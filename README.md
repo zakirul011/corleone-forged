@@ -8,7 +8,7 @@ This project contains the following main folders:
 
 ## Project Structure
 
-corleone-forged/
+```corleone-forged/
 ├── versions/ # Multiple UI versions (v1.1, v1.2, etc.)
 ├── apps/ # Mobile app, email templates, landing pages, presentations
 ├── configurations/ # UI behavior settings with assets (tabs, sidebar, dynamic layout)
