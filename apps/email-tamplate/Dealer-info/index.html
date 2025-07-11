@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corleone</title>
+	<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	Margin: 0 !important;
+	padding: 15px;
+	background-color: #DEE0E2;
+	line-height: 1.5;
+}
+table {
+	border-spacing: 0;
+	font-family: "Helvetica Neue",'sans-serif', Arial;
+	color: #727f80;
+}
+td {
+    padding: 0;
+}
+.inner-td {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+}
+.wrapper-inner {
+	width: 100%;
+	background-color: #eee;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.main-table {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+.content {
+    width: 100%;
+}
+.text-center {
+	text-align: center;
+}
+p {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+img {
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+
+/*--- Start Two Column Sections --*/
+.two-column {
+    text-align: center;
+    font-size: 0;
+}
+.two-column .section {
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-column .content {
+    font-size: 16px;
+}
+
+/*--- Start Three Column Sections --*/
+.three-column {
+    text-align: center;
+    font-size: 0;
+}
+.three-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.three-column .content {
+    font-size: 16px;
+}
+
+/* col-8, col-4 */
+.two-one-column{
+    font-size: 0;
+}
+.two-one-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-one-column .section:first-child {
+    max-width: 400px;
+}
+.two-one-column .content {
+    font-size: 16px;
+}
+
+/*================================================
+CUSTOM CSSS
+================================================*/
+
+/*HEADER-AREA*/
+.header-area {
+	padding-top: 40px;
+}
+/*HEADER-AREA END*/
+
+/* hero area */
+.header-wrapper .main-table{
+	background: none;
+}
+.main-table.hero-area h1 {
+	color: #fff;
+	margin-bottom: 0;
+	font-size: 40px;
+	font-weight: 800;
+}
+.main-table.hero-area h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0 5px;
+}
+.hero-text {
+	padding-bottom: 15px;
+}
+
+/* info wrap */
+.body-wrapper {
+	background: linear-gradient(to bottom, #CC0B0D 15%, #DFEAF3 15%);
+}
+.body-wrapper .main-table{
+	background: none;
+}
+.info-wrap {
+  background: #fff;
+  box-shadow: 0px 55px 46px 0px rgba(0, 0, 0, 0.13);
+}
+.info-wrap td {
+  padding: 20px;
+  font-size: 15px;
+  color: #262626;
+  font-weight: 600;
+}
+.info-wrap td:first-child {
+	padding-left: 40px;
+	width: 40%;
+}
+.info-wrap tr:nth-child(2n) {
+  background: #F6FBFF;
+}
+.section-padding {
+  padding: 40px 0;
+}
+.boxed-text td {
+  padding: 30px;
+  font-weight: 700;
+  color: #fff;
+  background: #DC0303;
+  font-size: 18px;
+}
+.contact-text p {
+	color: #111111;
+}
+.contact-text p a {
+	font-weight: 800;
+	color: #DA1F26;
+}
+.copyright a:hover,
+.contact-text p a:hover {
+	text-decoration: underline;
+}
+.contact-text td {
+	padding: 0 12%;
+}
+.social-links {
+	border-bottom: 5px solid #DC0303;
+}
+.social-links ul li {
+  display: inline-block;
+}
+.social-links ul li a {
+	height: 50px;
+	line-height: 60px;
+	background: #DC0303;
+	width: 50px;
+	display: block;
+	text-align: center;
+}
+/* copyright */
+.copyright td {
+  padding: 20px;
+  font-weight: 500;
+  color: #3C3C3C;
+}
+.copyright a {
+  color: #DA1F26;
+  font-weight: 800;
+}
+	/*--- Responsive CSS --*/
+	@media screen and (max-width:768px) {
+		body {
+			padding: 0px !important;
+		}
+		img.img-responsive {
+			width:100% !important;
+			height:auto !important;
+			max-width:100% !important;
+		}
+		.two-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.three-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.two-one-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+
+		/* hero-area */
+		.main-table.hero-area h1 {
+			font-size: 30px !important;
+		}
+		.main-table.hero-area h3 {
+			font-size: 16px !important;
+		}
+		.inner-td {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+		.info-wrap td {
+			padding: 15px !important;
+			font-size: 14px !important;
+		}
+		.info-wrap td:first-child {
+			padding-left: 20px !important;
+		}
+		.boxed-text td {
+			padding: 20px 15px !important;
+			font-size: 16px !important;
+		}
+		.contact-text td {
+			padding: 0 !important;
+		}
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="wrapper-inner">
+
+			<table class="main-table header-wrapper" style="background-image: url(./assets/header-bg.jpg)">
+				<tr>
+					<td>
+						<!-- HEADER-AREA -->
+						<table class="main-table">
+		
+							<tr>
+								<td class="one-column">
+									<table width="100%">
+										<tr>
+											<td class="header-area text-center">
+												<img src="assets/logo.png" alt="" class="logo">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+		
+						</table>
+		
+						<!-- HERO-AREA -->
+						<table class="main-table hero-area">
+							<tr>
+								<td class="one-column">
+									<table width="100%">
+										<tr>
+											<td class="inner-td text-center hero-text">
+												<h1>Michael Henderson</h1>
+												<h3>Non-Dealer</h3>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<table class="main-table body-wrapper">
+				<tr>
+					<td class="content inner-td">
+						<table width="100%" class="info-wrap">
+							<tr>
+								<td>Full Name: </td>
+								<td>Michael Henderson</td>
+							</tr>
+							<tr>
+								<td>Email Address: </td>
+								<td>mike@designnearme.com</td>
+							</tr>
+							<tr>
+								<td>Phone No: </td>
+								<td>+14692142468</td>
+							</tr>
+							<tr>
+								<td>Product SKU: </td>
+								<td><span>SF-7171</span></td>
+							</tr>
+							<tr>
+								<td>City: </td>
+								<td>Micinney</td>
+							</tr>
+							<tr>
+								<td>State: </td>
+								<td>Texas 75050</td>
+							</tr>
+							<tr>
+								<td>Dealer/ Non Dealer: </td>
+								<td>Non-dealer</td>
+							</tr>
+						</table>
+						
+						<table width="100%">
+							<tr>
+								<td class="section-padding">
+									<table width="100%" class="boxed-text text-center">
+										<tr>
+											<td>Testing the contact form of the website</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table width="100%" class="contact-text text-center">
+							<tr>
+								<td>
+									<p>This Email was sent from a contact form on corleone 
+										forged <a href="#">(www.corleoneforged.com)</a> </p>
+								</td>
+							</tr>
+						</table>
+
+						<table width="100%">
+							<tr>
+								<td class="social-links text-center">
+									<ul>
+										<li><a href="#"><img src="./assets/facebook.png" alt=""></a></li>
+										<li><a href="#"><img src="./assets/instagram.png" alt=""></a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<table class="main-table copyright">
+				<tr>
+					<td class="content inner-td text-center">
+						&copy; Copyright 2021 Corleone Forged Designed By <a href="#">DesignNearMe.com</a>
+					</td>
+				</tr>
+			</table>
+			
+
+
+		</div>
+	</div>
+	
+</body>
+</html>

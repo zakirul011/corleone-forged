@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    
+    <title>Checkout Corleone</title>
+</head>
+
+<body>
+    
+    <div class="preloader bg-attachment" style="background-image: url(./assets/img/loading.jpg)">
+        <img src="./assets/img/logo/logo.png" alt="logo">
+        <p>LET’S SHOP in</p>
+    </div>
+    
+    <div class="app-wrapper padding-around">
+        <!-- app-header -->
+        <div class="app-header" style="background-color: #fff;">
+            <a href="#" class="icon"><i class="far fa-angle-left"></i></a>
+            <h4>Corleoneforged</h4>
+            <div class="item-group">
+                <a href="#" class="icon"><i class="far fa-search"></i></a>
+                <a href="#" class="icon menu-bar">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- app-body -->
+        <div class="app-body">
+            <div class="checkout">
+                <div class="card bg-attachment mb-30" style="background-image: url(./assets/img/checkout/card-bg.jpg);">
+                    <div class="section-content white-content card-header">
+                        <div class="item-group mb-20">
+                            <h4>VISA</h4>
+                            <p>Bank Name</p>
+                        </div>
+                    </div>
+                    <img src="./assets/img/checkout/Chip.png" alt="">
+                    <div class="card-info mt-30">
+                        <div class="section-content white-content">
+                            <p class="card-number">1234 5685 8535 0000</p>
+                            <p class="card-name">Michael Henderson</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="./checkout.html">
+                    <div class="input-box mb-20">
+                        <label for="">New Cards</label>
+                        <div class="select-item">
+                            <i class="far fa-credit-card"></i>
+                            <select>
+                                <option value="0">Add a New Card</option>
+                                <option value="1">VISA Card</option>
+                                <option value="1">VISA Card</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-box mb-20">
+                        <label for="">Bank account</label>
+                        <div class="select-item">
+                            <select>
+                                <option value="0">Add a New Card</option>
+                                <option value="1">VISA Card</option>
+                                <option value="1">VISA Card</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-box mb-20">
+                        <label for="">Credit / debit cards</label>
+                        <div class="input-group">
+                            <div class="item-group">
+                                <input class="cc-input" type="text" placeholder="****  ****  ****  4587" >
+                                <img src="./assets/img/checkout/visa.png" alt="">
+                            </div>
+                            <div class="item-group">
+                                <input class="cc-input" type="text" placeholder="****  ****  ****  0015">
+                                <img src="./assets/img/checkout/master-card.png" alt="">
+                            </div>
+                            <div class="item-group">
+                                <input type="text" placeholder="Sales@CorleoneForged.com">
+                                <img src="./assets/img/checkout/paypal.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="">COUPON CODE</label>
+                        <div class="input-row">
+                            <i class="fal fa-tag"></i>
+                            <input type="text" placeholder="TA2940H">
+                            <button type="submit" class="boxed-btn">APPLY</button>
+                        </div>
+                    </div>
+
+                    <button class="boxed-btn w-100 mt-30" type="submit">PROCEED TO PAY</button>
+                    <script>
+                        document.querySelector('.checkout form > button[type=submit]').addEventListener('click', (e)=>{
+                            e.preventDefault();
+                            document.querySelector('.popup').classList.add('active')
+                        })
+                    </script>
+                </form>
+            </div>
+        </div>
+
+        <!-- app-footer -->
+        <div class="app-footer">
+            <ul>
+                <li class="active"><a href="#"><i class="fal fa-home"></i></a></li>
+                <li><a href="#"><i class="fal fa-heart"></i></a></li>
+                <li><a href="#"><i class="fal fa-user"></i></a></li>
+                <li><a href="#"><i class="fal fa-cog"></i></a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="popup">
+        <div class="ovarlay"></div>
+        <div class="porup-content text-center">
+            <span class="close"><i class="fal fa-times"></i></span>
+            <span class="check-icon"></span>
+            <h2>Your Order Placed 
+                Successfully</h2>
+            <p>That this group would somehow form a family
+                we all became the Brady Bunch!</p>
+            <a href="./checkout.html" class="boxed-btn small-btn mt-10">BACK TO HOME</a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/nice-select.min.js"></script>
+    <script src="assets/js/scrollup.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

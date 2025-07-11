@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corleone</title>
+	<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	Margin: 0 !important;
+	padding: 15px;
+	background-color: #DEE0E2;
+	line-height: 1.5;
+}
+table {
+	border-spacing: 0;
+	font-family: "Helvetica Neue",'sans-serif', Arial;
+	color: #383838;
+}
+td {
+    padding: 0;
+}
+.inner-td {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+}
+.wrapper-inner {
+	width: 100%;
+	background-color: #eee;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.main-table {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+.content {
+    width: 100%;
+}
+.text-center {
+	text-align: center;
+}
+p {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+img {
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+
+/*--- Start Two Column Sections --*/
+.two-column {
+    text-align: center;
+    font-size: 0;
+}
+.two-column .section {
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-column .content {
+    font-size: 16px;
+}
+
+/*--- Start Three Column Sections --*/
+.three-column {
+    text-align: center;
+    font-size: 0;
+}
+.three-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.three-column .content {
+    font-size: 16px;
+}
+
+/* col-8, col-4 */
+.two-one-column{
+    font-size: 0;
+}
+.two-one-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-one-column .section:first-child {
+    max-width: 400px;
+}
+.two-one-column .content {
+    font-size: 16px;
+}
+
+/*================================================
+CUSTOM CSSS
+================================================*/
+
+/*HEADER-AREA*/
+.header-area {
+	padding-top: 40px;
+}
+/*HEADER-AREA END*/
+
+/* hero area */
+.header-wrapper .main-table{
+	background: none;
+}
+.main-table.hero-area h1 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+.main-table.hero-area h3 {
+	font-size: 20px;
+	color: #fff;
+}
+.hero-text {
+	padding-bottom: 15px;
+}
+.border-bx {
+	border: 3px solid #FFFFFF;
+	padding: 25px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+}
+/* info wrap */
+.body-wrapper {
+	background: linear-gradient(to bottom, #CC0B0D 15%, #DFEAF3 15%);
+}
+.body-wrapper .main-table{
+	background: none;
+}
+.boxed-text {
+	padding: 30px;
+	background: #fff;
+	font-size: 18px;
+	box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.13);
+	line-height: 1.8;
+}
+.section-padding {
+	padding-top: 40px;
+}
+.copyright a:hover {
+	text-decoration: underline;
+}
+.social-links {
+	border-bottom: 5px solid #DC0303;
+}
+.social-links ul li {
+  display: inline-block;
+}
+.social-links ul li a {
+	height: 50px;
+	line-height: 60px;
+	background: #DC0303;
+	width: 50px;
+	display: block;
+	text-align: center;
+}
+/* copyright */
+.copyright td {
+  padding: 20px;
+  font-weight: 500;
+  color: #3C3C3C;
+}
+.copyright a {
+  color: #DA1F26;
+  font-weight: 800;
+}
+	/*--- Responsive CSS --*/
+	@media screen and (max-width:768px) {
+		body {
+			padding: 0px !important;
+		}
+		img.img-responsive {
+			width:100% !important;
+			height:auto !important;
+			max-width:100% !important;
+		}
+		.two-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.three-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.two-one-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+
+		/* hero-area */
+		.main-table.hero-area h1 {
+			font-size: 30px !important;
+		}
+		.main-table.hero-area h3 {
+			font-size: 16px !important;
+		}
+		.inner-td {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+		.border-bx {
+			padding: 15px !important;
+			font-size: 16px !important;
+			border-width: 2px !important;
+		}
+		.border-bx img {
+			max-height: 15px !important;
+		}
+		.boxed-text {
+			padding: 15px !important;
+			font-size: 16px !important;
+			line-height: 1.6 !important;
+			text-align: center !important;
+		}
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="wrapper-inner">
+
+			<table class="main-table header-wrapper" style="background-image: url(./assets/header-bg.jpg)">
+				<tr>
+					<td>
+						<!-- HEADER-AREA -->
+						<table class="main-table">
+		
+							<tr>
+								<td class="one-column">
+									<table width="100%">
+										<tr>
+											<td class="header-area text-center">
+												<img src="assets/logo.png" alt="" class="logo">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+		
+						</table>
+		
+						<!-- HERO-AREA -->
+						<table class="main-table hero-area">
+							<tr>
+								<td class="one-column">
+									<table width="100%">
+										<tr>
+											<td class="inner-td text-center hero-text">
+												<h1>Michael Henderson</h1>
+												<h3>Mike@designnearme.com</h3>
+											</td>
+										</tr>
+									</table>
+
+									<table width="100%" class="border-bx-wrap text-center">
+										<tr>
+											<td class="inner-td">
+												<table width="100%" class="border-bx">
+													<tr>
+														<td><img src="./assets/star.png" alt=""> Rating: 5.0</td>
+														<td><img src="./assets/user.png" alt=""> Status: Customer</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<table class="main-table body-wrapper">
+				<tr>
+					<td>
+						<img src="./assets/img.jpg" alt="">
+						<table width="100%">
+							<tr>
+								<td class="inner-td">
+									<table width="100%">
+										<tr>
+											<td class="boxed-text">Fantastic Service i have ever Seen! <br>
+												Thank You Corelone Forged</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+		
+						<table width="100%">
+							<tbody>
+								<tr>
+									<td class="social-links text-center section-padding">
+										<ul>
+											<li><a href="#"><img src="./assets/facebook.png" alt=""></a></li>
+											<li><a href="#"><img src="./assets/instagram.png" alt=""></a></li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<table class="main-table copyright">
+				<tr>
+					<td class="content inner-td text-center">
+						&copy; Copyright 2021 Corleone Forged Designed By <a href="#">DesignNearMe.com</a>
+					</td>
+				</tr>
+			</table>
+			
+
+
+		</div>
+	</div>
+	
+</body>
+</html>

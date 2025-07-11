@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corleone</title>
+	<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	Margin: 0 !important;
+	padding: 15px;
+	background-color: #DEE0E2;
+	line-height: 1.5;
+}
+table {
+	border-spacing: 0;
+	font-family: "Helvetica Neue",'sans-serif', Arial;
+	color: #727f80;
+}
+td {
+    padding: 0;
+}
+.inner-td {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+}
+.wrapper-inner {
+	width: 100%;
+	background-color: #eee;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.main-table {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+.content {
+    width: 100%;
+}
+.text-center {
+	text-align: center;
+}
+p {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+img {
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+
+/*--- Start Two Column Sections --*/
+.two-column {
+    text-align: center;
+    font-size: 0;
+}
+.two-column .section {
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-column .content {
+    font-size: 16px;
+}
+
+/*--- Start Three Column Sections --*/
+.three-column {
+    text-align: center;
+    font-size: 0;
+}
+.three-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.three-column .content {
+    font-size: 16px;
+}
+
+/* col-8, col-4 */
+.two-one-column{
+    font-size: 0;
+}
+.two-one-column .section {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.two-one-column .section:first-child {
+    max-width: 400px;
+}
+.two-one-column .content {
+    font-size: 16px;
+}
+
+/*================================================
+CUSTOM CSSS
+================================================*/
+
+/*HEADER-AREA*/
+.header-area {
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+/*HEADER-AREA END*/
+
+/* hero area */
+.header-wrapper .main-table{
+	background: none;
+}
+.main-table.hero-area h1 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+.main-table.hero-area h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0 5px;
+}
+.hero-text {
+	padding-bottom: 15px;
+}
+
+/* info wrap */
+.body-wrapper {
+	background: linear-gradient(to bottom, #CC0B0D 3%, #DFEAF3 3%);
+}
+.body-wrapper .main-table{
+	background: none;
+}
+.info-main {
+	background: #fff;
+	box-shadow: 0px 55px 46px 0px rgba(0, 0, 0, 0.13);
+	padding: 25px;
+	padding-bottom: 0;
+}
+.info-wrap {
+	border: 1px solid #F3F3F3;
+}
+.info-wrap th,
+.info-wrap td {
+	padding: 15px;
+	font-size: 15px;
+	color: #262626;
+	font-weight: 700;
+	text-align: left;
+}
+.info-wrap td:first-child {
+	padding-left: 30px;
+	width: 50%;
+}
+.info-wrap th {
+	color: #fff;
+	font-size: 20px;
+	padding-left: 30px;
+}
+.info-wrap tr:nth-child(2n) {
+	background: #F1F8FE;
+}
+.info-wrap thead{
+	background-color: #DC0303;
+}
+.info-bx {
+	padding-bottom: 25px;
+}
+.section-padding {
+	padding-top: 40px;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.social-links {
+	border-bottom: 5px solid #DC0303;
+}
+.social-links ul li {
+  display: inline-block;
+}
+.social-links ul li a {
+	height: 50px;
+	line-height: 60px;
+	background: #DC0303;
+	width: 50px;
+	display: block;
+	text-align: center;
+}
+/* copyright */
+.copyright td {
+  padding: 20px;
+  font-weight: 500;
+  color: #3C3C3C;
+}
+.copyright a {
+  color: #DA1F26;
+  font-weight: 800;
+}
+	/*--- Responsive CSS --*/
+	@media screen and (max-width:768px) {
+		body {
+			padding: 0px !important;
+		}
+		img.img-responsive {
+			width:100% !important;
+			height:auto !important;
+			max-width:100% !important;
+		}
+		.two-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.three-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+		.two-one-column .section {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+
+		/* hero-area */
+		.logo {
+			max-width: 220px !important;
+		}
+		.inner-td {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+		.info-wrap td {
+			padding: 15px !important;
+			font-size: 14px !important;
+		}
+		.info-wrap th,
+		.info-wrap td:first-child {
+			padding-left: 20px !important;
+		}
+		.boxed-text td {
+			padding: 20px 15px !important;
+			font-size: 16px !important;
+		}
+		.info-main {
+			padding: 15px !important;
+			padding-bottom: 0 !important;
+		}
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="wrapper-inner">
+
+			<!-- header -->
+			<table class="main-table header-wrapper" style="background-image: url(./assets/header-bg.jpg)">
+				<tr>
+					<td>
+						<!-- HEADER-AREA -->
+						<table class="main-table">
+		
+							<tr>
+								<td class="one-column">
+									<table width="100%">
+										<tr>
+											<td class="header-area text-center">
+												<img src="assets/logo.png" alt="" class="logo">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+		
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<!-- body -->
+			<table class="main-table body-wrapper">
+				<tr>
+					<td class="content inner-td">
+						<table width="100%" class="info-main">
+							<tr>
+								<td>
+									<!-- single box -->
+									<table width="100%">
+										<tr>
+											<td class="info-bx">
+												<table width="100%" class="info-wrap">
+													<tr>
+														<td>Authorize Person Name:</td>
+														<td>Moe</td>
+													</tr>
+													<tr>
+														<td>Person Full Name:</td>
+														<td>Moe Ibrahim</td>
+													</tr>
+													<tr>
+														<td>Authorized Date:</td>
+														<td>2021-04-03</td>
+													</tr>
+													<tr>
+														<td>Sales Order Number:</td>
+														<td>546781</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!-- single box -->
+									<table width="100%">
+										<tr>
+											<td class="info-bx">
+												<table width="100%" class="info-wrap">
+													<thead>
+														<tr>
+															<th colspan="2">Personal Information</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Billing Address:</td>
+															<td>5700 Tennyson Parkway, Suite 300</td>
+														</tr>
+														<tr>
+															<td>Phone:</td>
+															<td>4696149456</td>
+														</tr>
+														<tr>
+															<td>City-State-zip:</td>
+															<td>Mckinny, Texas, 75051</td>
+														</tr>
+														<tr>
+															<td>Email:</td>
+															<td>portal@designnearme.com</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!-- single box -->
+									<table width="100%">
+										<tr>
+											<td class="info-bx">
+												<table width="100%" class="info-wrap">
+													<thead>
+														<tr>
+															<th colspan="2">Account Information's</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Card Type:</td>
+															<td>MasterCard</td>
+														</tr>
+														<tr>
+															<td>City-State-zip: </td>
+															<td>Mckinny, Texas, 75051</td>
+														</tr>
+														<tr>
+															<td>Card Number:</td>
+															<td>1414125478948567</td>
+														</tr>
+														<tr>
+															<td>Expiration date:</td>
+															<td>11/26</td>
+														</tr>
+														<tr>
+															<td>Security Code:</td>
+															<td>786</td>
+														</tr>
+														<tr>
+															<td>Customers Permission
+																on Card:</td>
+															<td>One Time Charge Only</td>
+														</tr>
+														<tr>
+															<td>Signature: </td>
+															<td>Oliver Noah</td>
+														</tr>
+														<tr>
+															<td>Date:</td>
+															<td>2021-04-03</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+
+						<table width="100%">
+							<tr>
+								<td class="social-links text-center section-padding">
+									<ul>
+										<li><a href="#"><img src="./assets/facebook.png" alt=""></a></li>
+										<li><a href="#"><img src="./assets/instagram.png" alt=""></a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+			<!-- footer -->
+			<table class="main-table copyright">
+				<tr>
+					<td class="content inner-td text-center">
+						&copy; Copyright 2021 Corleone Forged Designed By <a href="#">DesignNearMe.com</a>
+					</td>
+				</tr>
+			</table>
+			
+
+
+		</div>
+	</div>
+	
+</body>
+</html>

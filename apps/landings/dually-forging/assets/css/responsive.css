@@ -1,0 +1,277 @@
+/* All Desktop. */
+@media (min-width: 768px) and (max-width: 1500px) {
+   h1 {
+      font-size: 140px;
+   }
+   h2 {
+      font-size: 34px;
+   }
+   h3 {
+      font-size: 30px;
+   }
+   h4 {
+      font-size: 24px;
+   }
+   h5 {
+      font-size: 18px;
+   }
+   body {
+      font-size: 16px;
+   }
+
+   /* header */
+   .logo img {
+      max-width: 200px;
+   }
+
+    /* hero  */
+    .site-btn {
+      font-size: 14px;
+   }
+   .hero-content h3 {
+      width: 80%;
+   }
+   .hero-area {
+      height: 750px;
+   }
+   .hero-wrapper .absolute-img {
+      bottom: 0%;
+   }
+   /* about */
+   .about-img img {
+      width: 60%;
+   }
+   /* intro */
+   .intro-area {
+      height: 600px;
+   }
+   .play-btn {
+      height: 120px;
+      width: 120px;
+   }
+   
+   /* feature */
+   .float-list .color-list li {
+      height: 30px;
+      width: 80px;
+   }
+   .size-list li {
+      width: 75px;
+      height: 35px;
+      line-height: 35px;
+   }
+   .feature-2-content {
+      padding: 45px;
+   }
+   .color-list li {
+      height: 35px;
+      width: 120px;
+   }
+
+
+   /* product */
+   .slick-arrow {
+      height: 45px;
+      width: 45px;
+      font-size: 16px;
+   }
+   /* footer */
+   .footer-logo img {
+      max-width: 220px;
+   }
+   .social-links ul li a {
+      height: 54px;
+      width: 54px;
+      font-size: 16px;
+      line-height: 54px;
+   }
+}
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+   h1 {
+      font-size: 180px;
+   }
+   h2 {
+      font-size: 42px;
+   }
+   h3 {
+      font-size: 45px;
+   }
+   body {
+      font-size: 16px;
+   }
+   .container {
+      max-width: 1120px;
+   }
+   .hero-content h3 {
+      width: 70%;
+   }
+   .hero-wrapper .absolute-img {
+      bottom: -17%;
+   }
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+   .container {
+      max-width: 970px;
+   }
+   .hero-wrapper .absolute-img {
+      bottom: -10%;
+   }
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+   .container {
+      max-width: 750px;
+   }
+   .hero-wrapper .absolute-img {
+      max-width: 360px;
+   }
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+   h1 {
+      font-size: 70px;
+   }
+   h2 {
+      font-size: 32px;
+   }
+   h3 {
+      font-size: 24px;
+   }
+   h4 {
+      font-size: 18px;
+   }
+   h5 {
+      font-size: 16px;
+   }
+   h6 {
+      font-size: 14px;
+   }
+   body {
+      font-size: 16px;
+   }
+   .site-btn {
+      font-size: 14px;
+   }
+   /* header */
+   .logo img {
+      max-width: 150px;
+   }
+
+   /* hero */
+   .hero-area {
+      height: auto;
+      padding-bottom: 70px;
+   }
+   .hero-content h3 {
+      width: auto;
+   }
+   .slick-slider {
+      padding-bottom: 70px;
+   }
+   .slick-arrow {
+      height: 45px;
+      width: 45px;
+      font-size: 16px;
+      left: calc(50% - 50px);
+      bottom: 0;
+      top: auto;
+      transform: none;
+   }
+   .slick-arrow.slick-next {
+      right: calc(50% - 50px);
+      left: auto;
+   }
+   .hero-content h4 {
+      margin-bottom: 20px;
+   }
+   .hero-content .absolute-text {
+      left: 49%;
+      top: 2px;
+      transform: translate(-50%);
+   }
+   .hero-content h4 {
+      letter-spacing: .5em;
+   }
+   .site-btn {
+      font-size: 14px;
+   }
+   .hero-wrapper .absolute-img {
+      width: auto;
+      position: relative;
+      margin-top: 30px;
+   }
+   .hero-content {
+      text-align: center;
+   }
+   /* about area */
+   .section-content {
+      text-align: center !important;
+   }
+   .about-img {
+      padding-right: 0;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+   }
+
+   /* intro */
+   .intro-area {
+      height: 400px;
+   }
+   .play-btn {
+      height: 100px;
+      width: 100px;
+   }
+
+   /* feature */
+   .size-list li, .color-list li {
+      margin-right: auto;
+      margin-left: auto;
+   }
+   .float-list .color-list li {
+      height: 30px;
+      width: 70px;
+   }
+   .float-list .size-list, .float-list .color-list {
+      justify-content: center;
+   }
+   .feature-2-content {
+      padding: 40px 20px;
+   }
+   .size-list li {
+      width: 70px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 13px;
+   }
+   .color-list li {
+      height: 35px;
+      width: 115px;
+   }
+   .feature-2-img {
+      margin-right: 0;
+   }
+   /* footer */
+   .footer-logo img {
+      max-width: 220px;
+   }
+   .social-links ul li a {
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 18px;
+   }
+}
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+   .container {
+      max-width: 400px;
+   }
+}

@@ -1,0 +1,258 @@
+/* All Desktop. */
+@media (min-width: 768px) and (max-width: 1500px) {
+   h1 {
+      font-size: 50px;
+   }
+   h2{
+      font-size: 42px;
+   }
+   h3 {
+      font-size: 36px;
+   }
+   h5 {
+      font-size: 18px;
+   }
+   body {
+      font-size: 16px;
+   }
+
+   /* header */
+   .logo img {
+      max-width: 200px;
+   }
+
+   /* feature */
+   .color-list ul li {
+      height: 30px;
+      width: 30px;
+      margin: 2px;
+   }
+   .color-list h5 {
+      margin-right: 5px;
+      font-size: 15px;
+   }
+   
+   .size-list ul li {
+      padding: 5px 10px;
+   }
+
+   /* intro */
+   .intro-content {
+      height: 750px;
+   }
+
+   /* category */
+   .category-list {
+      padding: 0px 10px;
+   }
+   .category-list h4 {
+      font-size: 24px;
+      margin-bottom: 20px;
+   }
+   .category-list ul li {
+      font-size: 16px;
+      padding-left: 15px;
+   }
+   .magic-line::after {
+      height: 1px;
+   }
+   .category-btn {
+      font-size: 12px;
+      padding: 10px 15px;
+   }
+   .category-list ul li::after {
+      top: 9px;
+      height: 8px;
+      width: 8px;
+   }
+
+   /* intro */
+   .play-icon:hover, .play-icon {
+      height: 100px;
+      width: 100px;
+      font-size: 30px;
+   }
+
+   /* forging */
+   .multi-magic-line span {
+      width: 170px;
+   }
+
+   /* footer */
+   .footer-logo img {
+      max-width: 220px;
+   }
+}
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+   h1 {
+      font-size: 70px;
+   }
+   h3 {
+      font-size: 50px;
+   }
+   body {
+      font-size: 18px;
+   }
+.container{
+   max-width: 1120px;
+}
+.multi-magic-line span {
+	width: 215px;
+}
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.container{
+   max-width: 970px;
+}
+
+.multi-magic-line span {
+	width: 182px;
+}
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.container{
+   max-width: 750px;
+}
+
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    
+   h1 {
+      font-size: 36px;
+   }
+   h2 {
+      font-size: 32px;
+   }
+   h3 {
+      font-size: 30px;
+   }
+   h5 {
+      font-size: 16px;
+   }
+   body {
+      font-size: 16px;
+   }
+
+   /* header */
+   .logo img {
+      max-width: 150px;
+   }
+   .header-area {
+      top: 20px;
+   }
+
+   /* hero */
+   .hero-img {
+      margin-right: 0;
+   }
+   .section-content {
+      text-align: center;
+   }
+
+   /* feature */
+   .feature-item:nth-child(2n+1) .section-content {
+      text-align: center;
+   }
+   .color-list ul li {
+      height: 30px;
+      width: 30px;
+   }
+   .color-list {
+      justify-content: center;
+   }
+   .feature-item:nth-child(2n) {
+      margin-top: 0;
+   }
+   .size-list ul li {
+      padding: 5px 10px;
+   }
+   /* intro */
+   .play-icon:hover, .play-icon {
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+   }
+   .intro-content {
+      height: 580px;
+   }
+
+   /* category */
+   .category-list {
+      padding: 0px 10px;
+   }
+   .category-list h4 {
+      font-size: 24px;
+      margin-bottom: 20px;
+   }
+   .category-list ul li {
+      font-size: 16px;
+      padding-left: 15px;
+   }
+   .magic-line::after {
+      height: 1px;
+   }
+   .category-btn {
+      font-size: 12px;
+      padding: 10px 15px;
+   }
+   .category-list ul li::after {
+      top: 9px;
+      height: 8px;
+      width: 8px;
+   }
+   /* info */
+   .info-img-3 {
+      margin-left: 0;
+   }
+
+   /* design */
+   .design-wheel {
+      margin-right: 0;
+      position: relative;
+      z-index: 2;
+   }
+
+   /* detail */
+   .detail-img {
+      margin-left: 0;
+   }
+
+   /* forging */
+   .forging-img img:nth-child(2) {
+      transform: translate(0%);
+   }
+   .multi-magic-line {
+      display: none;
+   }
+
+   /* footer */
+   .footer-logo img {
+      max-width: 220px;
+   }
+   .social-links ul li a {
+      width: 80px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+   }
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .container{
+    max-width: 400px;
+ }
+}
