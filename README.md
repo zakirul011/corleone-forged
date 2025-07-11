@@ -15,7 +15,7 @@ This project contains the following main folders:
 ├── designs/ # Style guides and external links to PSDs
 ├── index.html # Project dashboard (auto-generated)
 ├── README.md # You are here :)
-└── .gitignore # Ignores unwanted files (like unneeded images)```
+└── .gitignore # Ignores unwanted files (like unneeded images)
 
 ## 🖼️ Image Management
 
