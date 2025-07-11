@@ -1,31 +1,38 @@
-# Corleone Forged - Web UI Project
-
-This is a multi-version, multi-module UI system designed for advanced frontend development and UI concept exploration.
 
 ---
 
-## 📁 Project Structure
+## 🖼️ Image Management
 
-
----
-
-## 🌐 Hosted Assets
-
-| Resource | Link |
-|---------|------|
-| 🎨 PSDs & High-Res | [OneDrive - PSDs](https://onedrive.live.com/psd-folder-link) |
-| 🖼️ 3D Assets | [OneDrive - 3D Images](https://onedrive.live.com/images-folder-link) |
+- Only **essential images** (e.g., `configurations/dynamic/assets/img`) are included.
+- All other heavy assets (e.g., demo images, mockups, large PSDs) are excluded via `.gitignore`.
+- You can update these image rules via `.gitattributes` and `.gitignore`.
 
 ---
 
-## 🚀 Usage
+## 🌐 Project Dashboard
 
-- Open `index.html` to browse versions, apps, templates.
-- Each folder (e.g., `v1.1`, `dually-forging`) has an `index.html` entry point.
-- Designs and large assets are stored externally via OneDrive.
+> 📂 [Open the Project Dashboard](index.html)
+
+This file (`index.html`) provides an interactive way to browse:
+- UI versions
+- Apps and templates
+- Presentation and designs
+- Configurable layouts
+
+The dashboard is **auto-generated** via a script that detects folders and builds navigation.
 
 ---
 
-## 📄 License
+## 🔧 How to Use / Clone
 
-[MIT](LICENSE)
+```bash
+# Clone this repo
+git clone https://github.com/yourusername/corleone-forged.git
+cd corleone-forged
+
+# Optional: enable LFS if using large files
+git lfs install
+git lfs pull
+
+# Run project locally (if needed)
+open index.html
