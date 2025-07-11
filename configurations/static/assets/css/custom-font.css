@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Platform';
+    src: url('./../fonts/platform/Platform-Regular.woff2') format('woff2'),
+        url('./../fonts/platform/Platform-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('./../fonts/platform/Platform-Bold.woff2') format('woff2'),
+        url('./../fonts/platform/Platform-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('./../fonts/platform/Platform-Medium.woff2') format('woff2'),
+        url('./../fonts/platform/Platform-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('./../fonts/platform/Platform-RegularItalic.woff2') format('woff2'),
+        url('./../fonts/platform/Platform-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Impact';
+    src: url('./../fonts/impact/Impact.woff2') format('woff2'),
+        url('./../fonts/impact/Impact.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,226 @@
+
+
+ /* error */
+ .error-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgb(0, 0, 0,.5);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+ .error-box {
+	background: var(--theme-color);
+	width: 50%;
+	text-align: center;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 5%;
+ }
+ .error-close {
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	color: #fff;
+	transition: .3s ease;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+ }
+ .error-text h4 {
+	color: #fff;
+	margin-bottom: 0;
+}
+ .error-close:hover {
+	color: #000;
+ }
+ /* error end */
+
+
+@keyframes fadeEffect {
+   0%{opacity: 0;}
+   100%{opacity: 1;}
+}
+.selected-boxed,
+.config-content-title,
+.preview-wheel,
+.error-wrap,
+.thankyou-area,
+.contact-form-area,
+.config-content,
+.select-color-main,
+.choose-color-category ul li,
+.config-category,
+.config-content-wrap,
+.config-pointer,
+.placeholder-logo,
+.config-part-category img,
+.choose-color-page,
+.select-color-category,
+.select-color-title h5,
+.choose-color-title h5,
+.threeD-btn,
+.invert-btn,
+.action-btns button,
+.config-navigation{
+   display: none;
+   animation: .5s fadeEffect ease;
+}
+.choose-color-main > i.running-move{
+   display: none;
+}
+.config-part-category img{
+   animation-duration: 0s;
+}
+.preview-wheel.active,
+.selected-boxed.active,
+.thankyou-area.active,
+.contact-form-area.active,
+.config-content.active,
+.select-color-main.active,
+.config-category.active,
+.config-pointer.active,
+.placeholder-logo.active,
+.config-part-category img.active,
+.select-color-category.active,
+.select-color-title h5.active,
+.choose-color-title h5.active,
+.config-navigation.active{
+   display: block;
+}
+
+.config-content-wrap.active,
+.error-wrap.active,
+.choose-color-page.active{
+   display: flex;
+}
+.config-content-title.active,
+.choose-color-main > i.running-move.active,
+.choose-color-category,
+.choose-color-category ul li.active,
+.threeD-btn.active,
+.invert-btn.active,
+.action-btns button.active{
+   display: inline-block;
+}
+.color-fixed{
+   display: inline-block !important;
+}
+
+.boxed-blur,
+.select-color-category.boxed-blur:first-child {
+	filter: blur(8px);
+	pointer-events: none !important;
+	display: block;
+}
+.select-color-category.boxed-blur {
+   display: none;
+}
+.clean-color {
+	transition: .3s ease;
+	opacity: .1;
+	pointer-events: none;
+	cursor: pointer;
+	border: 1px solid;
+	background: #fff;
+	height: 1.5em;
+	width: 1.5em;
+	display: inline-grid;
+	place-content: center;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.clean-color:hover {
+   color: var(--theme-color);
+}
+
+
+.selected-color-wrap{
+   opacity: 0;
+   pointer-events: none;
+   transition: .5s ease;
+}
+.clean-color.active,
+.selected-color-wrap.active{
+   opacity: 1;
+   pointer-events: all;
+}
+
+
+.config-pointer-wrap,
+.config-part-page,
+.config-part-category img {
+	position: absolute;
+	top: 0;
+	left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 1;
+}
+.config-part-category img {
+   height: auto;
+}
+
+
+.config-pointer-wrap {
+	z-index: 99;
+}
+.config-navigation-wrap {
+   position: relative;
+}
+.placeholder-logo {
+	padding: 50px 0;
+}
+.select-color-category ul li::after,
+.choose-color-category ul li::after {
+	content: "\f00c";
+	font-family: "Font Awesome 5 Pro";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	transition: .3s ease;
+   opacity: 0;
+}
+.select-color-category ul li.active::after,
+.choose-color-category ul li.checked::after {
+   opacity: 1;
+}
+.selected-color {
+   max-height: 0;
+	overflow: hidden;
+	transition: .3s ease;
+}
+.running-move, .config-content-title h5 i {
+	animation: moving 1.2s ease infinite;
+}
+@keyframes moving{
+	0%{transform: translate(-50%);}
+	50%{transform: translate(0px);}
+	100%{transform: translate(-50%);}
+}
+.choose-color-main {
+	position: relative;
+}
+.choose-color-main > i.running-move {
+	position: absolute;
+	right: 101%;
+	bottom: 1.2em;
+	color: #fff;
+}
+.threeD-btn {
+	display: none !important;
+}

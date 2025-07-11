@@ -1,0 +1,6659 @@
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700&display=swap');
+
+
+@font-face {
+	font-family: 'Aligatai';
+	src: url('./../fonts/aligatai/Aligatai.eot');
+	src: url('./../fonts/aligatai/Aligatai.eot?#iefix') format('embedded-opentype'),
+		  url('./../fonts/aligatai/Aligatai.svg#Aligatai') format('svg'),
+		  url('./../fonts/aligatai/Aligatai.ttf') format('truetype'),
+		  url('./../fonts/aligatai/Aligatai.woff') format('woff'),
+		  url('./../fonts/aligatai/Aligatai.otf') format('woff2'),
+		  url('./../fonts/aligatai/Aligatai.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+ }
+ 
+ 
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Aligatai';
+*/
+
+:root {
+	--theme-color: #DC0303;
+	--text-color: #676767;
+	--heading-color: #151515;
+	--black: #000000;
+	--white: #ffffff;
+	--hr-color: #cccccc;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+body, html{
+	position: relative;
+	overflow-x: hidden;
+	scroll-behavior: auto !important;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color: var(--text-color);
+	font-size: 20px;
+	line-height: 1.42;
+	height: auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Anton', sans-serif;
+	color: var(--heading-color);
+	margin-bottom: 15px;
+}
+h1{font-size: 100px;}
+h2{font-size: 80px;}
+h3{font-size: 60px;}
+h4{font-size: 40px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}  
+
+p {
+	margin-bottom: 15px;
+	letter-spacing: .02em;
+}
+
+img {
+	max-width: 100%;
+	transition: .3s;
+}
+a{
+	text-decoration: none;
+}
+a,
+button {
+	transition: .3s ease;
+	color: inherit;
+	outline: medium none;
+}
+
+a:focus,
+a:active,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+button:focus,
+input:focus,
+textarea:focus {
+	outline: 0;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+hr {
+	border-bottom: 1px solid var(--hr-color);
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+*::-moz-selection {
+	background: #007ACC;
+	color: var(--white);
+	text-shadow: none;
+}
+*::selection {
+	background: #007ACC;
+	color: var(--white);
+	text-shadow: none;
+}
+/* Input Placeholder */
+*::-moz-placeholder {
+	color: #9FA4AF;
+	font-size: 16px;
+	font-weight: 500;
+	opacity: 1;
+}
+*::placeholder {
+	color: #9FA4AF;
+	font-size: 16px;
+	font-weight: 500;
+	opacity: 1;
+}
+input, textarea {
+	width: 100%;
+	border: 0;
+	padding: 18px 25px;
+	border-radius: 4px;
+	font-size: 16px;
+	border: 1px solid transparent;
+	transition: .3s ease;
+}
+input:focus, textarea:focus {
+	border-color: var(--theme-color);
+}
+.bg-attachment{
+	background-color: #0F0F0F;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+/*ScrollUp CSS*/
+#scrollUp {
+	background: var(--theme-color) none repeat scroll 0 0;
+	border-radius: 3px;
+	bottom: 50px;
+	cursor: pointer;
+	height: 40px;
+	position: fixed;
+	right: 30px;
+	text-align: center;
+	width: 40px;
+	z-index: 998 !important;
+}
+  #scrollUp i {
+	color: #fff;
+	font-size: 24px;
+	line-height: 38px;
+  }
+
+
+  .container{
+	  max-width: 1540px;
+  }
+
+/* ====================================================== */
+
+/* PRELOADER-CSS */
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+ }
+ .preloader .spinner {
+	margin: 45px auto;
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	font-size: 10px;
+ }
+ .preloader .spinner > div {
+	background-color: var(--theme-color);
+	height: 100%;
+	width: 6px;
+	border-radius: 0;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+ }
+ .preloader .spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+ }
+ .preloader .spinner .rect3 {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+ }
+ .preloader .spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+ }
+ .preloader .spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+ }
+ @-webkit-keyframes sk-stretchdelay {
+	0%,
+	40%,
+	100% {
+	   -webkit-transform: scaleY(0.4);
+	}
+	20% {
+	   -webkit-transform: scaleY(1);
+	}
+ }
+ 
+ @keyframes sk-stretchdelay {
+	0%,
+	40%,
+	100% {
+	   transform: scaleY(0.4);
+	   -webkit-transform: scaleY(0.4);
+	}
+	20% {
+	   transform: scaleY(1);
+	   -webkit-transform: scaleY(1);
+	}
+ } 
+/* PRELOADER-CSS END */
+
+/* preview loader */
+.preview-loader {
+	position: absolute;
+	top: 50.5%;
+	left: 50%;
+	height: 92%;
+	width: 93%;
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255,255,255,.7);
+	opacity: 0;
+	pointer-events: none;
+	transition: .3s ease;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+.preview-loader.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.lds-default {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-default div {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--theme-color);
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite;
+}
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 37px;
+  left: 66px;
+}
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 22px;
+  left: 62px;
+}
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 11px;
+  left: 52px;
+}
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 7px;
+  left: 37px;
+}
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 11px;
+  left: 22px;
+}
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 22px;
+  left: 11px;
+}
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 37px;
+  left: 7px;
+}
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 52px;
+  left: 11px;
+}
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 62px;
+  left: 22px;
+}
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 66px;
+  left: 37px;
+}
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 62px;
+  left: 52px;
+}
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 52px;
+  left: 62px;
+}
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+/* header-area v2*/
+.header-area-wrapper-v2 {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index: 99;
+   padding-top: 30px;
+}
+.header-top-v2 p {
+   font-size: 16px;
+   color: #dbdbdb;
+   margin: 0;
+}
+.header-top-v2 p span {
+   font-size: 20px;
+   color: #fff;
+   text-transform: uppercase;
+}
+.mainmenu-v2 ul li a {
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 14px;
+   padding: 40px 15px;
+   color: #fff;
+   display: block;
+}
+.mainmenu-v2 ul li {
+   display: inline-block;
+   position: relative;
+}
+.mainmenu-v2 ul li:hover > a {
+   color: var(--theme-color);
+}
+.header-area-v2 {
+   background: #1d1d1d;
+   padding: 0px 60px;
+   position: relative;
+}
+.circle-icon-v2 {
+   font-size: 14px;
+   border-radius: 50%;
+   height: 50px;
+   line-height: 50px;
+   width: 50px;
+   display: inline-block;
+   background: #292929;
+   text-align: center;
+   color: #fff;
+   margin: 2px;
+}
+.circle-icon-v2 i {
+   transition: 0.3s ease;
+}
+.circle-icon-v2:hover i {
+   transform: scale(1.2);
+}
+.circle-icon-v2:hover {
+   background: var(--theme-color);
+   color: #fff;
+}
+.header-address-v2 ul li i {
+   font-size: 18px;
+   color: #fff;
+   background: var(--theme-color);
+   height: 40px;
+   width: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 2px;
+   margin-right: 15px;
+}
+.header-address-v2 ul li {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.header-address-v2 ul li h6 {
+   font-size: 20px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   color: #fff;
+   line-height: 1.2;
+   margin: 0;
+}
+.header-address-v2 ul li h6 span {
+   color: #bfd4ef;
+   font-size: 15px;
+   display: block;
+   text-transform: uppercase;
+}
+.header-address-v2 ul li:last-child {
+   margin: 0;
+}
+.header-content-wrap {
+   position: relative;
+   z-index: 1;
+}
+.header-shaped-bg {
+   position: absolute;
+   left: -14%;
+   right: 25.8%;
+   top: -45%;
+   bottom: 0;
+   background-color: #db0303;
+   background-blend-mode: multiply;
+   clip-path: polygon(0 0, 100% 40%, 100% 100%, 16% 100%);
+   z-index: -1;
+}
+
+.submenu {
+   position: absolute;
+   top: 110%;
+   background: #fff;
+   padding: 20px 0px;
+   transition: 0.3s ease;
+   width: 200px;
+   opacity: 0;
+   pointer-events: none;
+}
+.mainmenu-v2 ul li:hover .submenu {
+   top: 100%;
+   opacity: 1;
+   pointer-events: all;
+}
+.submenu li {
+   display: block;
+}
+.mainmenu-v2 .submenu li a {
+   color: #000;
+   padding: 10px;
+}
+
+/* hero */
+.hero-absolute-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+/* contact area v2 */
+ .contact-input-v2 {
+	margin-bottom: 24px;
+ }
+ .contact-info-v2 {
+	height: 100%;
+	padding: 50px;
+ }
+ .contact-info-v2 h4 {
+	color: #fff;
+	margin-bottom: 30px;
+ }
+ .contact-info-v2 ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	justify-content: center;
+}
+ .contact-info-v2 ul li i {
+	font-size: 25px;
+	height: 65px;
+	line-height: 65px;
+	width: 65px;
+	text-align: center;
+	border-radius: 50%;
+	background: #000000;
+	color: var(--theme-color);
+	margin-right: 15px;
+ }
+ .contact-info-v2 ul li span {
+	flex: 1;
+	font-size: 19px;
+	color: #fff;
+	font-family: 'Anton', sans-serif;
+ }
+ .contact-info-v2 ul li:last-child {
+	margin: 0;
+ }
+
+/* footer area v2*/
+.footer-area-v2 .container{
+	max-width: 1690px;
+}
+.footer-logo-wrap-v2 {
+	padding: 0 30px;
+	position: relative;
+	z-index: 1;
+ }
+ .footer-logo-wrap-v2:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	content: '';
+	background: #1E1D1D;
+	z-index: -1;
+	border-radius: 5px;
+	transform: skew(5deg);
+ }
+ .footer-logo-v2 {
+	position: relative;
+	z-index: 1;
+	margin: 0 20px;
+	padding: 20px;
+	text-align: center;
+	transform: translate(0, -20px);
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+ .footer-logo-v2::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	content: '';
+	background: var(--theme-color);
+	transform: skew(5deg);
+	border-radius: 5px;
+	z-index: -1;
+}
+ .footer-logo-wrap-v2 p {
+	font-size: 18px;
+	color: #AFAFAF;
+	line-height: 1.5;
+	padding-left: 80px;
+ }
+ .footer-btns-v2 a {
+	padding: 15px 50px;
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	color: #111111;
+	font-size: 20px;
+	font-family: 'Anton', sans-serif;
+	transform: translate(0, 50%);
+ }
+ .footer-btns-v2 a:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	content: '';
+	background: #fff;
+	transition: .3s ease;
+	z-index: -1;
+	border-radius: 5px;
+	transform: skew(5deg);
+ }
+ .footer-btns-v2 a:hover:after {
+	background: var(--theme-color);
+ }
+ .footer-btns-v2 a:hover {
+	color: #fff;
+ }
+ .footer-btns-v2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+ }
+ .footer-item-title-v2 {
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 20px;
+ }
+ .footer-links-v2 ul li a {
+	color: #636363;
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 10px;
+	display: block;
+ }
+ .footer-links-v2 ul li a:hover {
+	color: var(--theme-color);
+ }
+ .footer-tags-v2 ul li a {
+	font-size: 15px;
+	color: #636363;
+	border: 1px dashed #332f2f;
+	padding: 3px 15px;
+	display: inline-block;
+ }
+ .footer-tags-v2 ul li {
+	margin: 0 2px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+ .footer-tags-v2 ul {
+	margin: 0 -4px;
+ }
+ .footer-tags-v2 ul li a:hover {
+	border-color: var(--theme-color);
+	color: var(--theme-color);
+ }
+ 
+.social-icons-v2 ul li a {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	width: 60px;
+	padding: 0;
+ }
+ .social-icons-v2 ul li {
+	display: inline-block;
+ }
+
+ .footer-area-v2 .contact-info-v2 {
+	 padding: 0;
+}
+ .footer-area-v2 .contact-info-v2 ul li span {
+	font-size: 16px;
+}
+ .footer-area-v2 .contact-info-v2 ul li i {
+	 height: 50px;
+	 width: 50px;
+	 line-height: 50px;
+}
+.footer-area-v2 .contact-info-v2 ul li {
+	margin-bottom: 15px;
+}
+.footer-area-v2 .contact-info-v2 ul li:last-child {
+	margin: 0px;
+}
+
+.footer-gallery-viewer {
+	height: 245px;
+}
+
+.copyright-area-v2 {
+	color: #fff;
+	font-size: 16px;
+	padding: 30px 0;
+	background: #111111;
+ }
+ .copyright-area-v2 a:hover {
+	color: var(--theme-color);
+ }
+
+
+ .bordered-btn-v2 {
+	display: inline-block;
+	font-family: 'Anton', sans-serif;
+	color: #fff;
+	background: var(--theme-color);
+	padding: 20px 50px;
+	font-size: 22px;
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	text-transform: uppercase;
+	border: 0;
+	text-align: center;
+ }
+ .bordered-btn-v2:after {
+	position: absolute;
+	left: 0;
+	top: -10px;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #1D1D1D;
+	content: '';
+	border-radius: inherit;
+	transition: .3s ease;
+	pointer-events: none;
+ }
+ .bordered-btn-v2:hover::after {
+	top: 0;
+	left: 0;
+ }
+ .bordered-btn-v2:hover {
+	color: #fff;
+ }
+ .white-content-v2 .bordered-btn-v2::after,
+ .contact-submit-v2 .bordered-btn-v2::after{
+	border-color: #fff;
+ }
+ .intro-video-wrap-v2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 345px;
+	border-radius: 4px;
+	margin-bottom: -100px;
+}
+
+
+
+ 
+ 
+/* humberger menu */
+.humberger-bar.active {
+   position: fixed;
+   top: 15px;
+   transform: translateY(0);
+}
+.humberger-bar {
+   height: 30px;
+   width: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   position: absolute;
+   z-index: 10000;
+   right: 15px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.humberger-bar span {
+   height: 2px;
+   width: 25px;
+   background: #fff;
+   display: block;
+   margin-bottom: 7px;
+   border-radius: 5px;
+   transition: 0.3s ease;
+}
+.humberger-bar span:last-child {
+   margin-bottom: 0px;
+}
+.humberger-bar:hover span {
+   background: var(--theme-color);
+}
+.humberger-bar.active span {
+   background: #000327;
+}
+.humberger-bar.active:hover span {
+   background: #ffffff;
+}
+.humberger-bar.active span:first-child {
+   transform: translate(0, 8px) rotate(45deg);
+}
+.humberger-bar.active span:nth-child(2) {
+   transform: scale(0.5);
+   opacity: 0;
+}
+.humberger-bar.active span:last-child {
+   transform: translate(0, -10px) rotate(-45deg);
+}
+
+.resonsive-slide {
+   width: 350px;
+   height: 100vh;
+   background: var(--theme-color);
+   padding: 30px 20px;
+   text-align: center;
+   padding-top: 60px;
+   position: fixed;
+   top: 0;
+   right: 0;
+   margin-right: -350px;
+   transition: 0.3s ease-in-out;
+   z-index: 9999;
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 15px;
+}
+.resonsive-slide.active {
+   margin-right: 0px;
+}
+.responsive-menu ul li a {
+   color: #000327;
+   font-weight: 700;
+   font-size: 16px;
+   text-transform: uppercase;
+   display: block;
+   padding: 5px;
+}
+.responsive-menu ul li a:hover,
+.responsive-menu ul li.active > a,
+.responsive-menu ul li.current > a {
+   color: #fff;
+}
+.responsive-menu {
+   margin-bottom: 20px;
+}
+.responsive-others {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.responsive-btn a {
+   display: block;
+   margin-bottom: 15px;
+   font-size: 16px;
+   padding: 10px;
+}
+.responsive-links .copyright-text {
+   font-size: 16px;
+   color: #000;
+}
+.responsive-menu .submenu li a:hover {
+   color: var(--theme-color);
+}
+.responsive-menu ul li.has-child > a::after {
+   content: "\f107";
+   font-family: "Font Awesome 5 Pro";
+   display: inline-block;
+   margin-left: 5px;
+   transition: 0.3s ease;
+}
+.responsive-menu ul li.has-child.active > a::after {
+   transform: rotate(-180deg);
+}
+.resonsive-slide-overlay {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   background: #000;
+   top: 0;
+   left: 0;
+   z-index: 9998;
+   opacity: 0.5;
+}
+.resonsive-slide-overlay {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   background: #000;
+   top: 0;
+   left: 0;
+   z-index: 9998;
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.3s;
+}
+.resonsive-slide-overlay.active {
+   opacity: 0.5;
+   pointer-events: all;
+}
+.search-icon {
+   position: absolute;
+   right: 70px;
+   top: 50%;
+   transform: translate(0, -50%);
+   color: #fff;
+}
+.search-icon:hover {
+   color: var(--theme-color);
+}
+.resposive-btns .site-btn {
+   display: block;
+   background: #000;
+   padding: 13px 0;
+   text-transform: uppercase;
+   color: #fff;
+   font-weight: 600;
+}
+.resposive-btns .site-btn:hover {
+   background: #fff;
+   color: #000;
+}
+.responsive-others .copyright-text {
+   color: #000;
+   font-size: 12px;
+}
+.responsive-others .copyright-text a:hover {
+   color: #ffffff;
+}
+/* humberger menu end */
+
+
+
+ /* PAGE TITLE */
+ .page-title {
+	min-height: 720px;
+	padding-top: 60px;
+	display: flex;
+	align-items: center;
+}
+.page-title-content h2 {
+	color: #fff;
+}
+
+.page-title {
+	min-height: 700px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+ }
+ .page-title-content h2 {
+	color: #fff;
+ }
+ .breadcrump li {
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	margin-right: 10px;
+ }
+ .breadcrump li:last-child {
+	margin-right: 0;
+ }
+ .breadcrump li:before {
+	content: "\f105";
+	font-family: "Font Awesome 5 Pro";
+	height: 20px;
+	line-height: 20px;
+	width: 20px;
+	text-align: center;
+	background: #fff;
+	display: inline-block;
+	border-radius: 2px;
+	color: #000;
+	margin-right: 5px;
+	font-size: 14px;
+ }
+ .breadcrump li:first-child::before {
+	content: "\f015";
+	background: none;
+	color: #fff;
+	font-weight: 900;
+	width: auto;
+}
+.shape-wrap img {
+	position: absolute;
+	left: -10%;
+	top: -50%;
+	z-index: -1;
+}
+.shape-wrap img:first-child {
+	top: -48%;
+	left: -9%;
+}
+
+
+/* shop page area */
+.shop-page-area .container{
+	max-width: 1640px;
+}
+.shop-page-wheel {
+	background: #fff;
+	padding: 15px;
+	box-shadow: 6px 10.392px 32px 0px rgba(0, 0, 0, 0.13);
+	border-radius: 3px;
+	padding-right: 35px;
+	padding-bottom: 35px;
+	position: relative;
+	z-index: 1;
+	margin-top: 20px;
+}
+.shop-page-wheel::after {
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #292929;
+	content: '';
+	transition: .3s ease;
+	z-index: -1;
+}
+ .shop-page-item:hover .shop-page-wheel:after {
+	 border-color: var(--theme-color);
+ }
+ .shop-page-item {
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+	border-radius: 5px;
+ }
+ .shop-page-item:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 85%;
+	background: #EDEDED;
+	content: '';
+	z-index: -1;
+	border-radius: inherit;
+	transition: .3s ease;
+ }
+ .shop-page-item:hover:after {
+	background: #1D1D1D;
+ }
+
+ 
+ .item-batch span {
+	background: #DC0303;
+	border-radius: 5px;
+	color: #fff;
+	padding: 3px 20px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.item-batch {
+	text-align: right;
+}
+.shop-page-info .item-batch {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+ .ratting-star ul li {
+	font-size: 14px;
+	display: inline-block;
+	color: #CCCCCC;
+	margin: 2px;
+ }
+ .ratting-star ul li.active {
+	color: #FFCC33;
+ }
+ .shop-page-info h4 span {
+	font-weight: 300;
+	font-size: 60%;
+	display: block;
+	color: var(--theme-color);
+ }
+ .shop-page-info h4 {
+	text-transform: uppercase;
+ }
+ .shop-page-item:hover .shop-page-info h4 a,
+ .shop-page-item:hover .sq-icon,
+ .shop-page-item:hover .shop-page-info p{
+	 color: #fff;
+ }
+ .shop-page-item:hover .shop-page-info h4 a:hover,
+ .shop-page-item:hover .sq-icon:hover {
+	color: var(--theme-color);
+ }	
+ .shop-page-info p {
+	color: #1D1D1D;
+	font-size: 20px;
+	transition: .3s ease;
+ }
+ .shop-page-info {
+	padding: 0 15px;
+ }
+ .shop-item-btn .bordered-btn-v2 {
+	background: #4D4D4D;
+	font-size: 16px;
+	padding: 18px 35px;
+}
+
+.shop-item-btn .bordered-btn-v2 {
+	background: #4D4D4D;
+	font-size: 16px;
+	padding: 18px 35px;
+ }
+ 
+.shop-page-item:hover .shop-item-btn .bordered-btn-v2 {
+	background: var(--theme-color);
+ }
+.shop-page-item:hover .shop-item-btn .bordered-btn-v2:after {
+	border-color: #fff;
+ }
+
+ .sq-icon {
+	font-size: 16px;
+	color: #1C1C1C;
+	border: 2px solid;
+	border-radius: 3px;
+	height: 55px;
+	width: 55px;
+	display: inline-block;
+	line-height: 55px;
+	text-align: center;
+ }
+ .shop-item-btn a {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+ .shop-item-btn a:last-child {
+	margin-right: 0;
+ }
+ .sq-icon:hover {
+	color: var(--theme-color);
+ }	
+
+
+ .filter-btn a {
+	background: #D7D7D7;
+	color: #2B2A2A;
+	box-shadow: 6px 10.392px 32px 0px rgba(0, 0, 0, 0.13);
+}
+ .filter-btn a:after {
+	 left: 10px;
+}
+ .filter-btn a:hover,
+ .filter-btn a.active {
+	 background: var(--theme-color);
+	 color: #fff;
+}
+
+
+.page-link {
+	padding: 7px 16px;
+	font-size: 20px;
+	font-family: 'Anton', sans-serif;
+	border-radius: 5px;
+}
+.page-item:first-child .page-link,
+.page-item:last-child .page-link{
+	border: 2px solid;
+	border-radius: 5px;
+}
+.page-item:first-child .page-link{
+	margin-right: 45px;
+}
+.page-item:last-child .page-link{
+	margin-left: 45px;
+}
+
+.page-item.active .page-link {
+	background-color: var(--theme-color);
+	border-color: var(--theme-color);
+}
+.page-link {
+	color: #000;
+	border: 1px solid transparent;
+}
+.page-link:hover{
+	color: var(--theme-color);
+	background-color: transparent;
+	border-color: transparent;
+}
+
+/* filter menu */
+
+.filter-menu-item {
+	background: #E0E0E0;
+	padding: 40px 30px 60px 50px;
+	border-radius: 2px;
+	position: relative;
+	z-index: 1;
+ }
+ .filter-menu-item:after {
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	height: 100%;
+	width: 100%;
+	border: 2px solid var(--theme-color);
+	content: '';
+	z-index: -1;
+ }
+ .filter-title {
+	font-size: 28px;
+	margin-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
+ }
+ .filter-list li a {
+	color: #333333;
+	font-weight: 500;
+ }
+ .filter-list li a.active,
+ .filter-list li a:hover {
+	color: var(--theme-color);
+ }
+ .filter-list li {
+	margin-bottom: 8px;
+	padding-left: 30px;
+	position: relative;
+	color: #333333;
+ }
+ .filter-list li:after {
+	content: "\f058";
+	position: absolute;
+	left: 0;
+	top: 0px;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+ }
+ .boxed-list li a {
+	color: #333333;
+	text-transform: uppercase;
+	padding: 13px 18px;
+	display: block;
+	background: #FAF7F7;
+	font-size: 19px;
+	border-radius: 3px;
+ }
+ .boxed-list li a.active,
+ .boxed-list li a:hover {
+	color: var(--theme-color);
+	background: #ffffff;
+ }
+ .boxed-list li {
+	display: inline-block;
+	margin: 0 1px;
+	margin-bottom: 5px;
+ }
+
+ .shop-page-area {
+	position: relative;
+	z-index: 9999;
+}
+.color-list li {
+	height: 45px;
+	width: 45px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 2px;
+	cursor: pointer;
+	line-height: 45px;
+}
+.color-list li::after {
+	content: "\f00c";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+	color: #fff;
+	transition: .3s ease;
+	opacity: 0;
+}
+.color-list li.active::after {
+	opacity: 1;
+}
+.filter-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #fff;
+	z-index: 9;
+	width: 500px;
+	bottom: 0;
+	box-shadow: 10px -5px 15px rgba(0,0,0,.05);
+	padding: 70px 50px 0px 30px;
+	overflow: auto;
+	transition: .3s ease-in-out;
+	opacity: 0;
+	transform: translate(-100%);
+	z-index: 9;
+}
+.filter-menu.active {
+	opacity: 1;
+	transform: translate(0%);
+}
+.close-filter-menu {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 25px;
+	cursor: pointer;
+	transition: .3s ease;
+ }
+ .close-filter-menu:hover {
+	color: var(--theme-color);
+ }
+
+
+/* qty counter */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.shop-product-number {
+	background: #fff;
+}
+.shop-product-number input {
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	width: 100px;
+	padding: 0;
+	height: 55px;
+}
+.shop-product-number button {
+	border: 0;
+	background: #e9e9e9;
+	font-size: 15px;
+	height: 35px;
+	width: 35px;
+	line-height: 30px;
+	color: #000000;
+}
+.shop-product-number {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 13px;
+}
+
+/* single shop */
+.single-shop-area .container{
+	max-width: 1750px;
+}
+.single-shop-content-wrap {
+	position: relative;
+	z-index: 1;
+	padding: 45px 9%;
+}
+.single-shop-content-wrap::after,
+.single-shop-content-wrap::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	transform: skew(-4deg);
+	z-index: -1;
+}
+.single-shop-content-wrap::before {
+	background-color: #F2F2F2;
+	background-image: url(./../img/single-shop/single-shop-bg.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.single-shop-content-wrap::after {
+	border: 2px solid var(--theme-color);
+	top: 20px;
+	left: 20px;
+}
+.single-shop-area .threeD-btn-v2 {
+	font-size: 70px;
+	position: absolute;
+	left: 0;
+	top: -2%;
+}
+
+
+
+.single-shop-preview {
+	text-align: center;
+	background: var(--theme-color);
+	position: relative;
+	z-index: 1;
+ }
+.single-shop-preview-item {
+	padding: 25px;
+ }
+ .single-shop-preview:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: -2px;
+	right: 0;
+	transform: skew(-5deg);
+	background: #fff;
+	z-index: -1;
+	content: '';
+ }
+ .single-shop-preview-item > a {
+	background: #EFEFEF;
+	height: 47px;
+	width: 43px;
+	display: block;
+	line-height: 47px;
+	color: #1D1D1D;
+	font-size: 18px;
+	position: absolute;
+	top: 15px;
+	left: 45px;
+	z-index: 3;
+ }
+ .single-shop-preview-item > a:hover {
+	background: var(--theme-color);
+	color: #fff;
+ }
+ 
+ .single-shop-item-img {
+	max-width: 120px;
+	max-height: 120px;
+	background: #fff;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.single-shop-slider-wrap{
+	margin-left: -10px;
+	margin-right: -10px;
+	padding: 0 90px;
+}
+.single-shop-slider-wrap .slick-slide{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+ 
+.single-shop-title h5 {
+	font-size: 25px;
+	margin: 0;
+	color: var(--theme-color);
+ }
+ .single-shop-title h3 {
+	margin-bottom: 10px;
+ }
+ .single-shop-info {
+	background: #FFFFFF;
+	padding: 20px 25px;
+	padding-bottom: 15px;
+}
+ .single-shop-info h5 {
+	color: #3D3D3D;
+	text-transform: uppercase;
+	letter-spacing: -.04em;
+	font-size: 20px;
+	margin: 0;
+}
+
+
+.single-shop-info .boxed-list li a {
+	background: #E9E9E9;
+	font-size: 14px;
+	border-radius: 0;
+	font-family: 'Anton', sans-serif;
+	color: #111111;
+	padding: 10px 15px;
+}
+.single-shop-info .boxed-list li{
+	color: #111111;
+}
+.single-shop-content .bordered-btn-v2 {
+	width: 100%;
+	padding: 20px 0;
+}
+.black-btn{
+	background: #000;
+}
+.black-btn:after{
+	border-color: var(--theme-color);
+}
+.single-shop-info .color-list li {
+	height: 40px;
+	width: 40px;
+	cursor: auto;
+}
+
+.shop-single-model-detail ul li i {
+	background: #000000;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	margin-right: 15px;
+ }
+ .shop-single-model-detail ul li {
+	display: inline-flex;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	align-items: center;
+}
+ .shop-single-model-detail ul li p {
+	flex: 1;
+	margin: 0;
+	color: #3D3D3D;
+ }
+
+ /* single-shop bottom slider*/
+ 
+ .single-shop-bottom-slide h5 {
+	color: #fff;
+	font-size: 28px;
+	text-transform: uppercase;
+	margin-top: -20px;
+}
+ .single-shop-bottom-slide h5 span {
+	font-size: 70%;
+	color: var(--theme-color);
+	background: #000;
+	padding: 0 10px;
+	font-weight: 400;
+	display: inline-block;
+ }
+ .single-shop-bottom-slide h5 a {
+	display: block;
+ }
+ .single-shop-bottom-slide h5 a:hover {
+	color: var(--theme-color);
+ }
+ .single-shop-bottom-slide > a img{
+	margin: 0 auto;
+ }
+.single-shop-bottom .section-content-v2 h3{
+	font-size: 60px;
+}
+.single-shop-bottom .section-content-v2 h2{
+	font-size: 70px;
+}
+ 
+.single-shop-area {
+  position: relative;
+  z-index: 1;
+}
+.single-shop-bg {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: -1px;
+	width: 75%;
+	z-index: -1;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 13% 100%);
+}
+.single-shop-bg:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .35;
+  background: #141414;
+  content: '';
+}
+.single-shop-abolute {
+	position: absolute;
+	left: 0;
+	bottom: -7%;
+}
+.single-shop-bottom-slider .slick-arrow {
+	left: calc(-6% - 75px);
+	top: 70%;
+}
+.single-shop-bottom-slider .slick-arrow.slick-next {
+	left: -6%;
+}
+
+.single-shop-bottom-slide > a {
+	max-width: 220px;
+	max-height: 220px;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 50%;
+ }
+ .single-shop-bottom-slider{
+	 margin-left: -15px;
+	 margin-right: -15px;
+ }
+ .single-shop-bottom-slider .slick-slide{
+	 margin-left: 15px;
+	 margin-right: 15px;
+ }
+
+ /* single-shop-description */
+ 
+ .single-shop-tab-link ul li a {
+	font-size: 25px;
+	font-family: 'Anton', sans-serif;
+	color: #7B7D7F;
+	display: inline-block;
+	padding: 20px 25px;
+}
+.single-shop-tab-link ul li a:hover {
+	color: var(--theme-color);
+ }
+ .single-shop-tab-content {
+	background: #fff;
+	padding: 50px;
+	position: relative;
+	z-index: 1;
+}
+.single-shop-tab-content::after {
+	position: absolute;
+	z-index: -1;
+	right: 100%;
+	top: 50px;
+	content: '';
+	border-top: 70px solid var(--theme-color);
+	border-right: 40px solid white;
+	transform: translate(50%) rotate(-30deg);
+}
+.single-shop-tab-link ul li a.active {
+	background: var(--theme-color);
+	color: #fff;
+ }
+ 
+.single-shop-tab-area {
+	background-color: #F2F2F2;
+	background-repeat: no-repeat;
+	background-position: left;
+ }
+ 
+.single-shop-description-wrap {
+	position: relative;
+	z-index: 1;
+ }
+ .single-shop-description-wrap > img {
+	position: absolute;
+	left: 50%;
+	top: 43%;
+	transform: translate(-50%, -50%);
+	max-width: 50%;
+}
+ .section-content h4 {
+	font-size: 60px;
+	margin: 0;
+ } 
+ .section-content h5 {
+	font-size: 22px;
+	letter-spacing: .1em;
+	color:var(--theme-color);
+ } 
+ 
+ .description-text {
+	position: relative;
+	margin-right: 55%;
+	text-align: right;
+}
+ .description-text h5{
+	 text-transform: uppercase;
+}
+ .reverse-item .description-text {
+	margin-left: 55%;
+	margin-right: auto;
+	text-align: left;
+}
+.description-text::after {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 12px;
+	width: 12px;
+	border: 2px solid #000;
+	content: '';
+	border-radius: 50%;
+}
+.reverse-item .description-text::after {
+	left: -25px;
+	right: auto;
+}
+.single-shop-addition-img {
+	height: 350px;
+}
+
+
+.client-review-title h5 {
+	text-transform: uppercase;
+	margin: 0;
+ }
+ .client-review-title h5 span {
+	color: #A8AAAB;
+	font-size: 80%;
+	text-transform: none;
+	margin-left: 30px;
+ }
+ .client-review-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+ }
+ .ratting-star ul li{
+	 color: var(--theme-color);
+ }
+ .ratting-star ul li i{
+	 font-weight: 400;
+ }
+ .ratting-star ul li.active i{
+	 font-weight: 900;
+	 color: var(--theme-color);
+ }
+ .client-review-item p{
+	 color: #7B7D7F;
+ }
+ .client-review-item {
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #D9D9D9;
+}
+.client-review-form > h4 {
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+.single-shop-review .section-content h4 {
+	font-size: 40px;
+}
+
+.client-review-input input,
+.client-review-input textarea{
+	border: 1px solid #EAEAEB;
+	border-radius: 5px;
+	transition: .3s ease;
+ }
+.client-review-input input:focus,
+.client-review-input textarea:focus{
+	border-color: var(--theme-color);
+ }
+ .client-review-item:last-child {
+	border: 0;
+}
+ .client-add-review h5 {
+	text-transform: uppercase;
+	margin: 0;
+	margin-right: 15px;
+ }
+ .client-add-review {
+	display: flex;
+	align-items: center;
+ }
+ .client-add-review .ratting-star ul li {
+	cursor: pointer;
+ }
+ .single-shop-tab {
+	display: none;
+	animation: fadeEffect 1s ease;
+ }
+ .single-shop-tab.active {
+	display: block;
+ }
+
+ @keyframes fadeEffect{
+	 0%{opacity: 0;}
+	 100%{opacity: 1;}
+ }
+
+ /* CONFIGURE AREA */
+ 
+ .config-wrapper {
+	padding-top: 180px;
+}
+ .config-body {
+	background: #fff;
+	position: relative;
+	z-index: 1;
+ }
+ .config-bg-shape-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 46%;
+	z-index: -1;
+}
+ .config-bg-shape-wrap::after {
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	bottom: 0;
+	right: -15px;
+	content: '';
+	background: var(--theme-color);
+	z-index: -1;
+	transform: skew(-1deg);
+}
+ .config-bg-shape {
+	height: 100%;
+}
+.bordered-btn-v2.white-border:after{
+	border-color: #fff;
+}
+.config-title {
+	padding: 40px 0;
+	padding-left: 40px;
+}
+ .config-title h3 {
+	font-size: 57px;
+	text-transform: uppercase;
+	color: var(--theme-color);
+	display: flex;
+	align-items: flex-end;
+	line-height: 1;
+	margin-bottom: 10px;
+ }
+ .config-title h3 span {
+	color: #fff;
+	font-size: 40%;
+	margin-bottom: 5px;
+	margin-left: 10px;
+ }
+ .config-title h1 {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 105px;
+}
+ .config-title h4 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	font-size: 30px;
+ }
+ 
+ .config-wheel-wrap {
+	position: relative;
+	display: inline-block;
+}
+ .config-main-wheel::after {
+	width: 75%;
+	content: '';
+	padding-top: 86%;
+	position: absolute;
+	right: 1%;
+	top: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-right: 5px solid #E5DEDE;
+	transform: translate(0, -50%);
+	z-index: -3;
+}
+.wheel-shadow {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: -1;
+	transform: translate(-50%);
+}
+.prev-btn:hover,
+.prev-btn {
+	background: #D6D6D6;
+	color: #000;
+}
+.config-content-wrap {
+	padding: 60px 0;
+	position: relative;
+	z-index: 100;
+}
+.config-content-title h5 {
+	font-size: 28px;
+	background: #D6D6D6;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 4px;
+	transition: .3s ease-in-out;
+	margin-left: -100px;
+	cursor: pointer;
+	position: relative;
+}
+.config-content-title h5 {
+	background: var(--theme-color);
+	color: #fff;
+}
+.pulse-pop:before,
+.bounce-pop h5::before {
+   content: "";
+   display: inline-block;
+   position: absolute;
+   top: -5px;
+   left: -5px;
+   bottom: -5px;
+   right: -5px;
+   border-radius: inherit;
+   background-color: var(--theme-color);
+   opacity: 0.5;
+   z-index: -1;
+   -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both
+      infinite;
+   animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+}
+@keyframes btnIconRipple {
+   0% {
+      border-width: 4px;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+   }
+
+   80% {
+      border-width: 1px;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+.running-move,
+.config-content-title h5 i{
+	animation: moving 1.2s ease infinite;
+}
+@keyframes moving{
+	0%{transform: translate(-8px);}
+	50%{transform: translate(0px);}
+	100%{transform: translate(-8px);}
+}
+.config-category{
+	position: relative;
+}
+.config-category ul li {
+	font-size: 21px;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	text-transform: uppercase;
+	color: #232323;
+	font-family: 'Anton', sans-serif;
+	padding: 8px 0;
+	position: relative;
+	padding-right: 20px;
+	border-bottom: 1px dashed #D6D6D6;
+	background: #fff;
+}
+.config-category ul li span {
+	position: absolute;
+	right: 105%;
+	color: var(--theme-color);
+}
+ .config-category ul li:last-child {
+	border-bottom: 0;
+}
+ .config-category ul li:after {
+	content: "";
+	position: absolute;
+	left: 100%;
+	height: 2px;
+	width: 30px;
+	background: #232323;
+	top: 50%;
+	transform: translate(0, -50%);
+	transition: .3s ease-in-out;
+	pointer-events: none;
+	animation: moving2 1s ease infinite;
+ }
+ .config-category ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+ .config-category ul li.active, .config-category ul li:hover {
+	color: var(--theme-color);
+ }
+ .config-category ul li.active::after {
+	 background: var(--theme-color);
+ }
+ .selected-color-wrap {
+	border-left: 10px solid var(--theme-color);
+	padding: 30px 0;
+	padding-left: 50px;
+}
+.selected-color-wrap h4 {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	margin-bottom: 0;
+	display: inline-block;
+	position: relative;
+}
+.selected-color-wrap h4 span {
+	padding: 10px 15px;
+	display: inline-block;
+	border: 1px solid;
+	cursor: pointer;
+	transition: .3s ease;
+}
+.selected-color-wrap h4 span:hover,
+.selected-color-wrap h4 span.active {
+	color: var(--theme-color);
+}
+.selected-color-wrap h4 i {
+	position: absolute;
+	right: 105%;
+	top: 50%;
+	transform: translate(0, -50%);
+	animation: moving2 1s ease infinite;
+}
+@keyframes moving2{
+	0%{transform: translate(5px, -50%);}
+	50%{transform: translate(0, -50%);}
+	100%{transform: translate(5px, -50%);}
+}
+ .selected-color-wrap ul li span {
+	width: 80px;
+	height: 27px;
+	display: inline-block;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	line-height: 27px;
+	font-size: 15px;
+	position: relative;
+}
+.selected-color-wrap ul li .color-holder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.selected-color-wrap ul li p {
+	display: inline-block;
+	color: #fff;
+	margin: 0;
+	margin-left: 15px;
+	font-size: 16px;
+}
+.selected-color-wrap ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	min-width: 200px;
+}
+ .selected-color-wrap ul li:last-child {
+	margin: 0;
+ }
+ .select-color-title h5,
+ .choose-color-title h5 {
+	color: #232323;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.choose-color-category ul,
+ .select-color-category ul{
+	 display: flex;
+	 flex-wrap: wrap;
+ }
+ .choose-color-category ul li,
+ .select-color-category ul li{
+	 position: relative;
+	 margin: 3px;
+	 cursor: pointer;
+	 text-align: center;
+ }
+ .choose-color-category ul li.checked
+ .select-color-category ul li.active {
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.choose-color-category ul li p,
+ .select-color-category ul li p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 11px;
+	margin: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: .3s ease;
+}
+.choose-color-category ul li span,
+.select-color-category ul li span {
+	width: 105px;
+	height: 34px;
+	border-radius: 4px;
+	display: block;
+	border: 1px solid #ddd;
+}
+.choose-color-category ul li.checked span,
+.select-color-category ul li.active span {
+	border-color: var(--theme-color);
+}
+
+.choose-color-page{
+	margin-left: -4px;
+	margin-right: -4px;
+}
+.action-btns button, .action-btns a {
+	margin: 8px;
+	padding-right: 0;
+	padding-left: 0;
+	width: 120px;
+}
+.action-inner{
+	display: inline-block;
+}
+.config-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+ }
+ .config-navigation ul li {
+	width: 23%;
+	margin: 1%;
+	text-align: center;
+	transition: .3s ease;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.config-navigation ul li img {
+	transition: .3s ease-in-out;
+	border: 2px solid #fff;
+	padding: 10px;
+}
+ .config-navigation ul li.active img{
+	 border-color: var(--theme-color);
+ }
+ .config-navigation ul li span {
+	color: #fff;
+	margin-top: 10px;
+	text-transform: uppercase;
+	font-size: 13px;
+	transition: .3s ease;
+}
+ .config-navigation ul li:hover span,
+ .config-navigation ul li.active span {
+	color: var(--theme-color);
+}
+
+ 
+.pointer-name {
+	padding: 20px 40px;
+	font-size: 22px;
+	color: #ffffff;
+	position: absolute;
+	top: 30%;
+	right: -15%;
+	background: var(--theme-color);
+	border: 2px dashed #000;
+	border-radius: 10px;
+	margin: 0;
+	z-index: 2;
+	text-transform: uppercase;
+	transition: .3s ease-in-out;
+}
+
+.pointer-name::after,
+.pointer-name::before {
+	content: '';
+	height: 135px;
+	width: 0;
+	position: absolute;
+	right: 100%;
+	top: 100%;
+	border-right: 2px dashed #000;
+	border-bottom: 2px dashed #000;
+	transform: rotate(54deg);
+	transform-origin: 0% 15%;
+}
+ .pointer-name::before {
+	transform: rotate(45deg);
+	transform-origin: 0% -5%;
+}
+
+.pointer {
+	display: flex;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 48%;
+	right: 30%;
+	background: var(--theme-color);
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed #000000;
+	transition: .3s ease-in-out;
+}
+.pointer::after {
+	content: '';
+	height: 9px;
+	width: 9px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #000;
+	opacity: 0;
+	transition: .3s ease-in-out;
+}
+ .config-pointer.active .pointer{
+	 border-color: transparent;
+ }
+ .config-pointer.active .pointer:after{
+	 opacity: 1;
+ }
+ .preview-wheel {
+	position: relative;
+	max-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ /* poiter position */
+ .config-pointer.outer-barrel .pointer {
+	right: 19%;
+	top: 16%;
+}
+.config-pointer.inner-barrel .pointer {
+	right: 23%;
+	top: 71%;
+}
+.config-pointer.big-bolts .pointer {
+	right: 12%;
+	top: 53%;
+}
+.config-pointer.face .pointer {
+	right: 28%;
+	top: 27%;
+}	
+.config-pointer.face-letter .pointer {
+	top: 41%;
+	right: 22%;
+}
+.config-pointer.accents .pointer {
+	right: 20%;
+	top: 34%;
+}
+.config-pointer.cap .pointer {
+	right: 46%;
+	top: 48%;
+}
+.config-pointer.cap-letter .pointer {
+	right: 47%;
+	top: 47%;
+}
+
+/* outer-barrel */
+.config-pointer.outer-barrel .pointer-name {
+	top: 1%;
+	right: -12%;
+}
+.config-pointer.outer-barrel .pointer-name::after,
+.config-pointer.outer-barrel .pointer-name::before {
+	left: auto;
+	right: 100%;
+	height: 90px;
+}
+
+/* inner-barrel */
+.config-pointer.inner-barrel .pointer-name {
+	top: 40%;
+	right: -24%;
+}
+.config-pointer.inner-barrel .pointer-name::after,
+.config-pointer.inner-barrel .pointer-name::before {
+	left: auto;
+	right: 100%;
+	height: 260px;
+}
+.config-pointer.outer-barrel .pointer-name::before,
+.config-pointer.inner-barrel .pointer-name::before,
+.config-pointer.big-bolts .pointer-name::before  {
+	transform: rotate(43deg);
+}
+.config-pointer.outer-barrel .pointer-name::after,
+.config-pointer.inner-barrel .pointer-name::after,
+.config-pointer.big-bolts .pointer-name::after {
+	transform: rotate(52deg);
+}
+
+/* big-bolts */
+.config-pointer.big-bolts .pointer-name {
+	top: 34%;
+	right: 1%;
+	left: auto;
+	transform: translate(100%);
+}
+.config-pointer.big-bolts .pointer-name::after,
+.config-pointer.big-bolts .pointer-name::before {
+	left: auto;
+	right: 100%;
+}
+/* face */
+.config-pointer.face .pointer-name {
+	top: 8%;
+	right: 2%;
+}
+/* faceletter */
+.config-pointer.face-letter .pointer-name {
+	top: 21%;
+	right: -13%;
+}
+/* accents */
+.config-pointer.accents .pointer-name {
+	top: 14%;
+	right: -11%;
+}
+/* cap */
+.config-pointer.cap .pointer-name {
+	right: 0%;
+	top: 11%;
+}
+.config-pointer.cap .pointer-name::after,
+.config-pointer.cap .pointer-name::before {
+	height: 355px;
+	right: 95%;
+	top: 84%;
+}
+/* cap-letter */
+.config-pointer.cap-letter .pointer-name {
+	right: -6%;
+	top: 11%;
+}
+.config-pointer.cap-letter .pointer-name::after,
+.config-pointer.cap-letter .pointer-name::before {
+	height: 355px;
+	right: 95%;
+	top: 75%;
+}
+
+/* spike */
+.config-pointer.spike .pointer {
+	right: 39%;
+}
+.config-pointer.spike .pointer-name {
+	top: 14%;
+	right: -4%;
+}
+.config-pointer.spike .pointer-name::after,
+.config-pointer.spike .pointer-name::before {
+	height: 300px;
+}
+/* barrel */
+.config-pointer.barrel .pointer {
+	right: 9%;
+}
+.config-pointer.barrel .pointer-name {
+	top: 32%;
+	right: -17%;
+}
+.config-pointer.barrel .pointer-name::after,
+.config-pointer.barrel .pointer-name::before {
+	height: 105px;
+}
+
+/* barrel-letter */
+.config-pointer.barrel-letter .pointer {
+	top: 43%;
+	right: 3%;
+}
+.config-pointer.barrel-letter .pointer-name {
+	top: 32%;
+	right: -25%;
+}
+.config-pointer.barrel-letter .pointer-name::after,
+.config-pointer.barrel-letter .pointer-name::before {
+	height: 45px;
+}
+
+/* valore */
+.valore .config-pointer.accents .pointer-name {
+	top: 18%;
+	right: -8.5%;
+}
+.valore .config-pointer.accents .pointer {
+	right: 22%;
+	top: 37%;
+}
+.valore .config-pointer.face-letter .pointer {
+	top: 45%;
+}
+.valore .config-pointer.face-letter .pointer-name {
+	top: 25%;
+}
+.valore .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.valore .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+}
+
+/* cyrus */
+.cyrus .config-pointer.face-letter .pointer {
+	top: 29%;
+	right: 25%;
+}
+.cyrus .config-pointer.face-letter .pointer-name {
+	top: 9%;
+	right: -10%;
+}
+.cyrus .config-pointer.big-bolts .pointer {
+	right: 11%;
+	top: 52%;
+}
+.cyrus .config-pointer.big-bolts .pointer {
+	right: 11%;
+	top: 52%;
+}
+.cyrus .config-pointer.accents .pointer {
+	top: 40%;
+}
+.cyrus .config-pointer.accents .pointer-name {
+	top: 20.5%;
+}
+
+/* lieto */
+.lieto .config-pointer.face-letter .pointer {
+	top: 34%;
+}
+.lieto .config-pointer.face-letter .pointer-name {
+	top: 14%;
+}
+.lieto .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.lieto .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+}
+.lieto .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+	right: 1%;
+}
+.lieto .config-pointer.face .pointer {
+	right: 18%;
+	top: 45%;
+}
+.lieto .config-pointer.face .pointer-name {
+	top: 24%;
+	right: -10%;
+}
+.lieto .config-pointer.accents .pointer {
+	top: 32%;
+}
+.lieto .config-pointer.accents .pointer-name {
+	top: 12%;
+}
+
+/* mangano */
+.mangano .config-pointer.face .pointer {
+	top: 31%;
+}
+.mangano .config-pointer.face .pointer-name {
+	top: 12%;
+}
+.mangano .config-pointer.face-letter .pointer {
+	top: 48%;
+	right: 18%;
+}
+.mangano .config-pointer.face-letter .pointer-name {
+	top: 28%;
+	right: -17%;
+}
+.mangano .config-pointer.big-bolts .pointer {
+	top: 54%;
+}
+.mangano .config-pointer.big-bolts .pointer-name {
+	top: 35%;
+}
+.mangano .config-pointer.accents .pointer {
+	top: 28%;
+}
+.mangano .config-pointer.accents .pointer-name {
+	top: 8%;
+}
+.mangano .config-pointer.inner-barrel .pointer {
+	right: 24%;
+	top: 72%;
+}
+.mangano .config-pointer.inner-barrel .pointer-name {
+	top: 41%;
+	right: -23%;
+}
+/* nitti */
+.nitti .config-pointer.face-letter .pointer {
+	top: 44%;
+}
+.nitti .config-pointer.face-letter .pointer-name {
+	top: 24%;
+}
+.nitti .config-pointer.accents .pointer {
+	right: 22%;
+	top: 29%;
+}
+.nitti .config-pointer.accents .pointer-name {
+	top: 9%;
+	right: -9%;
+}
+.nitti .config-pointer.face .pointer {
+	top: 33%;
+}
+.nitti .config-pointer.face .pointer {
+	right: 28%;
+}
+.nitti .config-pointer.face .pointer-name {
+	top: 14%;
+}
+.nitti .config-pointer.inner-barrel .pointer {
+	right: 19%;
+	top: 67%;
+}
+.nitti .config-pointer.inner-barrel .pointer-name {
+	top: 36%;
+	right: -28%;
+}
+/* sereno */
+.sereno .config-pointer.face-letter .pointer {
+	top: 31%;
+}
+.sereno .config-pointer.face-letter .pointer-name {
+	top: 11%;
+}
+.sereno .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.sereno .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+}
+.sereno .config-pointer.face .pointer {
+	right: 20%;
+	top: 47%;
+}
+.sereno .config-pointer.face .pointer-name {
+	top: 27%;
+	right: -7%;
+}
+.sereno .config-pointer.accents .pointer {
+	top: 29%;
+}
+.sereno .config-pointer.accents .pointer {
+	top: 29%;
+}
+.sereno .config-pointer.inner-barrel .pointer {
+	right: 26%;
+	top: 73%;
+}
+.sereno .config-pointer.inner-barrel .pointer-name {
+	top: 41%;
+	right: -21%;
+}
+/* veloce */
+.veloce .config-pointer.face-letter .pointer {
+	top: 29%;
+	right: 31%;
+}
+.veloce .config-pointer.face .pointer {
+	top: 29%;
+}
+.veloce .config-pointer.face .pointer-name {
+	top: 9.5%;
+	right: 1%;
+}
+.veloce .config-pointer.accents .pointer {
+	top: 33%;
+}
+.veloce .config-pointer.accents .pointer-name {
+	top: 13%;
+}
+.veloce .config-pointer.inner-barrel .pointer {
+	right: 29%;
+	top: 76%;
+}
+.veloce .config-pointer.inner-barrel .pointer-name {
+	top: 45%;
+	right: -18%;
+}
+
+/* vero */
+.vero .config-pointer.face-letter .pointer {
+	top: 34%;
+	right: 27%;
+}
+.vero .config-pointer.face-letter .pointer-name {
+	top: 14%;
+	right: -8%;
+}
+.vero .config-pointer.big-bolts .pointer {
+	top: 50%;
+}
+.vero .config-pointer.big-bolts .pointer-name {
+	top: 30%;
+}
+.vero .config-pointer.face .pointer {
+	right: 23%;
+	top: 33%;
+}
+.vero .config-pointer.face .pointer-name {
+	top: 13.5%;
+	right: -4%;
+}
+.vero .config-pointer.accents .pointer {
+	top: 30%;
+}
+.vero .config-pointer.accents .pointer-name {
+	top: 10%;
+}
+.vero .config-pointer.inner-barrel .pointer {
+	right: 26%;
+	top: 74%;
+}
+.vero .config-pointer.inner-barrel .pointer-name {
+	top: 43%;
+	right: -21%;
+}
+/* zeta */
+.zeta .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.zeta .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+}
+.zeta .config-pointer.face .pointer {
+	right: 20%;
+	top: 40%;
+}
+.zeta .config-pointer.face .pointer-name {
+	top: 21%;
+	right: -7%;
+}
+.zeta .config-pointer.accents .pointer {
+	right: 18%;
+}
+.zeta .config-pointer.accents .pointer-name {
+	right: -13%;
+}
+
+/* bandido-sf-7399 */
+.bandido-sf-7399 .config-pointer.accents .pointer-name {
+	top: 5%;
+	right: -5%;
+}
+.bandido-sf-7399 .config-pointer.accents .pointer {
+	right: 26%;
+	top: 24.5%;
+}
+.bandido-sf-7399 .config-pointer.face-letter .pointer {
+	top: 48%;
+	right: 68%;
+}
+.bandido-sf-7399 .config-pointer.face-letter .pointer-name {
+	top: 1.5%;
+	right: 4.5%;
+}
+.bandido-sf-7399 .config-pointer.face-letter .pointer-name::after,
+.bandido-sf-7399 .config-pointer.face-letter .pointer-name::before {
+	height: 450px;
+}
+.bandido-sf-7399 .config-pointer.face .pointer {
+	right: 26%;
+}
+.bandido-sf-7399 .config-pointer.face .pointer-name {
+	right: 0%;
+}
+.bandido-sf-7399 .config-pointer.big-bolts .pointer {
+	top: 52%;
+}
+.bandido-sf-7399 .config-pointer.big-bolts .pointer-name {
+	top: 33%;
+}
+
+/* borgio-sf-7283 */
+.borgio-sf-7283 .config-pointer.accents .pointer-name {
+	top: 4%;
+	right: -6%;
+}
+.borgio-sf-7283 .config-pointer.accents .pointer {
+	right: 24%;
+	top: 23%;
+}
+.borgio-sf-7283 .config-pointer.face-letter .pointer {
+	top: 10%;
+	right: 54%;
+}
+.borgio-sf-7283 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 1%;
+}
+.borgio-sf-7283 .config-pointer.face-letter .pointer-name::after,
+.borgio-sf-7283 .config-pointer.face-letter .pointer-name::before {
+	height: 235px;
+	transform: rotate(87deg);
+	transform-origin: 0% 0%;
+}
+.borgio-sf-7283 .config-pointer.face-letter .pointer-name::before {
+	transform: rotate(84deg);
+	transform-origin: 0% -5%;
+}
+.borgio-sf-7283 .config-pointer.face .pointer {
+	right: 24%;
+}
+.borgio-sf-7283 .config-pointer.face .pointer-name {
+	right: -2%;
+}
+.borgio-sf-7283 .config-pointer.big-bolts .pointer {
+	right: 10%;
+	top: 52%;
+}
+.borgio-sf-7283 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+	right: -1%;
+}
+.borgio-sf-7283 .config-pointer.inner-barrel .pointer {
+	right: 24%;
+	top: 72%;
+}
+.borgio-sf-7283 .config-pointer.inner-barrel .pointer-name {
+	top: 41%;
+	right: -22.5%;
+}
+
+/* .carino-sf-2197  */
+.carino-sf-2197 .config-pointer.accents .pointer {
+	right: 20%;
+	top: 31%;
+}
+.carino-sf-2197 .config-pointer.accents .pointer-name {
+	top: 11%;
+	right: -11%;
+}
+.carino-sf-2197 .config-pointer.face-letter .pointer {
+	top: 36%;
+}
+.carino-sf-2197 .config-pointer.face-letter .pointer-name {
+	top: 16%;
+}
+.carino-sf-2197 .config-pointer.face .pointer {
+	top: 24%;
+}
+.carino-sf-2197 .config-pointer.face .pointer-name {
+	top: 5%;
+}
+.carino-sf-2197 .config-pointer.big-bolts .pointer {
+	top: 38%;
+}
+.carino-sf-2197 .config-pointer.big-bolts .pointer-name {
+	top: 18%;
+}
+.carino-sf-2197 .config-pointer.inner-barrel .pointer {
+	right: 30%;
+	top: 77%;
+}
+.carino-sf-2197 .config-pointer.inner-barrel .pointer-name::after,
+.carino-sf-2197 .config-pointer.inner-barrel .pointer-name::before {
+	height: 340px;
+}
+.carino-sf-2197 .config-pointer.inner-barrel .pointer-name {
+	top: 39%;
+}
+/* ceaser-sf-6241 */
+.ceaser-sf-6241 .config-pointer.accents .pointer {
+	right: 17%;
+	top: 31%;
+}
+.ceaser-sf-6241 .config-pointer.accents .pointer-name {
+	top: 12%;
+	right: -13.5%;
+}
+.ceaser-sf-6241 .config-pointer.face-letter .pointer {
+	top: 37%;
+}
+.ceaser-sf-6241 .config-pointer.face-letter .pointer-name {
+	top: 17%;
+}
+.ceaser-sf-6241 .config-pointer.face .pointer {
+	right: 22%;
+	top: 34%;
+}
+.ceaser-sf-6241 .config-pointer.face .pointer-name {
+	top: 14.5%;
+	right: -5%;
+}
+.ceaser-sf-6241 .config-pointer.big-bolts .pointer {
+	right: 10%;
+	top: 51%;
+}
+.ceaser-sf-6241 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+	right: -0.5%;
+}
+.ceaser-sf-6241 .config-pointer.inner-barrel .pointer {
+	right: 21%;
+}
+.ceaser-sf-6241 .config-pointer.inner-barrel .pointer-name {
+	right: -26%;
+}
+
+.clemente-sf-5234 .config-pointer.accents .pointer {
+	right: 23%;
+}
+.clemente-sf-5234 .config-pointer.accents .pointer-name {
+	right: -8%;
+}
+.clemente-sf-5234 .config-pointer.face-letter .pointer {
+	top: 17%;
+	right: 29%;
+}
+.clemente-sf-5234 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: -1%;
+}
+.clemente-sf-5234 .config-pointer.face-letter .pointer-name::after,
+.clemente-sf-5234 .config-pointer.face-letter .pointer-name::before {
+	height: 85px;
+}
+.clemente-sf-5234 .config-pointer.face .pointer {
+	top: 25%;
+}
+.clemente-sf-5234 .config-pointer.face .pointer-name {
+	top: 6%;
+}
+
+
+.donno-sf-7412 .config-pointer.face-letter .pointer {
+	top: 37%;
+}
+.donno-sf-7412 .config-pointer.face-letter .pointer-name {
+	top: 17.5%;
+}
+.donno-sf-7412 .config-pointer.face .pointer {
+	right: 20%;
+	top: 36%;
+}
+.donno-sf-7412 .config-pointer.face .pointer-name {
+	top: 16.5%;
+	right: -7%;
+}
+.donno-sf-7412 .config-pointer.big-bolts .pointer {
+	right: 17%;
+	top: 32%;
+}
+.donno-sf-7412 .config-pointer.big-bolts .pointer-name {
+	top: 12%;
+	right: 6%;
+}
+.donno-sf-7412 .config-pointer.inner-barrel .pointer {
+	top: 67%;
+}
+.donno-sf-7412 .config-pointer.inner-barrel .pointer-name {
+	top: 36%;
+}
+
+/* illiano-sf-4156 */
+.illiano-sf-4156 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.illiano-sf-4156 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.illiano-sf-4156 .config-pointer.face-letter .pointer {
+	top: 20%;
+	right: 24%;
+}
+.illiano-sf-4156 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: -10%;
+}
+.illiano-sf-4156 .config-pointer.big-bolts .pointer {
+	top: 45%;
+}
+.illiano-sf-4156 .config-pointer.big-bolts .pointer-name {
+	top: 25%;
+	right: 0%;
+}
+.illiano-sf-4156 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.illiano-sf-4156 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+}
+
+/* mostro-sf-2691 */
+.mostro-sf-2691 .config-pointer.face-letter .pointer {
+	top: 15%;
+	right: 65%;
+}
+.mostro-sf-2691 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 7%;
+}
+.mostro-sf-2691 .config-pointer.face-letter .pointer-name::after,
+.mostro-sf-2691 .config-pointer.face-letter .pointer-name::before {
+	height: 288px;
+	transform: rotate(79deg);
+	transform-origin: 0% 0%;
+}
+.mostro-sf-2691 .config-pointer.face-letter .pointer-name::before {
+	transform: rotate(76deg);
+	transform-origin: 0% -5%;
+}
+.mostro-sf-2691 .config-pointer.face .pointer {
+	top: 24%;
+}
+.mostro-sf-2691 .config-pointer.face .pointer-name {
+	top: 5%;
+}
+
+
+.persico-sf-2578 .config-pointer.accents .pointer {
+	right: 31%;
+	top: 27%;
+}
+.persico-sf-2578 .config-pointer.accents .pointer-name {
+	top: 7%;
+	right: 0%;
+}
+.persico-sf-2578 .config-pointer.face-letter .pointer {
+	top: 43%;
+	right: 60%;
+}
+.persico-sf-2578 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 4%;
+}
+.persico-sf-2578 .config-pointer.face-letter .pointer-name::after,
+.persico-sf-2578 .config-pointer.face-letter .pointer-name::before {
+	height: 363px;
+}
+.persico-sf-2578 .config-pointer.face .pointer {
+	right: 20%;
+	top: 43%;
+}
+.persico-sf-2578 .config-pointer.face .pointer-name {
+	top: 23.5%;
+	right: -7%;
+}
+.persico-sf-2578 .config-pointer.big-bolts .pointer {
+	top: 48%;
+}
+.persico-sf-2578 .config-pointer.big-bolts .pointer-name {
+	top: 28.5%;
+}
+.persico-sf-2578 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.persico-sf-2578 .config-pointer.inner-barrel .pointer-name {
+	top: 38%;
+}
+
+.profaci-twist-sf-5775 .config-pointer.accents .pointer {
+	right: 17%;
+}
+.profaci-twist-sf-5775 .config-pointer.accents .pointer-name {
+	right: -14%;
+}
+.profaci-twist-sf-5775 .config-pointer.face-letter .pointer {
+	top: 45%;
+	right: 63%;
+}
+.profaci-twist-sf-5775 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 3%;
+}
+.profaci-twist-sf-5775 .config-pointer.face-letter .pointer-name::after,
+.profaci-twist-sf-5775 .config-pointer.face-letter .pointer-name::before {
+	height: 405px;
+}
+.profaci-twist-sf-5775 .config-pointer.face .pointer {
+	top: 25%;
+}
+.profaci-twist-sf-5775 .config-pointer.face .pointer-name {
+	top: 6%;
+}
+.profaci-twist-sf-5775 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.profaci-twist-sf-5775 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+.profaci-twist-sf-5775 .config-pointer.inner-barrel .pointer {
+	right: 21%;
+	top: 69%;
+}
+.profaci-twist-sf-5775 .config-pointer.inner-barrel .pointer-name {
+	top: 38%;
+	right: -26%;
+}
+
+/* pronto-sf-2952 */
+.pronto-sf-2952 .config-pointer.face-letter .pointer {
+	top: 14%;
+	right: 43%;
+}
+.pronto-sf-2952 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 15%;
+}
+.pronto-sf-2952 .config-pointer.face-letter .pointer-name::after,
+.pronto-sf-2952 .config-pointer.face-letter .pointer-name::before {
+	height: 60px;
+}
+.pronto-sf-2952 .config-pointer.face .pointer {
+	right: 24%;
+	top: 34%;
+}
+.pronto-sf-2952 .config-pointer.face .pointer-name {
+	top: 14.5%;
+	right: -3%;
+}
+.pronto-sf-2952 .config-pointer.big-bolts .pointer {
+	top: 50%;
+}
+.pronto-sf-2952 .config-pointer.big-bolts .pointer-name {
+	top: 30%;
+	right: 0.5%;
+}
+.pronto-sf-2952 .config-pointer.inner-barrel .pointer {
+	right: 21%;
+	top: 68%;
+}
+.pronto-sf-2952 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+	right: -25.5%;
+}
+
+/* abramo-off-3964 */
+.abramo-off-3964 .config-pointer.face .pointer {
+	right: 21%;
+	top: 32%;
+}
+.abramo-off-3964 .config-pointer.face .pointer-name {
+	top: 12.5%;
+	right: -6%;
+}
+
+/* angello-off-9493 */
+.angello-off-9493 .config-pointer.accents .pointer {
+	right: 23%;
+}
+.angello-off-9493 .config-pointer.accents .pointer-name {
+	right: -8%;
+}
+
+/* arkham-off-1424 */
+.arkham-off-1424 .config-pointer.accents .pointer {
+	top: 47%;
+}
+.arkham-off-1424 .config-pointer.accents .pointer-name {
+	top: 27%;
+}
+.arkham-off-1424 .config-pointer.spike .pointer {
+	right: 38%;
+}
+.arkham-off-1424 .config-pointer.spike .pointer-name {
+	right: -5%;
+}
+.arkham-off-1424 .config-pointer.face .pointer {
+	top: 28%;
+}
+.arkham-off-1424 .config-pointer.face .pointer-name {
+	top: 9%;
+}
+
+
+/* artemus-off-9458 */
+.artemus-off-9458 .config-pointer.accents .pointer {
+	right: 24%;
+	top: 29%;
+}
+.artemus-off-9458 .config-pointer.accents .pointer-name {
+	top: 10%;
+	right: -6%;
+}
+.artemus-off-9458 .config-pointer.spike .pointer {
+	top: 50%;
+}
+.artemus-off-9458 .config-pointer.spike .pointer-name {
+	top: 16%;
+}
+
+
+/* boccia-off-4698 */
+.boccia-off-4698 .config-pointer.spike .pointer {
+	right: 37%;
+}
+.boccia-off-4698 .config-pointer.spike .pointer-name {
+	right: -6%;
+}
+
+
+/* brancata-off-2941 */
+.brancata-off-2941 .config-pointer.spike .pointer {
+	top: 44%;
+}
+.brancata-off-2941 .config-pointer.spike .pointer-name {
+	top: 10%;
+}
+.brancata-off-2941 .config-pointer.barrel-letter .pointer {
+	top: 13%;
+	right: 22%;
+}
+.brancata-off-2941 .config-pointer.barrel-letter .pointer-name {
+	top: 2%;
+	right: -6%;
+}
+.brancata-off-2941 .config-pointer.face .pointer {
+	top: 33%;
+}
+.brancata-off-2941 .config-pointer.face .pointer-name {
+	top: 14%;
+}
+
+/* broglio-off-7597 */
+.broglio-off-7597 .config-pointer.accents .pointer {
+	top: 41.5%;
+}
+.broglio-off-7597 .config-pointer.accents .pointer-name {
+	top: 21.5%;
+}
+.broglio-off-7597 .config-pointer.spike .pointer {
+	top: 44%;
+}
+.broglio-off-7597 .config-pointer.spike .pointer-name {
+	top: 10%;
+}
+.broglio-off-7597 .config-pointer.barrel-letter .pointer {
+	top: 13%;
+	right: 22%;
+}
+.broglio-off-7597 .config-pointer.barrel-letter .pointer-name {
+	top: 1%;
+	right: -7%;
+}
+.broglio-off-7597 .config-pointer.face .pointer {
+	top: 35%;
+}
+.broglio-off-7597 .config-pointer.face .pointer-name {
+	top: 16%;
+}
+
+/* cavita-off-4418 */
+.cavita-off-4418 .config-pointer.accents .pointer {
+	right: 26%;
+	top: 31%;
+}
+.cavita-off-4418 .config-pointer.accents .pointer-name {
+	top: 12%;
+	right: -4%;
+}
+.cavita-off-4418 .config-pointer.face .pointer {
+	top: 24%;
+}
+.cavita-off-4418 .config-pointer.face .pointer-name {
+	top: 5%;
+}
+
+/* cellini-off-9822 */
+.cellini-off-9822 .config-pointer.accents .pointer {
+	top: 38%;
+}
+.cellini-off-9822 .config-pointer.accents .pointer-name {
+	top: 18%;
+}
+.cellini-off-9822 .config-pointer.spike .pointer {
+	right: 37%;
+}
+.cellini-off-9822 .config-pointer.spike .pointer-name {
+	right: -6%;
+}
+.cellini-off-9822 .config-pointer.barrel-letter .pointer {
+	top: 7%;
+	right: 31%;
+}
+.cellini-off-9822 .config-pointer.barrel-letter .pointer-name {
+	top: -4%;
+	right: 3%;
+}
+.cellini-off-9822 .config-pointer.face .pointer {
+	top: 21%;
+}
+.cellini-off-9822 .config-pointer.face .pointer-name {
+	top: 2%;
+}
+
+
+/* corazzo-off-2525 */
+.corazzo-off-2525 .config-pointer.accents .pointer {
+	top: 44%;
+}
+.corazzo-off-2525 .config-pointer.accents .pointer-name {
+	top: 24%;
+}
+
+/* fortuna-off-2553 */
+.fortuna-off-2553 .config-pointer.accents .pointer {
+	right: 24%;
+	top: 41%;
+}
+.fortuna-off-2553 .config-pointer.accents .pointer-name {
+	top: 22%;
+	right: -6%;
+}
+.fortuna-off-2553 .config-pointer.spike .pointer {
+	right: 36%;
+}
+.fortuna-off-2553 .config-pointer.spike .pointer-name {
+	right: -7%;
+}
+.fortuna-off-2553 .config-pointer.face .pointer {
+	top: 33%;
+}
+.fortuna-off-2553 .config-pointer.face .pointer-name {
+	top: 14%;
+}
+
+
+/* goombah-off-5358 */
+.goombah-off-5358 .config-pointer.face .pointer {
+	top: 32%;
+}
+.goombah-off-5358 .config-pointer.face .pointer-name {
+	top: 12.5%;
+}
+
+/* masseria-off-9487 */
+.masseria-off-9487 .config-pointer.spike .pointer {
+	right: 36%;
+}
+.masseria-off-9487 .config-pointer.spike .pointer-name {
+	right: -7%;
+}
+.masseria-off-9487 .config-pointer.face .pointer {
+	top: 33%;
+}
+.masseria-off-9487 .config-pointer.face .pointer-name {
+	top: 13.5%;
+}
+
+
+/* corallo-off-3163 */
+.corallo-off-3163 .config-pointer.accents .pointer {
+	right: 19%;
+}
+.corallo-off-3163 .config-pointer.accents .pointer-name {
+	right: -12%;
+}
+.corallo-off-3163 .config-pointer.face .pointer {
+	right: 25%;
+}
+.corallo-off-3163 .config-pointer.face .pointer-name {
+	right: -1%;
+}
+.corallo-off-3163 .config-pointer.cap .pointer {
+	right: 42%;
+}
+.corallo-off-3163 .config-pointer.cap .pointer-name {
+	right: -3.5%;
+}
+.corallo-off-3163 .config-pointer.spike .pointer-name {
+	right: -8%;
+}
+.corallo-off-3163 .config-pointer.spike .pointer {
+	right: 35%;
+}
+
+/* dedalo-off-5847 */
+.dedalo-off-5847 .config-pointer.accents .pointer {
+	right: 24%;
+}
+.dedalo-off-5847 .config-pointer.accents .pointer-name {
+	right: -7%;
+}
+.dedalo-off-5847 .config-pointer.face .pointer {
+	top: 29%;
+}
+.dedalo-off-5847 .config-pointer.face .pointer-name {
+	top: 10%;
+}
+
+/* fiato-off-6546 */
+.fiato-off-6546 .config-pointer.accents .pointer {
+	top: 36%;
+}
+.fiato-off-6546 .config-pointer.accents .pointer-name {
+	top: 16%;
+}
+.fiato-off-6546 .config-pointer.face .pointer {
+	right: 23%;
+	top: 26%;
+}
+.fiato-off-6546 .config-pointer.face .pointer-name {
+	top: 7%;
+	right: -3.5%;
+}
+
+/* barboza-cf-5422 */
+.barboza-cf-5422 .config-pointer.accents .pointer {
+	right: 36%;
+	top: 22.5%;
+}
+.barboza-cf-5422 .config-pointer.accents .pointer-name {
+	top: 3%;
+	right: 6%;
+}
+.barboza-cf-5422 .config-pointer.face .pointer {
+	right: 27%;
+	top: 29%;
+}
+.barboza-cf-5422 .config-pointer.face .pointer-name {
+	top: 10%;
+	right: 0.5%;
+}
+
+/* scarfo-cf-3834 */
+.scarfo-cf-3834 .config-pointer.accents .pointer {
+	right: 16%;
+	top: 44%;
+}
+.scarfo-cf-3834 .config-pointer.accents .pointer-name {
+	top: 24%;
+	right: -15%;
+}
+.scarfo-cf-3834 .config-pointer.face-letter .pointer {
+	top: 60%;
+	right: 59%;
+}
+.scarfo-cf-3834 .config-pointer.face-letter .pointer-name {
+	top: 9.5%;
+	right: -9%;
+}
+.scarfo-cf-3834 .config-pointer.face-letter .pointer-name::after,
+.scarfo-cf-3834 .config-pointer.face-letter .pointer-name::before {
+	height: 495px;
+}
+.scarfo-cf-3834 .config-pointer.face .pointer {
+	right: 28%;
+	top: 24%;
+}
+.scarfo-cf-3834 .config-pointer.face .pointer-name {
+	top: 4.5%;
+	right: 1%;
+}
+.scarfo-cf-3834 .config-pointer.big-bolts .pointer {
+	right: 11%;
+}
+.scarfo-cf-3834 .config-pointer.big-bolts .pointer-name {
+	top: 33.5%;
+	right: 0%;
+}
+
+/* accardi-sf-5286 */
+.accardi-sf-5286 .config-pointer.face-letter .pointer {
+	top: 43%;
+}
+.accardi-sf-5286 .config-pointer.face-letter .pointer-name {
+	top: 23%;
+}
+.accardi-sf-5286 .config-pointer.face .pointer {
+	top: 33%;
+}
+.accardi-sf-5286 .config-pointer.face .pointer-name {
+	top: 14%;
+	right: 1.5%;
+}
+.accardi-sf-5286 .config-pointer.big-bolts .pointer {
+	top: 54%;
+}
+.accardi-sf-5286 .config-pointer.big-bolts .pointer-name {
+	top: 35%;
+}
+
+/* acuto-sf-6775 */
+.acuto-sf-6775 .config-pointer.accents .pointer {
+	right: 15%;
+	top: 45%;
+}
+.acuto-sf-6775 .config-pointer.accents .pointer-name {
+	top: 26%;
+	right: -15%;
+}
+.acuto-sf-6775 .config-pointer.face-letter .pointer {
+	top: 45%;
+	right: 66%;
+}
+.acuto-sf-6775 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 6.5%;
+}
+.acuto-sf-6775 .config-pointer.face-letter .pointer-name::after,
+.acuto-sf-6775 .config-pointer.face-letter .pointer-name::before {
+	height: 405px;
+}
+.acuto-sf-6775 .config-pointer.face .pointer {
+	right: 26%;
+	top: 32%;
+}
+.acuto-sf-6775 .config-pointer.face .pointer-name {
+	top: 12.5%;
+	right: -1%;
+}
+.acuto-sf-6775 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.acuto-sf-6775 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* aggro-sf-2451 */
+.aggro-sf-2451 .config-pointer.accents .pointer {
+	top: 32%;
+}
+.aggro-sf-2451 .config-pointer.accents .pointer-name {
+	top: 12.5%;
+}
+.aggro-sf-2451 .config-pointer.face-letter .pointer {
+	top: 41.5%;
+	right: 28%;
+}
+.aggro-sf-2451 .config-pointer.face-letter .pointer-name {
+	top: 22%;
+	right: -6.5%;
+}
+.aggro-sf-2451 .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.aggro-sf-2451 .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+}
+
+/* agiato-sf-3876 */
+.agiato-sf-3876 .config-pointer.accents .pointer {
+	top: 41%;
+}
+.agiato-sf-3876 .config-pointer.accents .pointer-name {
+	top: 21.5%;
+}
+.agiato-sf-3876 .config-pointer.face-letter .pointer {
+	top: 46%;
+}
+.agiato-sf-3876 .config-pointer.face-letter .pointer-name {
+	top: 26.5%;
+}
+.agiato-sf-3876 .config-pointer.face .pointer {
+	right: 24%;
+	top: 41%;
+}
+.agiato-sf-3876 .config-pointer.face .pointer-name {
+	top: 22%;
+	right: -2.5%;
+}
+.agiato-sf-3876 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.agiato-sf-3876 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+
+/* amari-sf-9549 */
+.amari-sf-9549 .config-pointer.accents .pointer {
+	top: 33%;
+}
+.amari-sf-9549 .config-pointer.face-letter .pointer {
+	top: 47%;
+}
+.amari-sf-9549 .config-pointer.face-letter .pointer-name {
+	top: 27%;
+}
+.amari-sf-9549 .config-pointer.face .pointer {
+	top: 37%;
+}
+.amari-sf-9549 .config-pointer.face .pointer-name {
+	top: 18%;
+}
+.amari-sf-9549 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.amari-sf-9549 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* anastasia-sf-9348 */
+.anastasia-sf-9348 .config-pointer.accents .pointer {
+	top: 30%;
+}
+.anastasia-sf-9348 .config-pointer.accents .pointer-name {
+	top: 10%;
+}
+.anastasia-sf-9348 .config-pointer.face-letter .pointer {
+	top: 13%;
+	right: 38%;
+}
+.anastasia-sf-9348 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 11.5%;
+}
+.anastasia-sf-9348 .config-pointer.face-letter .pointer-name::after,
+.anastasia-sf-9348 .config-pointer.face-letter .pointer-name::before {
+	height: 49px;
+}
+.anastasia-sf-9348 .config-pointer.big-bolts .pointer {
+	top: 52%;
+}
+.anastasia-sf-9348 .config-pointer.big-bolts .pointer-name {
+	top: 33%;
+}
+
+/* antico-sf-9329 */
+.antico-sf-9329 .config-pointer.accents .pointer {
+	top: 32%;
+}
+.antico-sf-9329 .config-pointer.accents .pointer-name {
+	top: 12%;
+}
+.antico-sf-9329 .config-pointer.face-letter .pointer {
+	top: 11%;
+	right: 37%;
+}
+.antico-sf-9329 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 12.5%;
+}
+.antico-sf-9329 .config-pointer.face-letter .pointer-name::after,
+.antico-sf-9329 .config-pointer.face-letter .pointer-name::before {
+	height: 30px;
+}
+.antico-sf-9329 .config-pointer.face .pointer {
+	right: 23%;
+	top: 32%;
+}
+.antico-sf-9329 .config-pointer.face .pointer-name {
+	top: 13%;
+	right: -3.5%;
+}
+.antico-sf-9329 .config-pointer.inner-barrel .pointer-name {
+	top: 43%;
+}
+.antico-sf-9329 .config-pointer.inner-barrel .pointer {
+	top: 74%;
+}
+
+/* arkham-sf-6892 */
+.arkham-sf-6892 .config-pointer.accents .pointer {
+	top: 46.5%;
+}
+.arkham-sf-6892 .config-pointer.accents .pointer-name {
+	top: 27%;
+}
+.arkham-sf-6892 .config-pointer.face-letter .pointer {
+	top: 47%;
+}
+.arkham-sf-6892 .config-pointer.face-letter .pointer-name {
+	top: 27.5%;
+}
+.arkham-sf-6892 .config-pointer.face .pointer {
+	top: 28.5%;
+}
+.arkham-sf-6892 .config-pointer.face .pointer-name {
+	top: 9%;
+	right: 1%;
+}
+.arkham-sf-6892 .config-pointer.big-bolts .pointer {
+	top: 60%;
+}
+.arkham-sf-6892 .config-pointer.big-bolts .pointer-name {
+	top: 40.5%;
+}
+.arkham-sf-6892 .config-pointer.inner-barrel .pointer {
+	right: 21%;
+}
+.arkham-sf-6892 .config-pointer.inner-barrel .pointer-name {
+	right: -25.5%;
+}
+
+/* armone-sf-2757 */
+.armone-sf-2757 .config-pointer.accents .pointer {
+	top: 36%;
+}
+.armone-sf-2757 .config-pointer.accents .pointer-name {
+	top: 16%;
+}
+.armone-sf-2757 .config-pointer.face-letter .pointer {
+	top: 35%;
+}
+.armone-sf-2757 .config-pointer.face-letter .pointer-name {
+	top: 16%;
+	right: -12%;
+}
+.armone-sf-2757 .config-pointer.face .pointer {
+	top: 39%;
+}
+.armone-sf-2757 .config-pointer.face .pointer-name {
+	top: 20%;
+	right: 1.5%;
+}
+.armone-sf-2757 .config-pointer.big-bolts .pointer {
+	top: 49%;
+}
+.armone-sf-2757 .config-pointer.big-bolts .pointer-name {
+	top: 30%;
+}
+
+
+/* artemus-sf-3844 */
+.artemus-sf-3844 .config-pointer.big-bolts .pointer {
+	right: 11%;
+}
+.artemus-sf-3844 .config-pointer.big-bolts .pointer-name {
+	right: 0%;
+}
+.artemus-sf-3844 .config-pointer.inner-barrel .pointer {
+	top: 72%;
+}
+.artemus-sf-3844 .config-pointer.inner-barrel .pointer-name {
+	top: 40.5%;
+}
+
+
+/* asaro-sf-3262 */
+.asaro-sf-3262 .config-pointer.accents .pointer {
+	top: 45%;
+}
+.asaro-sf-3262 .config-pointer.accents .pointer-name {
+	top: 25%;
+}
+.asaro-sf-3262 .config-pointer.face-letter .pointer {
+	top: 44%;
+	right: 62%;
+}
+.asaro-sf-3262 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 4%;
+}
+.asaro-sf-3262 .config-pointer.face-letter .pointer-name::after,
+.asaro-sf-3262 .config-pointer.face-letter .pointer-name::before {
+	height: 392px;
+}
+.asaro-sf-3262 .config-pointer.face .pointer {
+	right: 23%;
+	top: 37%;
+}
+.asaro-sf-3262 .config-pointer.face .pointer-name {
+	top: 17.5%;
+	right: -4%;
+}
+.asaro-sf-3262 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.asaro-sf-3262 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+
+
+/* avolo-sf-9635 */
+.avolo-sf-9635 .config-pointer.face-letter .pointer {
+	top: 44%;
+	right: 62%;
+}
+.avolo-sf-9635 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 4%;
+}
+.avolo-sf-9635 .config-pointer.face-letter .pointer-name::after,
+.avolo-sf-9635 .config-pointer.face-letter .pointer-name::before {
+	height: 392px;
+}
+.avolo-sf-9635 .config-pointer.face .pointer {
+	right: 23%;
+	top: 42%;
+}
+.avolo-sf-9635 .config-pointer.face .pointer-name {
+	top: 23%;
+	right: -3%;
+}
+
+/* baratta-sf-2774 */
+.baratta-sf-2774 .config-pointer.accents .pointer {
+	top: 27%;
+}
+.baratta-sf-2774 .config-pointer.accents .pointer-name {
+	top: 7.5%;
+}
+.baratta-sf-2774 .config-pointer.face-letter .pointer {
+	top: 58%;
+	right: 57%;
+}
+.baratta-sf-2774 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: -6%;
+}
+.baratta-sf-2774 .config-pointer.face-letter .pointer-name::after,
+.baratta-sf-2774 .config-pointer.face-letter .pointer-name::before {
+	height: 440px;
+}
+.baratta-sf-2774 .config-pointer.face .pointer {
+	right: 25%;
+	top: 40%;
+}
+.baratta-sf-2774 .config-pointer.face .pointer-name {
+	top: 20.5%;
+	right: -2%;
+}
+
+
+/* barzini-sf-8778 */
+.barzini-sf-8778 .config-pointer.accents .pointer {
+	top: 25%;
+}
+.barzini-sf-8778 .config-pointer.accents .pointer-name {
+	top: 5%;
+}
+.barzini-sf-8778 .config-pointer.face-letter .pointer {
+	top: 52%;
+}
+.barzini-sf-8778 .config-pointer.face-letter .pointer-name {
+	top: 32%;
+}
+.barzini-sf-8778 .config-pointer.face .pointer {
+	right: 24%;
+	top: 34%;
+}
+.barzini-sf-8778 .config-pointer.face .pointer-name {
+	top: 14%;
+	right: -2.5%;
+}
+.barzini-sf-8778 .config-pointer.big-bolts .pointer {
+	top: 55%;
+}
+.barzini-sf-8778 .config-pointer.big-bolts .pointer-name {
+	top: 35.5%;
+}
+.barzini-sf-8778 .config-pointer.inner-barrel .pointer {
+	right: 25%;
+	top: 73%;
+}
+.barzini-sf-8778 .config-pointer.inner-barrel .pointer-name {
+	top: 41.5%;
+	right: -22%;
+}
+
+/* bello-sf-7878 */
+.bello-sf-7878 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.bello-sf-7878 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.bello-sf-7878 .config-pointer.face-letter .pointer {
+	top: 42%;
+	right: 63%;
+}
+.bello-sf-7878 .config-pointer.face-letter .pointer-name {
+	top: 5%;
+	right: 9.5%;
+}
+.bello-sf-7878 .config-pointer.face-letter .pointer-name::after,
+.bello-sf-7878 .config-pointer.face-letter .pointer-name::before {
+	height: 340px;
+}
+.bello-sf-7878 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.bello-sf-7878 .config-pointer.inner-barrel .pointer-name {
+	top: 38%;
+}
+
+/* .benzina-sf-2522  */
+.benzina-sf-2522 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.benzina-sf-2522 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.benzina-sf-2522 .config-pointer.face-letter .pointer {
+	top: 48%;
+	right: 68%;
+}
+.benzina-sf-2522 .config-pointer.face-letter .pointer-name {
+	top: 5%;
+	right: 8.5%;
+}
+.benzina-sf-2522 .config-pointer.face-letter .pointer-name::after,
+.benzina-sf-2522 .config-pointer.face-letter .pointer-name::before {
+	height: 402px;
+}
+.benzina-sf-2522 .config-pointer.face .pointer {
+	top: 33%;
+}
+.benzina-sf-2522 .config-pointer.face .pointer-name {
+	top: 14%;
+}
+
+/* boccia-sf-7893 */
+.boccia-sf-7893 .config-pointer.face-letter .pointer {
+	top: 45%;
+	right: 68%;
+}
+.boccia-sf-7893 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 8.5%;
+}
+.boccia-sf-7893 .config-pointer.face-letter .pointer-name::after,
+.boccia-sf-7893 .config-pointer.face-letter .pointer-name::before {
+	height: 402px;
+}
+.boccia-sf-7893 .config-pointer.face .pointer {
+	right: 26%;
+}
+.boccia-sf-7893 .config-pointer.face .pointer-name {
+	right: 0%;
+}
+.boccia-sf-7893 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.boccia-sf-7893 .config-pointer.inner-barrel .pointer-name {
+	top: 37.5%;
+}
+
+/* .bontate-sf-6569 */
+.bontate-sf-6569 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.bontate-sf-6569 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.bontate-sf-6569 .config-pointer.face-letter .pointer {
+	top: 43%;
+	right: 66%;
+}
+.bontate-sf-6569 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 8.5%;
+}
+.bontate-sf-6569 .config-pointer.face-letter .pointer-name::after,
+.bontate-sf-6569 .config-pointer.face-letter .pointer-name::before {
+	height: 382px;
+}
+.bontate-sf-6569 .config-pointer.face .pointer {
+	top: 33%;
+}
+.bontate-sf-6569 .config-pointer.face .pointer-name {
+	top: 13.5%;
+	right: 1%;
+}
+.bontate-sf-6569 .config-pointer.big-bolts .pointer {
+	right: 15%;
+	top: 56%;
+}
+.bontate-sf-6569 .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+	right: 3.5%;
+}
+.bontate-sf-6569 .config-pointer.outer-barrel .pointer {
+	top: 19%;
+}
+.bontate-sf-6569 .config-pointer.outer-barrel .pointer-name {
+	top: 4%;
+}
+.bontate-sf-6569 .config-pointer.inner-barrel .pointer {
+	top: 68%;
+}
+.bontate-sf-6569 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+}
+
+/* brasi-sf-8653 */
+.brasi-sf-8653 .config-pointer.accents .pointer {
+	top: 30%;
+}
+.brasi-sf-8653 .config-pointer.accents .pointer-name {
+	top: 10.5%;
+}
+.brasi-sf-8653 .config-pointer.face-letter .pointer {
+	top: 49%;
+	right: 64%;
+}
+.brasi-sf-8653 .config-pointer.face-letter .pointer-name {
+	top: 8%;
+	right: 6.5%;
+}
+.brasi-sf-8653 .config-pointer.face-letter .pointer-name::after,
+.brasi-sf-8653 .config-pointer.face-letter .pointer-name::before {
+	height: 382px;
+}
+.brasi-sf-8653 .config-pointer.face .pointer {
+	top: 29%;
+}
+.brasi-sf-8653 .config-pointer.face .pointer-name {
+	top: 10%;
+}
+.brasi-sf-8653 .config-pointer.big-bolts .pointer {
+	right: 14%;
+	top: 56%;
+}
+.brasi-sf-8653 .config-pointer.big-bolts .pointer-name {
+	top: 36.5%;
+	right: 3%;
+}
+.brasi-sf-8653 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.brasi-sf-8653 .config-pointer.inner-barrel .pointer-name {
+	top: 37.5%;
+}
+
+/* brusca-sf-7836 */
+.brusca-sf-7836 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.brusca-sf-7836 .config-pointer.accents .pointer-name {
+	top: 11.5%;
+}
+.brusca-sf-7836 .config-pointer.face-letter .pointer {
+	top: 51%;
+	right: 64%;
+}
+.brusca-sf-7836 .config-pointer.face-letter .pointer-name {
+	top: 10%;
+	right: 6.5%;
+}
+.brusca-sf-7836 .config-pointer.face-letter .pointer-name::after,
+.brusca-sf-7836 .config-pointer.face-letter .pointer-name::before {
+	height: 382px;
+}
+.brusca-sf-7836 .config-pointer.face .pointer {
+	right: 26%;
+}
+.brusca-sf-7836 .config-pointer.face .pointer-name {
+	right: 0%;
+}
+.brusca-sf-7836 .config-pointer.big-bolts .pointer {
+	right: 11%;
+	top: 51%;
+}
+.brusca-sf-7836 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+	right: 0%;
+}
+
+/* camion-sf-5398. */
+.camion-sf-5398 .config-pointer.accents .pointer {
+	top: 28%;
+}
+.camion-sf-5398 .config-pointer.accents .pointer-name {
+	top: 8.5%;
+}
+.camion-sf-5398 .config-pointer.big-bolts .pointer {
+	right: 9%;
+	top: 49%;
+}
+.camion-sf-5398 .config-pointer.big-bolts .pointer-name {
+	top: 29%;
+	right: -3%;
+}
+.camion-sf-5398 .config-pointer.inner-barrel .pointer {
+	top: 73%;
+}
+.camion-sf-5398 .config-pointer.inner-barrel .pointer-name {
+	top: 42%;
+}
+
+.casso-sf-5289 .config-pointer.accents .pointer {
+	top: 32%;
+}
+.casso-sf-5289 .config-pointer.accents .pointer-name {
+	top: 12%;
+}
+.casso-sf-5289 .config-pointer.face .pointer {
+	top: 28%;
+}
+.casso-sf-5289 .config-pointer.face .pointer-name {
+	top: 9%;
+}
+.casso-sf-5289 .config-pointer.big-bolts .pointer {
+	right: 14%;
+	top: 51%;
+}
+.casso-sf-5289 .config-pointer.big-bolts .pointer-name {
+	top: 31%;
+	right: 2%;
+}
+.casso-sf-5289 .config-pointer.outer-barrel .pointer {
+	top: 19%;
+}
+.casso-sf-5289 .config-pointer.outer-barrel .pointer-name {
+	top: 4%;
+}
+.casso-sf-5289 .config-pointer.inner-barrel .pointer {
+	right: 24%;
+	top: 69%;
+}
+.casso-sf-5289 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+	right: -23%;
+}
+
+/* catena-sf-8649 */
+.catena-sf-8649 .config-pointer.face-letter .pointer {
+	top: 21%;
+	right: 51%;
+}
+.catena-sf-8649 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 17%;
+}
+.catena-sf-8649 .config-pointer.face .pointer {
+	top: 35%;
+}
+.catena-sf-8649 .config-pointer.face .pointer-name {
+	top: 16%;
+}
+
+/* cavallo-sf-3187 */
+.cavallo-sf-3187 .config-pointer.accents .pointer {
+	top: 25%;
+}
+.cavallo-sf-3187 .config-pointer.accents .pointer-name {
+	top: 5%;
+}
+.cavallo-sf-3187 .config-pointer.face-letter .pointer {
+	top: 44%;
+	right: 64%;
+}
+.cavallo-sf-3187 .config-pointer.face-letter .pointer-name {
+	top: 3.5%;
+	right: 6.5%;
+}
+.cavallo-sf-3187 .config-pointer.face-letter .pointer-name::after,
+.cavallo-sf-3187 .config-pointer.face-letter .pointer-name::before {
+	height: 382px;
+}
+.cavallo-sf-3187 .config-pointer.face .pointer {
+	right: 31%;
+}
+.cavallo-sf-3187 .config-pointer.face .pointer-name {
+	right: 4.5%;
+}
+.cavallo-sf-3187 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 60%;
+}
+.cavallo-sf-3187 .config-pointer.big-bolts .pointer-name {
+	top: 40.5%;
+	right: 2%;
+}
+
+
+/* chiatti-sf-2739 */
+.chiatti-sf-2739 .config-pointer.face-letter .pointer {
+	top: 38%;
+}
+.chiatti-sf-2739 .config-pointer.face-letter .pointer-name {
+	top: 18%;
+}
+.chiatti-sf-2739 .config-pointer.face .pointer-name {
+	top: 23%;
+	right: -4%;
+}
+.chiatti-sf-2739 .config-pointer.face .pointer {
+	top: 42%;
+	right: 22%;
+}
+.chiatti-sf-2739 .config-pointer.big-bolts .pointer {
+	top: 52%;
+}
+.chiatti-sf-2739 .config-pointer.big-bolts .pointer-name {
+	top: 33%;
+}
+
+
+.civella-sf-7954 .config-pointer.accents .pointer {
+	right: 22%;
+	top: 23%;
+}
+.civella-sf-7954 .config-pointer.accents .pointer-name {
+	top: 3%;
+	right: -9%;
+}
+.civella-sf-7954 .config-pointer.face-letter .pointer {
+	top: 49%;
+	right: 66%;
+}
+.civella-sf-7954 .config-pointer.face-letter .pointer-name {
+	top: 8%;
+	right: 8.5%;
+}
+.civella-sf-7954 .config-pointer.face-letter .pointer-name::after,
+.civella-sf-7954 .config-pointer.face-letter .pointer-name::before {
+	height: 382px;
+}
+.civella-sf-7954 .config-pointer.big-bolts .pointer {
+	right: 11%;
+	top: 42%;
+}
+.civella-sf-7954 .config-pointer.big-bolts .pointer-name {
+	top: 22%;
+	right: -0.5%;
+}
+.civella-sf-7954 .config-pointer.inner-barrel .pointer {
+	right: 22%;
+}
+.civella-sf-7954 .config-pointer.inner-barrel .pointer-name {
+	right: -24.5%;
+}
+
+
+/* clemenza-sf-5852 */
+.clemenza-sf-5852 .config-pointer.accents .pointer {
+	top: 25%;
+}
+.clemenza-sf-5852 .config-pointer.accents .pointer-name {
+	top: 5%;
+}
+.clemenza-sf-5852 .config-pointer.face-letter .pointer {
+	top: 52%;
+}
+.clemenza-sf-5852 .config-pointer.face-letter .pointer-name {
+	top: 32%;
+}
+.clemenza-sf-5852 .config-pointer.face .pointer {
+	right: 34%;
+	top: 20%;
+}
+.clemenza-sf-5852 .config-pointer.face .pointer-name {
+	top: 1%;
+	right: 8.5%;
+}
+.clemenza-sf-5852 .config-pointer.big-bolts .pointer {
+	top: 49%;
+}
+.clemenza-sf-5852 .config-pointer.big-bolts .pointer-name {
+	top: 29.5%;
+}
+
+
+.colossimo-sf-9360 .config-pointer.accents .pointer {
+	right: 26.5%;
+}
+.colossimo-sf-9360 .config-pointer.accents .pointer-name {
+	right: -4%;
+}
+.colossimo-sf-9360 .config-pointer.face-letter .pointer {
+	top: 40%;
+	right: 72%;
+}
+.colossimo-sf-9360 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 16.5%;
+}
+.colossimo-sf-9360 .config-pointer.face-letter .pointer-name::after,
+.colossimo-sf-9360 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.colossimo-sf-9360 .config-pointer.face .pointer {
+	right: 26%;
+	top: 24%;
+}
+.colossimo-sf-9360 .config-pointer.face .pointer-name {
+	top: 4.5%;
+	right: -1%;
+}
+.colossimo-sf-9360 .config-pointer.big-bolts .pointer {
+	top: 42%;
+}
+.colossimo-sf-9360 .config-pointer.big-bolts .pointer-name {
+	top: 22.5%;
+}
+.colossimo-sf-9360 .config-pointer.inner-barrel .pointer {
+	right: 26%;
+	top: 74%;
+}
+.colossimo-sf-9360 .config-pointer.inner-barrel .pointer-name {
+	top: 43%;
+	right: -20.5%;
+}
+
+
+/* coppola-sf-8459 */
+.coppola-sf-8459 .config-pointer.face-letter .pointer {
+	top: 29%;
+	right: 18%;
+}
+.coppola-sf-8459 .config-pointer.face-letter .pointer-name {
+	top: 10%;
+	right: -16%;
+}
+.coppola-sf-8459 .config-pointer.face .pointer {
+	right: 31%;
+}
+.coppola-sf-8459 .config-pointer.face .pointer-name {
+	right: 5%;
+}
+
+
+
+/* corallo-sf-4349 */
+.corallo-sf-4349 .config-pointer.accents .pointer {
+	right: 21%;
+}
+.corallo-sf-4349 .config-pointer.accents .pointer-name {
+	right: -9.5%;
+}
+.corallo-sf-4349 .config-pointer.face-letter .pointer {
+	right: 40%;
+}
+.corallo-sf-4349 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: -5%;
+}
+.corallo-sf-4349 .config-pointer.face-letter .pointer-name::after,
+.corallo-sf-4349 .config-pointer.face-letter .pointer-name::before {
+	height: 247px;
+}
+.corallo-sf-4349 .config-pointer.face .pointer {
+	right: 27%;
+}
+.corallo-sf-4349 .config-pointer.face .pointer-name {
+	right: 1.5%;
+}
+.corallo-sf-4349 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.corallo-sf-4349 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+.corallo-sf-4349 .config-pointer.inner-barrel .pointer {
+	top: 70%;
+}
+.corallo-sf-4349 .config-pointer.inner-barrel .pointer-name {
+	top: 38.5%;
+}
+
+.corozzo-sf-8953 .config-pointer.accents .pointer {
+	top: 27%;
+}
+.corozzo-sf-8953 .config-pointer.accents .pointer-name {
+	top: 7%;
+}
+.corozzo-sf-8953 .config-pointer.face-letter .pointer {
+	top: 29%;
+}
+.corozzo-sf-8953 .config-pointer.face-letter .pointer-name {
+	top: 9%;
+}
+.corozzo-sf-8953 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.corozzo-sf-8953 .config-pointer.inner-barrel .pointer-name {
+	top: 38%;
+}
+
+
+/* corsa-sf-8442 */
+.corsa-sf-8442 .config-pointer.accents .pointer {
+	top: 24%;
+}
+.corsa-sf-8442 .config-pointer.accents .pointer-name {
+	top: 4%;
+}
+.corsa-sf-8442 .config-pointer.face-letter .pointer {
+	top: 51%;
+	right: 68%;
+}
+.corsa-sf-8442 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 3%;
+}
+.corsa-sf-8442 .config-pointer.face-letter .pointer-name::after,
+.corsa-sf-8442 .config-pointer.face-letter .pointer-name::before {
+	height: 465px;
+}
+.corsa-sf-8442 .config-pointer.big-bolts .pointer {
+	right: 10%;
+	top: 55%;
+}
+.corsa-sf-8442 .config-pointer.big-bolts .pointer-name {
+	top: 35%;
+	right: -1%;
+}
+.corsa-sf-8442 .config-pointer.inner-barrel .pointer {
+	top: 73%;
+}
+.corsa-sf-8442 .config-pointer.inner-barrel .pointer-name {
+	top: 41%;
+}
+
+
+
+.crea-sf-9755 .config-pointer.accents .pointer {
+	top: 36%;
+}
+.crea-sf-9755 .config-pointer.accents .pointer-name {
+	top: 17%;
+	right: -10%;
+}
+.crea-sf-9755 .config-pointer.face-letter .pointer {
+	right: 40%;
+}
+.crea-sf-9755 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: -5%;
+}
+.crea-sf-9755 .config-pointer.face-letter .pointer-name::after,
+.crea-sf-9755 .config-pointer.face-letter .pointer-name::before {
+	height: 247px;
+}
+
+
+/* .decarlo-sf-6259  */
+.decarlo-sf-6259 .config-pointer.face-letter .pointer {
+	top: 33%;
+	right: 64%;
+}
+.decarlo-sf-6259 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 16%;
+}
+.decarlo-sf-6259 .config-pointer.face-letter .pointer-name::after,
+.decarlo-sf-6259 .config-pointer.face-letter .pointer-name::before {
+	height: 285px;
+}
+.decarlo-sf-6259 .config-pointer.inner-barrel .pointer {
+	right: 28%;
+	top: 74%;
+}
+.decarlo-sf-6259 .config-pointer.inner-barrel .pointer-name {
+	top: 42%;
+	right: -19%;
+}
+
+/* demeo-sf-2978 */
+.demeo-sf-2978 .config-pointer.accents .pointer {
+	right: 22%;
+	top: 34%;
+}
+.demeo-sf-2978 .config-pointer.accents .pointer-name {
+	top: 15%;
+	right: -8%;
+}
+.demeo-sf-2978 .config-pointer.face-letter .pointer {
+	right: 34%;
+	top: 36%;
+}
+.demeo-sf-2978 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: -5.5%;
+}
+.demeo-sf-2978 .config-pointer.face-letter .pointer-name::after,
+.demeo-sf-2978 .config-pointer.face-letter .pointer-name::before {
+	height: 195px;
+}
+.demeo-sf-2978 .config-pointer.face .pointer {
+	top: 32%;
+}
+.demeo-sf-2978 .config-pointer.face .pointer-name {
+	top: 13%;
+}
+.demeo-sf-2978 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.demeo-sf-2978 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+
+/* gargotta-sf-6180 */
+.gargotta-sf-6180 .config-pointer.accents .pointer {
+	top: 28%;
+}
+.gargotta-sf-6180 .config-pointer.accents .pointer-name {
+	top: 8%;
+}
+.gargotta-sf-6180 .config-pointer.face-letter .pointer {
+	top: 21%;
+	right: 27%;
+}
+.gargotta-sf-6180 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: -8%;
+}
+.gargotta-sf-6180 .config-pointer.face .pointer {
+	right: 22%;
+	top: 41%;
+}
+.gargotta-sf-6180 .config-pointer.face .pointer-name {
+	top: 21%;
+	right: -5%;
+}
+.gargotta-sf-6180 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 37%;
+}
+.gargotta-sf-6180 .config-pointer.big-bolts .pointer-name {
+	top: 17.5%;
+	right: 2%;
+}
+
+
+/* geraci-sf-2498 */
+.geraci-sf-2498 .config-pointer.accents .pointer {
+	top: 27%;
+}
+.geraci-sf-2498 .config-pointer.accents .pointer-name {
+	top: 7%;
+}
+.geraci-sf-2498 .config-pointer.face-letter .pointer {
+	right: 55%;
+	top: 55%;
+}
+.geraci-sf-2498 .config-pointer.face-letter .pointer-name {
+	top: 11.5%;
+	right: -5.5%;
+}
+.geraci-sf-2498 .config-pointer.face-letter .pointer-name::after,
+.geraci-sf-2498 .config-pointer.face-letter .pointer-name::before {
+	height: 415px;
+}
+.geraci-sf-2498 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.geraci-sf-2498 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+
+/* gravano-sf-9438 */
+.gravano-sf-9438 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.gravano-sf-9438 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.gravano-sf-9438 .config-pointer.face-letter .pointer {
+	right: 60%;
+	top: 44%;
+}
+.gravano-sf-9438 .config-pointer.face-letter .pointer-name {
+	top: 6.5%;
+	right: 6.5%;
+}
+.gravano-sf-9438 .config-pointer.face-letter .pointer-name::after,
+.gravano-sf-9438 .config-pointer.face-letter .pointer-name::before {
+	height: 340px;
+}
+.gravano-sf-9438 .config-pointer.face .pointer-name {
+	top: 18.5%;
+	right: 1%;
+}
+.gravano-sf-9438 .config-pointer.face .pointer {
+	top: 38%;
+}
+.gravano-sf-9438 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 49%;
+}
+.gravano-sf-9438 .config-pointer.big-bolts .pointer-name {
+	top: 29%;
+	right: 1.5%;
+}
+.gravano-sf-9438 .config-pointer.outer-barrel .pointer {
+	right: 21%;
+	top: 17%;
+}
+.gravano-sf-9438 .config-pointer.outer-barrel .pointer-name {
+	right: -11%;
+}
+.gravano-sf-9438 .config-pointer.inner-barrel .pointer {
+	top: 68%;
+}
+.gravano-sf-9438 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+}
+
+
+
+.inverno-sf-7252 .config-pointer.accents .pointer {
+	right: 19%;
+	top: 36%;
+}
+.inverno-sf-7252 .config-pointer.accents .pointer-name {
+	top: 17%;
+	right: -12%;
+}
+.inverno-sf-7252 .config-pointer.face-letter .pointer {
+	right: 60%;
+	top: 44%;
+}
+.inverno-sf-7252 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 9.5%;
+}
+.inverno-sf-7252 .config-pointer.face-letter .pointer-name::after,
+.inverno-sf-7252 .config-pointer.face-letter .pointer-name::before {
+	height: 310px;
+}
+.inverno-sf-7252 .config-pointer.face-letter .pointer {
+	top: 35%;
+}
+.inverno-sf-7252 .config-pointer.face .pointer {
+	right: 26%;
+	top: 24%;
+}
+.inverno-sf-7252 .config-pointer.face .pointer-name {
+	top: 5%;
+	right: 0%;
+}
+.inverno-sf-7252 .config-pointer.big-bolts .pointer {
+	top: 47%;
+}
+.inverno-sf-7252 .config-pointer.big-bolts .pointer-name {
+	top: 28%;
+}
+
+
+/* lanza-sf-6555 */
+.lanza-sf-6555 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.lanza-sf-6555 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.lanza-sf-6555 .config-pointer.face-letter .pointer {
+	right: 64%;
+	top: 44%;
+}
+.lanza-sf-6555 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 6.5%;
+}
+.lanza-sf-6555 .config-pointer.face-letter .pointer-name::after,
+.lanza-sf-6555 .config-pointer.face-letter .pointer-name::before {
+	height: 380px;
+}
+.lanza-sf-6555 .config-pointer.big-bolts .pointer {
+	right: 15%;
+	top: 37%;
+}
+.lanza-sf-6555 .config-pointer.big-bolts .pointer-name {
+	top: 17%;
+	right: 3%;
+}
+.lanza-sf-6555 .config-pointer.outer-barrel .pointer {
+	right: 21%;
+	top: 17%;
+}
+.lanza-sf-6555 .config-pointer.outer-barrel .pointer-name {
+	right: -11%;
+}
+.lanza-sf-6555 .config-pointer.inner-barrel .pointer {
+	top: 67%;
+}
+.lanza-sf-6555 .config-pointer.inner-barrel .pointer-name {
+	top: 35%;
+}
+
+
+/* falcone-sf-2372 */
+.falcone-sf-2372 .config-pointer.face-letter .pointer {
+	right: 78%;
+	top: 57%;
+}
+.falcone-sf-2372 .config-pointer.face-letter .pointer-name {
+	top: 5%;
+	right: 8.5%;
+}
+.falcone-sf-2372 .config-pointer.face-letter .pointer-name::after,
+.falcone-sf-2372 .config-pointer.face-letter .pointer-name::before {
+	height: 515px;
+}
+.falcone-sf-2372 .config-pointer.face .pointer {
+	top: 21%;
+}
+.falcone-sf-2372 .config-pointer.face .pointer-name {
+	top: 2%;
+	right: 1.5%;
+}
+.falcone-sf-2372 .config-pointer.big-bolts .pointer {
+	top: 38%;
+}
+.falcone-sf-2372 .config-pointer.big-bolts .pointer-name {
+	top: 19%;
+}
+
+
+/* farina-sf-9946 */
+.farina-sf-9946 .config-pointer.face-letter .pointer {
+	top: 27%;
+}
+.farina-sf-9946 .config-pointer.face-letter .pointer-name {
+	top: 7%;
+}
+.farina-sf-9946 .config-pointer.face .pointer {
+	right: 25%;
+	top: 21%;
+}
+.farina-sf-9946 .config-pointer.face .pointer-name {
+	top: 2%;
+	right: -1%;
+}
+
+
+/* fiato-sf-8339 */
+.fiato-sf-8339 .config-pointer.face-letter .pointer {
+	top: 46%;
+}
+.fiato-sf-8339 .config-pointer.face-letter .pointer-name {
+	top: 26%;
+}
+.fiato-sf-8339 .config-pointer.face .pointer {
+	right: 25%;
+}
+.fiato-sf-8339 .config-pointer.face .pointer-name {
+	right: -1%;
+}
+.fiato-sf-8339 .config-pointer.face-letter .pointer {
+	right: 43%;
+	top: 38%;
+}
+.fiato-sf-8339 .config-pointer.face-letter .pointer-name {
+	top: 11%;
+	right: 0%;
+}
+.fiato-sf-8339 .config-pointer.face-letter .pointer-name::after,
+.fiato-sf-8339 .config-pointer.face-letter .pointer-name::before {
+	height: 230px;
+}
+.fiato-sf-8339 .config-pointer.big-bolts .pointer {
+	top: 48%;
+}
+.fiato-sf-8339 .config-pointer.big-bolts .pointer-name {
+	top: 28%;
+	right: 0%;
+}
+
+
+/* fontaine-sf-8479 */
+.fontaine-sf-8479 .config-pointer.accents .pointer {
+	right: 24%;
+	top: 20%;
+}
+.fontaine-sf-8479 .config-pointer.accents .pointer-name {
+	top: 0%;
+	right: -7%;
+}
+.fontaine-sf-8479 .config-pointer.face-letter .pointer {
+	right: 77%;
+	top: 55%;
+}
+.fontaine-sf-8479 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 7.5%;
+}
+.fontaine-sf-8479 .config-pointer.face-letter .pointer-name::after,
+.fontaine-sf-8479 .config-pointer.face-letter .pointer-name::before {
+	height: 515px;
+}
+.fontaine-sf-8479 .config-pointer.big-bolts .pointer {
+	top: 54%;
+}
+.fontaine-sf-8479 .config-pointer.big-bolts .pointer-name {
+	top: 35%;
+}
+.fontaine-sf-8479 .config-pointer.inner-barrel .pointer {
+	right: 35%;
+	top: 78%;
+}
+.fontaine-sf-8479 .config-pointer.inner-barrel .pointer-name {
+	top: 37.5%;
+	right: -21%;
+}
+.fontaine-sf-8479 .config-pointer.inner-barrel .pointer-name::after,
+.fontaine-sf-8479 .config-pointer.inner-barrel .pointer-name::before {
+	height: 370px;
+}
+
+
+/* gallo-sf-4437 */
+.gallo-sf-4437 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.gallo-sf-4437 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.gallo-sf-4437 .config-pointer.face-letter .pointer {
+	right: 60%;
+	top: 44%;
+}
+.gallo-sf-4437 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 1%;
+}
+.gallo-sf-4437 .config-pointer.face-letter .pointer-name::after,
+.gallo-sf-4437 .config-pointer.face-letter .pointer-name::before {
+	height: 400px;
+}
+.gallo-sf-4437 .config-pointer.face .pointer {
+	top: 40%;
+}
+.gallo-sf-4437 .config-pointer.face .pointer-name {
+	top: 21.5%;
+}
+.gallo-sf-4437 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.gallo-sf-4437 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+.gallo-sf-4437 .config-pointer.inner-barrel .pointer {
+	top: 69%;
+}
+.gallo-sf-4437 .config-pointer.inner-barrel .pointer-name {
+	top: 38%;
+}
+
+
+
+.gambino-sf-9686 .config-pointer.accents .pointer {
+	top: 28%;
+}
+.gambino-sf-9686 .config-pointer.accents .pointer-name {
+	top: 8%;
+}
+.gambino-sf-9686 .config-pointer.face-letter .pointer {
+	right: 66.5%;
+	top: 45%;
+}
+.gambino-sf-9686 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 7.5%;
+}
+.gambino-sf-9686 .config-pointer.face-letter .pointer-name::after,
+.gambino-sf-9686 .config-pointer.face-letter .pointer-name::before {
+	height: 405px;
+}
+.gambino-sf-9686 .config-pointer.face .pointer {
+	top: 23%;
+}
+.gambino-sf-9686 .config-pointer.face .pointer-name {
+	top: 4%;
+}
+.gambino-sf-9686 .config-pointer.big-bolts .pointer {
+	top: 46%;
+}
+.gambino-sf-9686 .config-pointer.big-bolts .pointer-name {
+	top: 27%;
+}
+.gambino-sf-9686 .config-pointer.inner-barrel .pointer {
+	right: 25%;
+	top: 72%;
+}
+.gambino-sf-9686 .config-pointer.inner-barrel .pointer-name {
+	top: 40.5%;
+	right: -22%;
+}
+
+
+/* lombardo-sf-8709 */
+.lombardo-sf-8709 .config-pointer.accents .pointer {
+	top: 28%;
+}
+.lombardo-sf-8709 .config-pointer.accents .pointer-name {
+	top: 8%;
+}
+.lombardo-sf-8709 .config-pointer.face-letter .pointer {
+	top: 36%;
+}
+.lombardo-sf-8709 .config-pointer.face-letter .pointer-name {
+	top: 16%;
+}
+.lombardo-sf-8709 .config-pointer.face .pointer {
+	top: 26%;
+}
+.lombardo-sf-8709 .config-pointer.face .pointer-name {
+	top: 7%;
+}
+.lombardo-sf-8709 .config-pointer.big-bolts .pointer {
+	top: 52%;
+}
+.lombardo-sf-8709 .config-pointer.big-bolts .pointer-name {
+	top: 33%;
+}
+
+
+/* lupo-sf-4635 */
+.lupo-sf-4635 .config-pointer.face-letter .pointer {
+	right: 65%;
+	top: 51%;
+}
+.lupo-sf-4635 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 1%;
+}
+.lupo-sf-4635 .config-pointer.face-letter .pointer-name::after,
+.lupo-sf-4635 .config-pointer.face-letter .pointer-name::before {
+	height: 455px;
+}
+.lupo-sf-4635 .config-pointer.face .pointer {
+	top: 32%;
+}
+.lupo-sf-4635 .config-pointer.face .pointer-name {
+	top: 13%;
+}
+.lupo-sf-4635 .config-pointer.big-bolts .pointer {
+	top: 49%;
+}
+.lupo-sf-4635 .config-pointer.big-bolts .pointer-name {
+	top: 30%;
+}
+.lupo-sf-4635 .config-pointer.inner-barrel .pointer {
+	right: 28%;
+	top: 74%;
+}
+.lupo-sf-4635 .config-pointer.inner-barrel .pointer-name {
+	top: 42%;
+	right: -19%;
+}
+
+
+/* luso-sf-7595 */
+.luso-sf-7595 .config-pointer.accents .pointer {
+	top: 35%;
+}
+.luso-sf-7595 .config-pointer.accents .pointer-name {
+	top: 15%;
+}
+.luso-sf-7595 .config-pointer.face-letter .pointer {
+	right: 61%;
+	top: 43%;
+}
+.luso-sf-7595 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 5.5%;
+}
+.luso-sf-7595 .config-pointer.face-letter .pointer-name::after,
+.luso-sf-7595 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.luso-sf-7595 .config-pointer.face .pointer {
+	top: 35%;
+}
+.luso-sf-7595 .config-pointer.face .pointer-name {
+	top: 16%;
+}
+.luso-sf-7595 .config-pointer.big-bolts .pointer {
+	top: 48%;
+}
+.luso-sf-7595 .config-pointer.big-bolts .pointer-name {
+	top: 29%;
+}
+.luso-sf-7595 .config-pointer.inner-barrel .pointer {
+	right: 28%;
+	top: 74%;
+}
+.luso-sf-7595 .config-pointer.inner-barrel .pointer-name {
+	top: 42%;
+	right: -19%;
+}
+
+/* luthor-sf-3238 */
+.luthor-sf-3238 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.luthor-sf-3238 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.luthor-sf-3238 .config-pointer.face-letter .pointer {
+	top: 42%;
+}
+.luthor-sf-3238 .config-pointer.face-letter .pointer-name {
+	top: 22%;
+}
+.luthor-sf-3238 .config-pointer.face .pointer {
+	top: 25%;
+}
+.luthor-sf-3238 .config-pointer.face .pointer-name {
+	top: 6%;
+}
+.luthor-sf-3238 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.luthor-sf-3238 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* magari-sf-7258 */
+.magari-sf-7258 .config-pointer.accents .pointer {
+	right: 23%;
+	top: 27%;
+}
+.magari-sf-7258 .config-pointer.accents .pointer-name {
+	top: 8%;
+	right: -7%;
+}
+.magari-sf-7258 .config-pointer.face-letter .pointer {
+	top: 15%;
+	right: 41%;
+}
+.magari-sf-7258 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 13%;
+}
+.magari-sf-7258 .config-pointer.face-letter .pointer-name::after,
+.magari-sf-7258 .config-pointer.face-letter .pointer-name::before {
+	height: 70px;
+}
+.magari-sf-7258 .config-pointer.face .pointer {
+	top: 36%;
+}
+.magari-sf-7258 .config-pointer.face .pointer-name {
+	top: 17%;
+}
+.magari-sf-7258 .config-pointer.outer-barrel .pointer {
+	right: 21%;
+	top: 18%;
+}
+.magari-sf-7258 .config-pointer.outer-barrel .pointer-name {
+	top: 3%;
+	right: -10%;
+}
+.magari-sf-7258 .config-pointer.inner-barrel .pointer {
+	top: 65%;
+}
+.magari-sf-7258 .config-pointer.inner-barrel .pointer-name {
+	top: 33%;
+}
+
+
+/* marcello-sf-3464 */
+.marcello-sf-3464 .config-pointer.accents .pointer {
+	right: 23%;
+	top: 27%;
+}
+.marcello-sf-3464 .config-pointer.accents .pointer-name {
+	top: 7%;
+	right: -8%;
+}
+.marcello-sf-3464 .config-pointer.face-letter .pointer {
+	right: 78%;
+	top: 28%;
+}
+.marcello-sf-3464 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 14%;
+}
+.marcello-sf-3464 .config-pointer.face-letter .pointer-name::after,
+.marcello-sf-3464 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.marcello-sf-3464 .config-pointer.face-letter .pointer-name::after {
+	transform: rotate(68deg);
+	transform-origin: 0% 4%;
+}
+.marcello-sf-3464 .config-pointer.face-letter .pointer-name::before {
+	transform: rotate(63deg);
+	transform-origin: 0% -5%;
+}
+
+
+/* masseria-sf-6542 */
+.masseria-sf-6542 .config-pointer.face-letter .pointer {
+	right: 43%;
+	top: 39%;
+}
+.masseria-sf-6542 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: 0%;
+}
+.masseria-sf-6542 .config-pointer.face-letter .pointer-name::after,
+.masseria-sf-6542 .config-pointer.face-letter .pointer-name::before {
+	height: 230px;
+}
+.masseria-sf-6542 .config-pointer.big-bolts .pointer {
+	right: 14%;
+	top: 51%;
+}
+.masseria-sf-6542 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+	right: 3%;
+}
+.masseria-sf-6542 .config-pointer.outer-barrel .pointer {
+	right: 24%;
+}
+.masseria-sf-6542 .config-pointer.outer-barrel .pointer-name {
+	right: -7%;
+}
+.masseria-sf-6542 .config-pointer.inner-barrel .pointer {
+	right: 24%;
+	top: 68%;
+}
+.masseria-sf-6542 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+	right: -23%;
+}
+
+
+/* migilore-sf-2827 */
+.migilore-sf-2827 .config-pointer.accents .pointer {
+	top: 27%;
+}
+.migilore-sf-2827 .config-pointer.accents .pointer-name {
+	top: 7%;
+}
+.migilore-sf-2827 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 48.5%;
+}
+.migilore-sf-2827 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 1.5%;
+}
+.migilore-sf-2827 .config-pointer.face-letter .pointer-name::after,
+.migilore-sf-2827 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.migilore-sf-2827 .config-pointer.face .pointer {
+	right: 31%;
+}
+.migilore-sf-2827 .config-pointer.face .pointer-name {
+	right: 5%;
+}
+
+
+/* millazo-sf-6044 */
+.millazo-sf-6044 .config-pointer.accents .pointer {
+	right: 22%;
+}
+.millazo-sf-6044 .config-pointer.accents .pointer-name {
+	right: -9%;
+}
+.millazo-sf-6044 .config-pointer.face-letter .pointer {
+	right: 43%;
+	top: 39%;
+}
+.millazo-sf-6044 .config-pointer.face-letter .pointer-name {
+	top: 12%;
+	right: 0%;
+}
+.millazo-sf-6044 .config-pointer.face-letter .pointer-name::after,
+.millazo-sf-6044 .config-pointer.face-letter .pointer-name::before {
+	height: 230px;
+}
+.millazo-sf-6044 .config-pointer.face .pointer-name {
+	top: 12.5%;
+}
+.millazo-sf-6044 .config-pointer.face .pointer {
+	top: 31%;
+}
+.millazo-sf-6044 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 51%;
+}
+.millazo-sf-6044 .config-pointer.big-bolts .pointer-name {
+	top: 31%;
+	right: 2%;
+}
+
+
+/* pacino-sf-8542 */
+.pacino-sf-8542 .config-pointer.accents .pointer {
+	right: 21%;
+	top: 24%;
+}
+.pacino-sf-8542 .config-pointer.accents .pointer-name {
+	top: 4%;
+	right: -10%;
+}
+.pacino-sf-8542 .config-pointer.face-letter .pointer {
+	top: 20%;
+	right: 37%;
+}
+.pacino-sf-8542 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 3%;
+}
+.pacino-sf-8542 .config-pointer.big-bolts .pointer {
+	right: 11%;
+	top: 56%;
+}
+.pacino-sf-8542 .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+	right: -1%;
+}
+
+
+/* .palermo-sf-7663 */
+.palermo-sf-7663 .config-pointer.accents .pointer {
+	top: 32%;
+}
+.palermo-sf-7663 .config-pointer.accents .pointer-name {
+	top: 12%;
+}
+.palermo-sf-7663 .config-pointer.face-letter .pointer {
+	top: 14%;
+	right: 41%;
+}
+.palermo-sf-7663 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 13%;
+}
+.palermo-sf-7663 .config-pointer.face-letter .pointer-name::after,
+.palermo-sf-7663 .config-pointer.face-letter .pointer-name::before {
+	height: 70px;
+}
+.palermo-sf-7663 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.palermo-sf-7663 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* profaci-sf-8825 */
+.profaci-sf-8825 .config-pointer.accents .pointer {
+	right: 22%;
+	top: 27%;
+}
+.profaci-sf-8825 .config-pointer.accents .pointer-name {
+	top: 8%;
+	right: -8%;
+}
+.profaci-sf-8825 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 48.5%;
+}
+.profaci-sf-8825 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 1.5%;
+}
+.profaci-sf-8825 .config-pointer.face-letter .pointer-name::after,
+.profaci-sf-8825 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.profaci-sf-8825 .config-pointer.face .pointer {
+	top: 31%;
+}
+.profaci-sf-8825 .config-pointer.face .pointer-name {
+	top: 12%;
+}
+.profaci-sf-8825 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.profaci-sf-8825 .config-pointer.big-bolts .pointer-name {
+	top: 31%;
+}
+
+/* ricca-sf-4563 */
+
+.ricca-sf-4563 .config-pointer.accents .pointer {
+	top: 26%;
+}
+.ricca-sf-4563 .config-pointer.accents .pointer-name {
+	top: 6%;
+}
+.ricca-sf-4563 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 38.5%;
+}
+.ricca-sf-4563 .config-pointer.face-letter .pointer-name {
+	top: 3%;
+	right: 11%;
+}
+.ricca-sf-4563 .config-pointer.face-letter .pointer-name::after,
+.ricca-sf-4563 .config-pointer.face-letter .pointer-name::before {
+	height: 325px;
+}
+.ricca-sf-4563 .config-pointer.face .pointer {
+	right: 30%;
+}
+.ricca-sf-4563 .config-pointer.face .pointer-name {
+	right: 4%;
+}
+
+
+/* rosatto-sf-4368 */
+.rosatto-sf-4368 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.rosatto-sf-4368 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.rosatto-sf-4368 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 50.5%;
+}
+.rosatto-sf-4368 .config-pointer.face-letter .pointer-name {
+	top: 6%;
+	right: 1.5%;
+}
+.rosatto-sf-4368 .config-pointer.face-letter .pointer-name::after,
+.rosatto-sf-4368 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.rosatto-sf-4368 .config-pointer.big-bolts .pointer {
+	right: 14%;
+}
+.rosatto-sf-4368 .config-pointer.big-bolts .pointer-name {
+	right: 3%;
+}
+.rosatto-sf-4368 .config-pointer.outer-barrel .pointer {
+	right: 24%;
+}
+.rosatto-sf-4368 .config-pointer.outer-barrel .pointer-name {
+	right: -7%;
+}
+.rosatto-sf-4368 .config-pointer.inner-barrel .pointer {
+	right: 27%;
+}
+.rosatto-sf-4368 .config-pointer.inner-barrel .pointer-name {
+	right: -20%;
+}
+
+
+/* ruso-sf-8623 */
+.ruso-sf-8623 .config-pointer.accents .pointer {
+	top: 26%;
+}
+.ruso-sf-8623 .config-pointer.accents .pointer-name {
+	top: 6%;
+}
+.ruso-sf-8623 .config-pointer.face-letter .pointer {
+	top: 12%;
+	right: 53%;
+}
+.ruso-sf-8623 .config-pointer.face-letter .pointer-name {
+	top: -1%;
+	right: 25%;
+}
+.ruso-sf-8623 .config-pointer.face-letter .pointer-name::after,
+.ruso-sf-8623 .config-pointer.face-letter .pointer-name::before {
+	height: 70px;
+}
+.ruso-sf-8623 .config-pointer.big-bolts .pointer {
+	top: 56%;
+}
+.ruso-sf-8623 .config-pointer.big-bolts .pointer-name {
+	top: 37%;
+}
+
+
+/* salerno-cf-1719 */
+.salerno-cf-1719 .config-pointer.accents .pointer {
+	top: 30%;
+}
+.salerno-cf-1719 .config-pointer.accents .pointer-name {
+	top: 10%;
+}
+.salerno-cf-1719 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 50.5%;
+}
+.salerno-cf-1719 .config-pointer.face-letter .pointer-name {
+	top: 6%;
+	right: 1.5%;
+}
+.salerno-cf-1719 .config-pointer.face-letter .pointer-name::after,
+.salerno-cf-1719 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.salerno-cf-1719 .config-pointer.face .pointer {
+	top: 29%;
+}
+.salerno-cf-1719 .config-pointer.face .pointer-name {
+	top: 10%;
+}
+
+/* .santora-sf-6723-2 */
+.santora-sf-6723-2 .config-pointer.accents .pointer {
+	right: 20%;
+	top: 37%;
+}
+.santora-sf-6723-2 .config-pointer.accents .pointer-name {
+	top: 17.5%;
+}
+.santora-sf-6723-2 .config-pointer.face-letter .pointer {
+	right: 58.5%;
+	top: 29.5%;
+}
+.santora-sf-6723-2 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 15.5%;
+}
+.santora-sf-6723-2 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 15.5%;
+}
+.santora-sf-6723-2 .config-pointer.face .pointer {
+	right: 36%;
+}
+.santora-sf-6723-2 .config-pointer.face .pointer-name {
+	right: 10%;
+}
+
+/* scopo-sf-2356. */
+.scopo-sf-2356 .config-pointer.accents .pointer {
+	right: 23%;
+	top: 37%;
+}
+.scopo-sf-2356 .config-pointer.accents .pointer-name {
+	top: 18%;
+	right: -7%;
+}
+.scopo-sf-2356 .config-pointer.face-letter .pointer {
+	right: 56.5%;
+	top: 59.5%;
+}
+.scopo-sf-2356 .config-pointer.face-letter .pointer-name {
+	top: 15%;
+	right: -5.5%;
+}
+.scopo-sf-2356 .config-pointer.face-letter .pointer-name::after,
+.scopo-sf-2356 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.scopo-sf-2356 .config-pointer.face .pointer {
+	top: 40%;
+}
+.scopo-sf-2356 .config-pointer.face .pointer-name {
+	top: 21%;
+}
+.scopo-sf-2356 .config-pointer.big-bolts .pointer {
+	top: 61%;
+}
+.scopo-sf-2356 .config-pointer.big-bolts .pointer-name {
+	top: 41%;
+}
+
+
+/* spero-sf-5543 */
+.spero-sf-5543 .config-pointer.face-letter .pointer {
+	top: 31%;
+}
+.spero-sf-5543 .config-pointer.face-letter .pointer-name {
+	top: 11%;
+}
+.spero-sf-5543 .config-pointer.face .pointer {
+	right: 21%;
+	top: 49%;
+}
+.spero-sf-5543 .config-pointer.face .pointer-name {
+	top: 30%;
+	right: -5%;
+}
+
+/* stima-sf-6566 */
+.stima-sf-6566 .config-pointer.accents .pointer {
+	top: 39%;
+}
+.stima-sf-6566 .config-pointer.accents .pointer-name {
+	top: 19%;
+}
+.stima-sf-6566 .config-pointer.face-letter .pointer {
+	right: 63.5%;
+	top: 43.5%;
+}
+.stima-sf-6566 .config-pointer.face-letter .pointer-name {
+	top: -0.5%;
+	right: 2.5%;
+}
+.stima-sf-6566 .config-pointer.face-letter .pointer-name::after,
+.stima-sf-6566 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.stima-sf-6566 .config-pointer.face .pointer {
+	top: 39%;
+}
+.stima-sf-6566 .config-pointer.face .pointer-name {
+	top: 20.5%;
+}
+.stima-sf-6566 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.stima-sf-6566 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* terranova-sf-5967 */
+.terranova-sf-5967 .config-pointer.face-letter .pointer {
+	right: 62.5%;
+	top: 46.5%;
+}
+.terranova-sf-5967 .config-pointer.face-letter .pointer-name {
+	top: 2%;
+	right: 1%;
+}
+.terranova-sf-5967 .config-pointer.face-letter .pointer-name::after,
+.terranova-sf-5967 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+.terranova-sf-5967 .config-pointer.face .pointer {
+	right: 22%;
+	top: 38%;
+}
+.terranova-sf-5967 .config-pointer.face .pointer-name {
+	top: 19%;
+	right: -5%;
+}
+
+/* testa-sf-3382 */
+.testa-sf-3382 .config-pointer.accents .pointer {
+	top: 32%;
+}
+.testa-sf-3382 .config-pointer.accents .pointer-name {
+	top: 12%;
+}
+.testa-sf-3382 .config-pointer.face-letter .pointer {
+	right: 67.5%;
+	top: 56.5%;
+}
+.testa-sf-3382 .config-pointer.face-letter .pointer-name {
+	top: 12.5%;
+	right: 6.5%;
+}
+.testa-sf-3382 .config-pointer.face-letter .pointer-name::after,
+.testa-sf-3382 .config-pointer.face-letter .pointer-name::before {
+	height: 425px;
+}
+
+/* vastola-sf-2646 */
+.vastola-sf-2646 .config-pointer.accents .pointer {
+	right: 24%;
+}
+.vastola-sf-2646 .config-pointer.accents .pointer-name {
+	right: -7%;
+}
+.vastola-sf-2646 .config-pointer.face .pointer {
+	right: 27%;
+}
+.vastola-sf-2646 .config-pointer.face .pointer-name {
+	right: 0.5%;
+}
+.vastola-sf-2646 .config-pointer.big-bolts .pointer {
+	top: 51%;
+}
+.vastola-sf-2646 .config-pointer.big-bolts .pointer-name {
+	top: 32%;
+}
+
+/* nostra-off-2255*/
+.nostra-off-2255 .config-pointer.spike .pointer {
+	right: 39%;
+	top: 44%;
+}
+.nostra-off-2255 .config-pointer.spike .pointer-name {
+	right: -4%;
+	top: 10%;
+}
+.nostra-off-2255 .config-pointer.barrel-letter .pointer {
+	top: 40%;
+}
+.nostra-off-2255 .config-pointer.barrel-letter .pointer-name {
+	top: 29%;
+}
+.nostra-off-2255 .config-pointer.face .pointer {
+	top: 23%;
+}
+.nostra-off-2255 .config-pointer.face .pointer-name {
+	top: 4%;
+}
+
+/* scalfini-off-2487 */
+.scalfini-off-2487 .config-pointer.spike .pointer {
+	right: 38%;
+}
+.scalfini-off-2487 .config-pointer.spike .pointer-name {
+	right: -5%;
+}
+
+/* stryker-off-1547 */
+.stryker-off-1547 .config-pointer.accents .pointer {
+	top: 48%;
+}
+.stryker-off-1547 .config-pointer.accents .pointer-name {
+	top: 28%;
+}
+.stryker-off-1547 .config-pointer.spike .pointer {
+	right: 38%;
+}
+.stryker-off-1547 .config-pointer.spike .pointer-name {
+	right: -5%;
+}
+.stryker-off-1547 .config-pointer.barrel-letter .pointer {
+	top: 8%;
+	right: 34%;
+}
+.stryker-off-1547 .config-pointer.barrel-letter .pointer-name {
+	top: -3%;
+	right: 6%;
+}
+.stryker-off-1547 .config-pointer.face .pointer {
+	top: 20%;
+}
+.stryker-off-1547 .config-pointer.face .pointer-name {
+	top: 1%;
+}
+
+/* tattaglia-off-9884 */
+.tattaglia-off-9884 .config-pointer.accents .pointer {
+	right: 24%;
+}
+.tattaglia-off-9884 .config-pointer.accents .pointer-name {
+	right: -7%;
+}
+.tattaglia-off-9884 .config-pointer.spike .pointer {
+	right: 38%;
+}
+.tattaglia-off-9884 .config-pointer.spike .pointer-name {
+	right: -5%;
+}
+
+/* terranova-off-6929 */
+.terranova-off-6929 .config-pointer.spike .pointer {
+	right: 38%;
+}
+.terranova-off-6929 .config-pointer.spike .pointer-name {
+	right: -5%;
+}
+.terranova-off-6929 .config-pointer.face .pointer {
+	right: 31%;
+}
+.terranova-off-6929 .config-pointer.face .pointer-name {
+	right: 5%;
+}
+
+/* valdo-off-4534 */
+.valdo-off-4534 .config-pointer.spike .pointer {
+	top: 44%;
+}
+.valdo-off-4534 .config-pointer.spike .pointer-name {
+	top: 10%;
+}
+.valdo-off-4534 .config-pointer.barrel-letter .pointer {
+	top: 41%;
+}
+.valdo-off-4534 .config-pointer.barrel-letter .pointer-name {
+	top: 30%;
+}
+.valdo-off-4534 .config-pointer.face .pointer {
+	right: 19%;
+	top: 36%;
+}
+.valdo-off-4534 .config-pointer.face .pointer-name {
+	top: 17%;
+	right: -7%;
+}
+
+/* vega-off-7899 */
+.vega-off-7899 .config-pointer.accents .pointer {
+	right: 22%;
+	top: 31%;
+}
+.vega-off-7899 .config-pointer.accents .pointer-name {
+	top: 11%;
+	right: -9%;
+}
+.vega-off-7899 .config-pointer.spike .pointer {
+	right: 39%;
+	top: 49%;
+}
+.vega-off-7899 .config-pointer.spike .pointer-name {
+	right: -4%;
+	top: 15%;
+}
+.vega-off-7899 .config-pointer.barrel-letter .pointer {
+	top: 12%;
+	right: 24%;
+}
+.vega-off-7899 .config-pointer.barrel-letter .pointer-name {
+	top: 1%;
+	right: -4%;
+}
+.vega-off-7899 .config-pointer.face .pointer {
+	top: 22%;
+}
+.vega-off-7899 .config-pointer.face .pointer-name {
+	top: 3%;
+}
+
+/* zasa-off-5644 */
+.zasa-off-5644 .config-pointer.accents .pointer {
+	top: 37%;
+}
+.zasa-off-5644 .config-pointer.accents .pointer-name {
+	top: 17%;
+}
+.zasa-off-5644 .config-pointer.spike .pointer {
+	right: 41%;
+	top: 44%;
+}
+.zasa-off-5644 .config-pointer.spike .pointer-name {
+	right: -2%;
+	top: 10%;
+}
+.zasa-off-5644 .config-pointer.face .pointer {
+	top: 35%;
+}
+.zasa-off-5644 .config-pointer.face .pointer-name {
+	top: 16%;
+}
+
+
+/* borgio-cf-6665 */
+.borgio-cf-6665 .config-pointer.accents .pointer {
+	right: 22%;
+	top: 28%;
+}
+.borgio-cf-6665 .config-pointer.accents .pointer-name {
+	top: 9%;
+	right: -8%;
+}
+.borgio-cf-6665 .config-pointer.face-letter .pointer {
+	right: 68%;
+	top: 40%;
+}
+.borgio-cf-6665 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 12%;
+}
+.borgio-cf-6665 .config-pointer.face-letter .pointer-name::after,
+.borgio-cf-6665 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.borgio-cf-6665 .config-pointer.face .pointer {
+	right: 25%;
+	top: 30%;
+}
+.borgio-cf-6665 .config-pointer.face .pointer-name {
+	top: 10%;
+	right: -2%;
+}
+.borgio-cf-6665 .config-pointer.inner-barrel .pointer {
+	right: 26%;
+	top: 73%;
+}
+.borgio-cf-6665 .config-pointer.inner-barrel .pointer-name {
+	top: 41.5%;
+	right: -21%;
+}
+
+/* illiano-cf-6121 */
+.illiano-cf-6121 .config-pointer.accents .pointer {
+	top: 48%;
+}
+.illiano-cf-6121 .config-pointer.accents .pointer-name {
+	top: 28%;
+}
+.illiano-cf-6121 .config-pointer.face-letter .pointer {
+	top: 21%;
+}
+.illiano-cf-6121 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+}
+.illiano-cf-6121 .config-pointer.big-bolts .pointer {
+	top: 38%;
+}
+.illiano-cf-6121 .config-pointer.big-bolts .pointer-name {
+	top: 19%;
+}
+
+
+/* luciano-cf-5674 */
+.luciano-cf-5674 .config-pointer.accents .pointer {
+	right: 23.5%;
+}
+.luciano-cf-5674 .config-pointer.accents .pointer-name {
+	right: -7.5%;
+}
+.luciano-cf-5674 .config-pointer.face-letter .pointer {
+	right: 83%;
+	top: 40%;
+}
+.luciano-cf-5674 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 28%;
+}
+.luciano-cf-5674 .config-pointer.face-letter .pointer-name::after,
+.luciano-cf-5674 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.luciano-cf-5674 .config-pointer.face .pointer {
+	right: 30%;
+	top: 31%;
+}
+.luciano-cf-5674 .config-pointer.face .pointer-name {
+	top: 12%;
+	right: 4%;
+}
+
+/* pitera-cf-8394 */
+.pitera-cf-8394 .config-pointer.accents .pointer {
+	top: 33%;
+}
+.pitera-cf-8394 .config-pointer.accents .pointer-name {
+	top: 13%;
+}
+.pitera-cf-8394 .config-pointer.face-letter .pointer {
+	right: 61%;
+	top: 52%;
+}
+.pitera-cf-8394 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: -4%;
+}
+.pitera-cf-8394 .config-pointer.face-letter .pointer-name::after,
+.pitera-cf-8394 .config-pointer.face-letter .pointer-name::before {
+	height: 460px;
+}
+.pitera-cf-8394 .config-pointer.face .pointer {
+	top: 30%;
+}
+.pitera-cf-8394 .config-pointer.face .pointer-name {
+	top: 10.5%;
+}
+.pitera-cf-8394 .config-pointer.big-bolts .pointer {
+	right: 9%;
+	top: 49%;
+}
+.pitera-cf-8394 .config-pointer.big-bolts .pointer-name {
+	top: 30%;
+	right: -2%;
+}
+.pitera-cf-8394 .config-pointer.inner-barrel .pointer {
+	right: 25%;
+	top: 74%;
+}
+.pitera-cf-8394 .config-pointer.inner-barrel .pointer-name {
+	top: 42%;
+	right: -22%;
+}
+
+
+/* inverno-cf-4022 */
+.inverno-cf-4022 .config-pointer.accents .pointer {
+	top: 37%;
+}
+.inverno-cf-4022 .config-pointer.accents .pointer-name {
+	top: 17%;
+}
+.inverno-cf-4022 .config-pointer.face-letter .pointer {
+	right: 64%;
+	top: 37%;
+}
+.inverno-cf-4022 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 12%;
+}
+.inverno-cf-4022 .config-pointer.face-letter .pointer-name::after,
+.inverno-cf-4022 .config-pointer.face-letter .pointer-name::before {
+	height: 333px;
+}
+.inverno-cf-4022 .config-pointer.big-bolts .pointer {
+	right: 14%;
+	top: 43%;
+}
+.inverno-cf-4022 .config-pointer.big-bolts .pointer-name {
+	top: 23%;
+	right: 2%;
+}
+.inverno-cf-4022 .config-pointer.inner-barrel .pointer {
+	right: 24%;
+	top: 68%;
+}
+.inverno-cf-4022 .config-pointer.inner-barrel .pointer-name {
+	top: 36%;
+	right: -23%;
+}
+
+
+/* fucina-cf-5458 */
+.fucina-cf-5458 .config-pointer.accents .pointer {
+	right: 23%;
+}
+.fucina-cf-5458 .config-pointer.accents .pointer-name {
+	right: -8%;
+}
+.fucina-cf-5458 .config-pointer.face-letter .pointer {
+	right: 63%;
+	top: 40%;
+}
+.fucina-cf-5458 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 7.5%;
+}
+.fucina-cf-5458 .config-pointer.face-letter .pointer-name::after,
+.fucina-cf-5458 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.fucina-cf-5458 .config-pointer.face .pointer {
+	top: 31%;
+}
+.fucina-cf-5458 .config-pointer.face .pointer-name {
+	top: 12%;
+}
+.fucina-cf-5458 .config-pointer.big-bolts .pointer {
+	right: 14%;
+}
+.fucina-cf-5458 .config-pointer.big-bolts .pointer-name {
+	right: 3%;
+}
+.fucina-cf-5458 .config-pointer.inner-barrel .pointer {
+	top: 68%;
+}
+.fucina-cf-5458 .config-pointer.inner-barrel .pointer-name {
+	top: 37%;
+}
+
+/* caruso-cf-4576 */
+.caruso-cf-4576 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.caruso-cf-4576 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.caruso-cf-4576 .config-pointer.face-letter .pointer {
+	right: 65%;
+	top: 49%;
+}
+.caruso-cf-4576 .config-pointer.face-letter .pointer-name {
+	top: 1%;
+	right: 0%;
+}
+.caruso-cf-4576 .config-pointer.face-letter .pointer-name::after,
+.caruso-cf-4576 .config-pointer.face-letter .pointer-name::before {
+	height: 465px;
+}
+.caruso-cf-4576 .config-pointer.face .pointer {
+	top: 29%;
+}
+.caruso-cf-4576 .config-pointer.face .pointer-name {
+	top: 10%;
+}
+.caruso-cf-4576 .config-pointer.big-bolts .pointer {
+	top: 60%;
+}
+.caruso-cf-4576 .config-pointer.big-bolts .pointer-name {
+	top: 41%;
+}
+.caruso-cf-4576 .config-pointer.inner-barrel .pointer {
+	right: 20%;
+	top: 69%;
+}
+.caruso-cf-4576 .config-pointer.inner-barrel .pointer-name {
+	top: 38.5%;
+	right: -26%;
+}
+
+/* fredo-cf-9839 */
+.fredo-cf-9839 .config-pointer.accents .pointer {
+	top: 29%;
+}
+.fredo-cf-9839 .config-pointer.accents .pointer-name {
+	top: 9%;
+}
+.fredo-cf-9839 .config-pointer.face-letter .pointer {
+	top: 36%;
+}
+.fredo-cf-9839 .config-pointer.face-letter .pointer-name {
+	top: 16%;
+}
+.fredo-cf-9839 .config-pointer.face .pointer {
+	right: 32%;
+	top: 21%;
+}
+.fredo-cf-9839 .config-pointer.face .pointer-name {
+	top: 2%;
+	right: 6%;
+}
+
+/* leggero-cf-5323 */
+.leggero-cf-5323 .config-pointer.accents .pointer {
+	top: 30%;
+}
+.leggero-cf-5323 .config-pointer.accents .pointer-name {
+	top: 10%;
+}
+.leggero-cf-5323 .config-pointer.face-letter .pointer {
+	right: 63%;
+	top: 48%;
+}
+.leggero-cf-5323 .config-pointer.face-letter .pointer-name {
+	top: 9%;
+	right: 7.5%;
+}
+.leggero-cf-5323 .config-pointer.face-letter .pointer-name::after,
+.leggero-cf-5323 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.leggero-cf-5323 .config-pointer.face .pointer {
+	top: 33%;
+}
+.leggero-cf-5323 .config-pointer.face .pointer-name {
+	top: 14%;
+}
+.leggero-cf-5323 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 43%;
+}
+.leggero-cf-5323 .config-pointer.big-bolts .pointer-name {
+	top: 22.5%;
+	right: 1%;
+}
+.leggero-cf-5323 .config-pointer.inner-barrel .pointer {
+	top: 68%;
+}
+.leggero-cf-5323 .config-pointer.inner-barrel .pointer-name {
+	top: 36%;
+}
+
+/* strollo-cf-8936 */
+.strollo-cf-8936 .config-pointer.face-letter .pointer {
+	right: 63%;
+	top: 48%;
+}
+.strollo-cf-8936 .config-pointer.face-letter .pointer-name {
+	top: 9%;
+	right: 7.5%;
+}
+.strollo-cf-8936 .config-pointer.face-letter .pointer-name::after,
+.strollo-cf-8936 .config-pointer.face-letter .pointer-name::before {
+	height: 365px;
+}
+.strollo-cf-8936 .config-pointer.face .pointer {
+	top: 37%;
+}
+.strollo-cf-8936 .config-pointer.face .pointer-name {
+	top: 18%;
+}
+.strollo-cf-8936 .config-pointer.big-bolts .pointer {
+	right: 13%;
+	top: 56%;
+}
+.strollo-cf-8936 .config-pointer.big-bolts .pointer-name {
+	top: 36%;
+	right: 1.5%;
+}
+.strollo-cf-8936 .config-pointer.inner-barrel .pointer {
+	right: 22%;
+	top: 67%;
+}
+.strollo-cf-8936 .config-pointer.inner-barrel .pointer {
+	right: 22%;
+	top: 67%;
+}
+
+/* corsa-cf-4923 */
+.corsa-cf-4923 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.corsa-cf-4923 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.corsa-cf-4923 .config-pointer.face-letter .pointer {
+	right: 65%;
+	top: 50%;
+}
+.corsa-cf-4923 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 2%;
+}
+.corsa-cf-4923 .config-pointer.face-letter .pointer-name::after,
+.corsa-cf-4923 .config-pointer.face-letter .pointer-name::before {
+	height: 440px;
+}
+.corsa-cf-4923 .config-pointer.big-bolts .pointer {
+	right: 14%;
+}
+.corsa-cf-4923 .config-pointer.big-bolts .pointer-name {
+	right: 3%;
+}
+.corsa-cf-4923 .config-pointer.inner-barrel .pointer {
+	top: 68%;
+}
+.corsa-cf-4923 .config-pointer.inner-barrel .pointer-name {
+	top: 36.5%;
+}
+
+
+/* demeo-cf-5385 */
+.demeo-cf-5385 .config-pointer.accents .pointer {
+	top: 36%;
+}
+.demeo-cf-5385 .config-pointer.accents .pointer-name {
+	top: 16%;
+}
+.demeo-cf-5385 .config-pointer.face-letter .pointer {
+	right: 43.5%;
+	top: 30%;
+}
+.demeo-cf-5385 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 2%;
+}
+.demeo-cf-5385 .config-pointer.face-letter .pointer-name::after,
+.demeo-cf-5385 .config-pointer.face-letter .pointer-name::before {
+	height: 215px;
+}
+.demeo-cf-5385 .config-pointer.face .pointer {
+	top: 35%;
+}
+.demeo-cf-5385 .config-pointer.face .pointer-name {
+	top: 16%;
+}
+
+
+/* corallo-cf-4395 */
+.corallo-cf-4395 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.corallo-cf-4395 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.corallo-cf-4395 .config-pointer.face-letter .pointer {
+	right: 65%;
+	top: 45%;
+}
+.corallo-cf-4395 .config-pointer.face-letter .pointer-name {
+	top: 4%;
+	right: 7%;
+}
+.corallo-cf-4395 .config-pointer.face-letter .pointer-name::after,
+.corallo-cf-4395 .config-pointer.face-letter .pointer-name::before {
+	height: 387px;
+}
+.corallo-cf-4395 .config-pointer.face .pointer {
+	top: 34%;
+}
+.corallo-cf-4395 .config-pointer.face .pointer-name {
+	top: 15%;
+}
+.corallo-cf-4395 .config-pointer.inner-barrel .pointer {
+	top: 67%;
+}
+.corallo-cf-4395 .config-pointer.inner-barrel .pointer-name {
+	top: 35%;
+}
+
+/* mazza-cf-4929 */
+.mazza-cf-4929 .config-pointer.accents .pointer {
+	top: 33%;
+}
+.mazza-cf-4929 .config-pointer.accents .pointer-name {
+	top: 13%;
+}
+.mazza-cf-4929 .config-pointer.face-letter .pointer {
+	right: 63%;
+	top: 49%;
+}
+.mazza-cf-4929 .config-pointer.face-letter .pointer-name {
+	top: 7.5%;
+	right: 5%;
+}
+.mazza-cf-4929 .config-pointer.face-letter .pointer-name::after,
+.mazza-cf-4929 .config-pointer.face-letter .pointer-name::before {
+	height: 387px;
+}
+
+/* rocco-cf-1260 */
+.rocco-cf-1260 .config-pointer.accents .pointer {
+	top: 36%;
+}
+.rocco-cf-1260 .config-pointer.accents .pointer-name {
+	top: 16%;
+}
+.rocco-cf-1260 .config-pointer.face .pointer {
+	right: 25%;
+	top: 35%;
+}
+.rocco-cf-1260 .config-pointer.face .pointer-name {
+	top: 16%;
+	right: -1%;
+}
+.rocco-cf-1260 .config-pointer.big-bolts .pointer {
+	top: 37%;
+}
+.rocco-cf-1260 .config-pointer.big-bolts .pointer-name {
+	top: 18%;
+}
+.rocco-cf-1260 .config-pointer.outer-barrel .pointer {
+	top: 12%;
+}
+.rocco-cf-1260 .config-pointer.outer-barrel .pointer-name {
+	top: -3%;
+}
+.rocco-cf-1260 .config-pointer.inner-barrel .pointer {
+	right: 21%;
+}
+.rocco-cf-1260 .config-pointer.inner-barrel .pointer-name {
+	right: -26%;
+}
+
+
+/* fiato-cf-5449 */
+.fiato-cf-5449 .config-pointer.accents .pointer { 
+	top: 46%;
+}
+.fiato-cf-5449 .config-pointer.accents .pointer-name {
+	top: 26%;
+}
+.fiato-cf-5449 .config-pointer.face-letter .pointer {
+	right: 41.5%;
+	top: 37%;
+}
+.fiato-cf-5449 .config-pointer.face-letter .pointer-name {
+	top: 11%;
+	right: 0%;
+}
+.fiato-cf-5449 .config-pointer.face-letter .pointer-name::after,
+.fiato-cf-5449 .config-pointer.face-letter .pointer-name::before {
+	height: 215px;
+}
+.fiato-cf-5449 .config-pointer.face .pointer {
+	right: 20%;
+	top: 32%;
+}
+.fiato-cf-5449 .config-pointer.face .pointer-name {
+	top: 13%;
+	right: -6.5%;
+}
+.fiato-cf-5449 .config-pointer.inner-barrel .pointer {
+	top: 74%;
+}
+.fiato-cf-5449 .config-pointer.inner-barrel .pointer-name {
+	top: 42.5%;
+}
+
+
+/* conte-inner-df-6537 */
+.conte-inner-df-6537 .config-pointer.accents .pointer {
+	top: 33%;
+}
+.conte-inner-df-6537 .config-pointer.accents .pointer-name {
+	top: 13%;
+}
+.conte-inner-df-6537 .config-pointer.spike .pointer {
+	top: 35%;
+}
+.conte-inner-df-6537 .config-pointer.spike .pointer-name {
+	top: 1%;
+}
+
+/* demeo-outer-df-7227 */
+.demeo-outer-df-7227 .config-pointer.accents .pointer {
+	top: 27%;
+}
+.demeo-outer-df-7227 .config-pointer.accents .pointer-name {
+	top: 7%;
+}
+.demeo-outer-df-7227 .config-pointer.spike .pointer {
+	right: 33%;
+	top: 38%;
+}
+.demeo-outer-df-7227 .config-pointer.spike .pointer-name {
+	right: -10%;
+	top: 4%;
+}
+
+/* doppio-inner-df-3755 */
+.doppio-inner-df-3755 .config-pointer.accents .pointer {
+	top: 30%;
+}
+.doppio-inner-df-3755 .config-pointer.accents .pointer-name {
+	top: 10%;
+}
+.doppio-inner-df-3755 .config-pointer.spike .pointer {
+	top: 44%;
+}
+.doppio-inner-df-3755 .config-pointer.spike .pointer-name {
+	top: 10%;
+}
+.doppio-inner-df-3755 .config-pointer.barrel-letter .pointer {
+	top: 44%;
+	right: 5%;
+}
+.doppio-inner-df-3755 .config-pointer.barrel-letter .pointer-name {
+	top: 33%;
+	right: -23%;
+}
+
+
+/* dritto-inner-df-8929 */
+.dritto-inner-df-8929 .config-pointer.accents .pointer {
+	top: 38%;
+}
+.dritto-inner-df-8929 .config-pointer.accents .pointer-name {
+	top: 18%;
+}
+.dritto-inner-df-8929 .config-pointer.spike .pointer {
+	top: 44%;
+}
+.dritto-inner-df-8929 .config-pointer.spike .pointer-name {
+	top: 10%;
+}
+.dritto-inner-df-8929 .config-pointer.barrel-letter .pointer {
+	right: 6%;
+}
+.dritto-inner-df-8929 .config-pointer.barrel-letter .pointer-name {
+	right: -22%;
+}
+.dritto-inner-df-8929 .config-pointer.face .pointer {
+	top: 32%;
+}
+.dritto-inner-df-8929 .config-pointer.face .pointer-name {
+	top: 13%;
+}
+
+
+/* gravido-inner-df-3584. */
+.gravido-inner-df-3584 .config-pointer.spike .pointer {
+	top: 52%;
+}
+.gravido-inner-df-3584 .config-pointer.spike .pointer-name {
+	top: 18%;
+}
+.gravido-inner-df-3584 .config-pointer.barrel-letter .pointer {
+	top: 44%;
+	right: 5%;
+}
+.gravido-inner-df-3584 .config-pointer.barrel-letter .pointer-name {
+	top: 33%;
+	right: -23%;
+}
+.gravido-inner-df-3584 .config-pointer.face .pointer {
+	right: 30%;
+}
+.gravido-inner-df-3584 .config-pointer.face .pointer-name {
+	right: 4%;
+}
+
+
+/* inverno-outer-df-4884 */
+.inverno-outer-df-4884 .config-pointer.spike .pointer {
+	right: 31%;
+}
+.inverno-outer-df-4884 .config-pointer.spike .pointer-name {
+	right: -12%;
+}
+.inverno-outer-df-4884 .config-pointer.face .pointer {
+	top: 34%;
+}
+.inverno-outer-df-4884 .config-pointer.face .pointer-name {
+	top: 15%;
+}
+.inverno-outer-df-4884 .config-pointer.barrel-letter .pointer {
+	top: 4%;
+	right: 33%;
+}
+.inverno-outer-df-4884 .config-pointer.barrel-letter .pointer-name {
+	top: -7%;
+	right: 5%;
+}
+
+/* lucchese-inner-df-2855 */
+.lucchese-inner-df-2855 .config-pointer.accents .pointer {
+	top: 24%;
+}
+.lucchese-inner-df-2855 .config-pointer.accents .pointer-name {
+	top: 4%;
+}
+.lucchese-inner-df-2855 .config-pointer.spike .pointer {
+	right: 32%;
+	top: 43%;
+}
+.lucchese-inner-df-2855 .config-pointer.spike .pointer-name {
+	right: -11%;
+	top: 9%;
+}
+
+
+/* lucchese-outer-df-2855 */
+.lucchese-outer-df-2855 .config-pointer.spike .pointer {
+	right: 28%;
+	top: 45%;
+}
+.lucchese-outer-df-2855 .config-pointer.spike .pointer-name {
+	right: -15%;
+	top: 11%;
+}
+
+/* monarcca-inner-df-6955 */
+.monarcca-inner-df-6955 .config-pointer.spike .pointer {
+	top: 52%;
+}
+.monarcca-inner-df-6955 .config-pointer.spike .pointer-name {
+	top: 18%;
+}
+.monarcca-inner-df-6955 .config-pointer.barrel-letter .pointer {
+	right: 6%;
+}
+.monarcca-inner-df-6955 .config-pointer.barrel-letter .pointer-name {
+	right: -22%;
+}
+
+
+/* siegel-inner-df-4523 */
+.siegel-inner-df-4523 .config-pointer.accents .pointer {
+	top: 41%;
+}
+.siegel-inner-df-4523 .config-pointer.accents .pointer-name {
+	top: 21%;
+}
+.siegel-inner-df-4523 .config-pointer.spike .pointer {
+	right: 34%;
+}
+.siegel-inner-df-4523 .config-pointer.spike .pointer-name {
+	right: -9%;
+}
+
+/* buffalino-outer-df-2487 */
+.buffalino-outer-df-2487 .config-pointer.spike .pointer {
+	right: 31%;
+}
+.buffalino-outer-df-2487 .config-pointer.spike .pointer-name {
+	right: -12%;
+}
+.buffalino-outer-df-2487 .config-pointer.barrel-letter .pointer {
+	top: 36%;
+}
+.buffalino-outer-df-2487 .config-pointer.barrel-letter .pointer-name {
+	top: 25%;
+}
+
+/* strauss-outer-df-7763 */
+.strauss-outer-df-7763 .config-pointer.accents .pointer {
+	top: 31%;
+}
+.strauss-outer-df-7763 .config-pointer.accents .pointer-name {
+	top: 11%;
+}
+.strauss-outer-df-7763 .config-pointer.spike .pointer {
+	right: 31%;
+}
+.strauss-outer-df-7763 .config-pointer.spike .pointer-name {
+	right: -12%;
+}
+.strauss-outer-df-7763 .config-pointer.barrel-letter .pointer {
+	top: 33%;
+}
+.strauss-outer-df-7763 .config-pointer.barrel-letter .pointer-name {
+	top: 22%;
+}
+.strauss-outer-df-7763 .config-pointer.face .pointer {
+	right: 25%;
+}
+.strauss-outer-df-7763 .config-pointer.face .pointer-name {
+	right: -1%;
+}
+
+
+
+
+/* CONTACT PAGE */
+.contact-form-wrap{
+	padding: 70px 90px;
+	padding-top: 0;
+	position: relative;
+}
+.contact-form-shape {
+	position: absolute;
+	right: 100%;
+	width: 100px;
+	top: 15px;
+	bottom: 15px;
+	background-color: var(--theme-color);
+	background-blend-mode: multiply;
+	background-position: left center;
+}
+.contact-title h2 {
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+	line-height: 1;
+	margin-top: -80px;
+	font-size: 70px;
+}
+ .contact-title h2:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 50px;
+	width: 80%;
+	background: var(--theme-color);
+	transform: translate(-50%, -50%);
+	z-index: -1;
+ }
+
+ 
+ .contact-form input, .contact-form textarea {
+	border-radius: 0;
+	margin-bottom: 20px;
+	padding: 15px;
+	border-top: 5px solid var(--theme-color);
+	font-size: 16px;
+}
+ .contact-form input::placeholder,
+ .contact-form textarea::placeholder {
+	text-transform: uppercase;
+ }
+ .chk-box input {
+	display: none;
+ }
+ .chk-box {
+	display: inline-block;
+	margin-right: 20px;
+ }
+ .chk-box label {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+ }
+ .chk-box:last-child {
+	margin-right: 0;
+ }
+ .chk {
+	height: 22px;
+	width: 25px;
+	display: inline-block;
+	border: 1px solid #515151;
+	border-radius: 2px;
+	margin-right: 10px;
+	transition: .3s ease;
+ }
+ .chk-box input:checked ~ label .chk {
+	border: 5px solid #ffffff;
+	background: var(--theme-color);
+ }
+ .bordered-btn-v2 {
+	margin-top: 10px;
+}
+.contact-page-btns{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.contact-page-btns .bordered-btn-v2 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.contact-page-btns .get-qoute-btn{
+	margin-left: auto;
+}
+
+/* THANK YOU PAGE */
+
+.thankyou-area {
+	padding-top: 80px;
+}
+.color-social-links a {
+	font-size: 18px;
+	height: 60px;
+	width: 60px;
+	background: #515BD4;
+	display: block;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	margin-right: 5px;
+	transition: .3s ease;
+	padding: 0;
+	font-size: 20px;
+}
+.color-social-links a:after {
+	left: -5px;
+	top: -5px;
+	
+}
+.color-social-links ul li{
+   display: inline-block;
+}
+ .color-social-links ul li a.instagram{
+   background: #fade7c;
+   background: -moz-linear-gradient(45deg,  #fade7c 0%, #e34277 32%, #7e35b3 66%, #539fe1 100%);
+   background: -webkit-linear-gradient(45deg,  #fade7c 0%,#e34277 32%,#7e35b3 66%,#539fe1 100%);
+   background: linear-gradient(45deg,  #fade7c 0%,#e34277 32%,#7e35b3 66%,#539fe1 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fade7c', endColorstr='#539fe1',GradientType=1 );
+ }
+ .color-social-links ul li a.instagram:after{
+	right: -5px;
+	left: auto;
+ }
+ .color-social-links ul li a.instagram:hover:after{
+	right: 0;
+ }
+
+ .last-preview-config {
+	margin-top: -10%;
+	position: relative;
+	width: auto;
+	max-width: none;
+	display: inline-block;
+}
+ .thankyou-content {
+	padding: 90px 40px;
+	border-top: 10px solid var(--theme-color);
+	border-bottom: 5px solid var(--theme-color);
+	position: relative;
+ }
+ .thankyou-area .last-preview-config {
+	display: none;
+}
+ .thankyou-text h3{
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0;
+ }
+ .thankyou-text h4 {
+	color: var(--theme-color);
+	text-transform: uppercase;
+ }
+ .thankyou-text p {
+	font-size: 20px;
+	color: #fff;
+	max-width: 470px;
+	margin: 0 auto;
+ }
+ .thankyou-btn a {
+	margin: 0 10px;
+ }
+ .color-social-links {
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	z-index: 2;
+ }
+ .black-shop a {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.thankyou-btn {
+	display: inline-block;
+}
+.black-shop {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+ /* error */
+.error-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgb(0, 0, 0,.5);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+ .error-box {
+	background: var(--theme-color);
+	width: 50%;
+	text-align: center;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 5%;
+ }
+ .error-close {
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	color: #fff;
+	transition: .3s ease;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+ }
+ .error-text h4 {
+	color: #fff;
+ }
+ .error-close:hover {
+	color: #000;
+ }
+
+ 
+/* threeD */
+#threeD .modal-dialog {
+   max-width: 800px;
+}
+#threeD .modal-body {
+	padding: 0;
+}
+ #threeD .btn-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	filter: invert();
+	z-index: 1;
+	opacity: 1;
+}
+
+/* arrow */
+.navigation-arrow button {
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	border-radius: 50%;
+	border: 0;
+	background: #fff;
+	color: #000;
+	margin: 5px;
+}
+.navigation-arrow button:hover {
+	background: var(--theme-color);
+	color: #fff;
+}
+
+
+.preview-wheel-wrap {
+	margin-left: -50px;
+ }
+.preview-wheel {
+	position: relative;
+	z-index: 1;
+ }
+ .preview-wheel > span {
+	color: #fff;
+	font-size: 50px;
+	cursor: pointer;
+	transition: .3s;
+	position: absolute;
+	left: -18%;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+ .preview-wheel > span:hover {
+	 color: var(--theme-color);
+}
+ .preview-wheel > span.arrow-next {
+	 right: -18%;
+	 left: auto;
+ }
+
+ .selected-color-wrap h4 i{
+	 display: none;
+ }
+ .choose-color-main{
+	 position: relative;
+ }
+ .choose-color-main > i.running-move {
+	position: absolute;
+	right: 101%;
+	bottom: 8px;
+}
+
+.action-btns .threeD-btn {
+	display: none !important;
+}

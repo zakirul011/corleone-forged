@@ -1,0 +1,563 @@
+/* All desktop. */
+@media (min-width: 768px) and (max-width: 1500px) {
+    h1 {
+        font-size: 44px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    h4 {
+        font-size: 22px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    body {
+        font-size: 14px;
+    }
+    /* HEADER AREA */
+    .header-locaiton-list li,
+    .header-contact-list li,
+    .text-link,
+    .top-link li {
+        font-size: 13px;
+    }
+    .header-lines li a {
+        font-size: 16px;
+    }
+    .header-top-inner {
+        font-size: 12px;
+    }
+
+    /* footer */
+    .footer-menu ul {
+        font-size: 14px;
+    }
+    .footer-contact li i {
+        font-size: 16px;
+    }
+    .footer-area .collection-shape {
+        height: 19.5%;
+    }
+
+    /* configurator */
+    .config-model-info {
+        font-size: 28px;
+    }
+    .config-category li {
+        font-size: 12px;
+    }
+    .action-btns button {
+        font-size: 14px;
+    }
+    .config-pointer .dash-lines {
+        border-width: 1px;
+    }
+
+    /* contact form */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form .nice-select,
+    .input-space,
+    .nice-select,
+    input,
+    textarea {
+        padding: 1.2em 1.5em;
+        font-size: 14px;
+    }
+
+    /* thankyou */
+    .thankyou-content p {
+        font-size: 18px;
+    }
+}
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .container {
+        max-width: 1080px;
+    }
+    h4 {
+        font-size: 26px;
+    }
+    .header-top-inner {
+        font-size: 14px;
+    }
+    .thankyou-content p,
+    .header-lines li a {
+        font-size: 20px;
+    }
+    .config-model-info {
+        font-size: 32px;
+    }
+    /* config */
+    .config-model-info {
+        margin-right: 4%;
+        margin-left: 3%;
+    }
+    .config-content-title h5 {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+    .config-bx {
+        padding: .8em;
+    }
+    .config-category li {
+        padding-right: 1.2em;
+        padding-left: 1.2em;
+    }
+    .selected-color li {
+        font-size: 12px;
+    }
+    .action-btns button {
+        font-size: 13px;
+    }
+    .selected-color-wrap h4 .site-btn {
+        padding-right: 1.2em;
+        padding-left: 1.2em;
+    }
+    .selected-color-wrap {
+        padding: .8em;
+    }
+    .config-navigation ul li {
+        font-size: 8px;
+    }
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 920px;
+    }
+    .mainmenu li a {
+        font-size: 13px;
+    }
+    .footer-menu ul {
+        font-size: 13px;
+    }
+    body {
+        font-size: 12px;
+    }
+    /* config */
+    .config-pointer .dash-lines,
+    .config-pointer .pointer-name {
+        display: none;
+    }
+    h2 {
+        font-size: 27px;
+    }
+    .config-model-info {
+        font-size: 25px;
+    }
+    .config-content-title h5 {
+        font-size: 10px;
+    }
+    .config-model-info {
+        margin-left: 3%;
+        margin-right: 4%;
+    }
+    .config-category li {
+        font-size: 10px;
+    }
+    .config-bx {
+        padding: .8em;
+    }
+    .selected-color-wrap h4 .site-btn {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+    .selected-color li {
+        font-size: 11px;
+    }
+    .config-navigation ul li {
+        font-size: 8px;
+    }
+    .selected-color-wrap {
+        padding: .8em;
+    }
+    .action-btns button {
+        font-size: 12px;
+    }
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 730px;
+    }
+    .header-area::after,
+    .header-area::before,
+    .header-area .header-top,
+    .header-area .header-bottom {
+        display: none;
+    }
+    .logo img {
+        width: 170px;
+    }
+    .header-area.sticky .logo img {
+        width: 160px;
+    }
+    .header-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 50px;
+    }
+    .header-lines li a {
+        font-size: 22px;
+        color: var(--theme-color);
+    }
+    .logo {
+        padding: 0.8em 0;
+    }
+
+    /* config */
+    .action-btns button {
+        font-size: 14px;
+    }
+    .config-model-info {
+        margin-right: 15%;
+    }
+    .config-shape-wrap {
+        width: 100%;
+        height: 80%;
+    }
+    .config-shape-wrap::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 22% 83%, 0 80%);
+    }
+    .config-shape {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 43% 96%, 25% 81%, 0 80%);
+    }
+    .selected-color-wrap h4.active,
+    .choose-color-wrapper.active {
+        display: inline-block;
+    }
+    .config-pointer .dash-lines,
+    .config-pointer .pointer-name {
+        display: none;
+    }
+    .choose-color-main > i.running-move {
+        position: relative;
+        right: 0;
+        margin-right: 5px;
+        margin-left: -20px;
+        bottom: 1em;
+    }
+    .thankyou-content {
+        padding: 7% 5% 7% 6%;
+    }
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .config-category li,
+    .black-btn,
+    .site-btn {
+        font-size: 12px;
+    }
+
+    .mt-xs-0 {
+        margin-top: 0;
+    }
+    .section-content {
+        text-align: center;
+    }
+
+    /* header area */
+    .logo {
+        padding: 1em 0;
+    }
+    .footer-logo img,
+    .logo img {
+        max-width: 130px;
+    }
+    .header-area::after,
+    .header-area::before,
+    .header-area .header-top,
+    .header-area .header-bottom {
+        display: none;
+    }
+    .header-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 50px;
+    }
+    .header-lines li a {
+        font-size: 18px;
+        color: var(--theme-color);
+    }
+
+    /* footer */
+    .footer-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-contact li {
+        margin-bottom: 1.2em;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-contact li i {
+        font-size: 16px;
+    }
+    .footer-contact li span {
+        width: 100%;
+        display: block;
+        margin-top: 0.7em;
+    }
+    .footer-menu ul {
+        font-size: 14px;
+    }
+    .footer-area .collection-shape {
+        display: none;
+    }
+
+    /* CONFIGURATOR */
+    .error-box {
+        width: 90%;
+        height: 200px;
+    }
+    .select-color-title h5 {
+        margin-bottom: 10px;
+    }
+    .config-model-info {
+        font-size: 22px;
+        writing-mode: horizontal-tb;
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        padding: 0.5em 2em 0.5em 0.8em;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .config-content-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .config-model-info h2 {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        margin-left: 0.5em;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .config-model-info img {
+        transform: rotate(0deg);
+    }
+    .config-model-info::after {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            93% 100%,
+            90% 80%,
+            46% 80%,
+            43% 100%,
+            0 100%
+        );
+        transform: rotate(0deg);
+    }
+    .config-content-inner > .absolute-img {
+        top: 50%;
+        left: 50%;
+    }
+    .config-content-title h5 {
+        font-size: 12px;
+    }
+    .config-category li {
+        padding-right: 1.1em;
+        padding-left: 1.1em;
+        font-size: 12px;
+    }
+    .config-content-inner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .config-bx {
+        padding: 1em 0.5em;
+    }
+    .action-btns button {
+        font-size: 12px;
+    }
+    .config-shape-wrap {
+        width: 100%;
+        height: 80%;
+    }
+    .contact-form-area .config-shape-wrap {
+        bottom: 0;
+        top: auto;
+        transform: rotate(180deg);
+        height: 90%;
+    }
+    .config-shape-wrap::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 22% 83%, 0 80%);
+    }
+    .config-shape {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 43% 96%, 25% 81%, 0 80%);
+    }
+    .config-wheel-container .action-btns {
+        display: block;
+    }
+    .config-content-wrap .action-btns,
+    .preview-wheel-wrap {
+        display: none;
+    }
+    .action-btns .site-btn:hover {
+        color: #fff;
+    }
+    .action-btns .site-btn:hover::after,
+    .action-btns .site-btn:hover::before {
+        background: #000;
+    }
+    .config-pointer .dash-lines,
+    .config-pointer .pointer-name {
+        display: none;
+    }
+    .selected-color-wrap h4 {
+        display: none;
+        animation: 0.5s fadeEffect ease;
+    }
+    .selected-color-wrap h4.active,
+    .choose-color-wrapper.active {
+        display: inline-block;
+    }
+
+    /* slider */
+    .navigation-slider {
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .config-navigation ul {
+        flex-wrap: nowrap;
+        transition: 0.3s ease;
+    }
+    .config-navigation ul li {
+        flex: 110px 0 0;
+        margin: 0 0.4em;
+        padding: 0.3em;
+        font-size: 10px;
+        padding-bottom: 1.2em;
+    }
+    .navigation-arrow button {
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 40%;
+        transform: translate(0, -50%);
+        margin: 0;
+        z-index: 4;
+    }
+    .navigation-arrow button.arrow-next {
+        right: 0;
+        left: auto;
+    }
+    .choose-color-main > i.running-move {
+        position: relative;
+        right: 0;
+        margin-right: 5px;
+        margin-left: -20px;
+        bottom: 1em;
+    }
+    .selected-color ul {
+        margin-right: -0.2em;
+        margin-left: -0.2em;
+    }
+    .selected-color li {
+        display: inline-flex;
+        margin-right: 0.2em;
+        margin-left: 0.2em;
+        font-size: 12px;
+    }
+    .selected-color-wrap {
+        padding: 0.5em;
+    }
+    .config-pointer .pointer {
+        font-size: 10px;
+    }
+    .selected-color-wrap.active {
+        margin-top: 15px;
+    }
+    .choose-color-title h5 {
+        font-size: 14px;
+    }
+
+    /* contact form */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form .nice-select,
+    .input-space,
+    .nice-select,
+    input,
+    textarea {
+        padding: 1em 1.2em;
+        font-size: 14px;
+    }
+
+    /* thank you */
+    .thankyou-content p {
+        font-size: 16px;
+    }
+    .thankyou-content {
+        padding: 5%;
+        padding-top: 8%;
+    }
+    .thankyou-area .last-preview-config {
+        margin-top: 20px;
+        margin-bottom: -12%;
+    }
+    .share-social {
+        display: flex;
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    .thankyou-content::after {
+        clip-path: polygon(55% 10%, 100% 0, 100% 100%, 0% 100%);
+        bottom: 0;
+        top: auto;
+        width: 60%;
+        height: 34%;
+    }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        max-width: 350px;
+    }
+}

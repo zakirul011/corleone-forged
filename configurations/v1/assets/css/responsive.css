@@ -1,0 +1,563 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+    .mainmneu ul li a {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .wheel-title h6 {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+    .wheel-menu-wrap h4 {
+        font-size: 20px;
+    }
+    .wheel-menu > span {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .choose-page-color h5, .select-page-color h5 {
+        font-size: 20px;
+    }
+    .color-panel span {
+        width: 40px;
+        height: 60px;
+    }
+    .single-price h5 {
+        font-size: 18px;
+    }
+    .single-price h6 {
+        font-size: 22px;
+    }
+    .selected-color ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+    .page-change-btn button {
+        width: 120px;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    .wheel-body {
+        height: auto;
+    }
+    .site-btn {
+        width: 130px;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    .wheel-menu {
+        margin-left: -10px;
+        margin-right: -5px;
+    }
+    .wheel-form-wrapper > h2 {
+        font-size: 38px;
+    }
+    .wheel-thankyou h2 {
+        font-size: 50px;
+    }
+    .back-shop-page {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+    .wheel-menu span span {
+        font-size: 8px;
+        left: -5px;
+        top: 1px;
+        height: 12px;
+        width: 12px;
+        line-height: 12px;
+    }
+    .wheel-form-wrapper {
+        padding: 40px 60px;
+    }
+    .wheel-form-wrapper {
+        padding-right: 120px;
+    }
+    .wheel-share-link a {
+        font-size: 14px;
+        padding: 14px 13px;
+    }
+    .wheel-share-link {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .mainmneu ul li a {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .wheel-title h6 {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+    .wheel-menu-wrap h4 {
+        font-size: 20px;
+    }
+    .wheel-menu > span {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .choose-page-color h5, .select-page-color h5 {
+        font-size: 19px;
+    }
+    .color-panel span {
+        width: 40px;
+        height: 60px;
+    }
+    .single-price h5 {
+        font-size: 18px;
+    }
+    .single-price h6 {
+        font-size: 22px;
+    }
+    .selected-color ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+    .page-change-btn button {
+        width: 120px;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    .wheel-body {
+        height: auto;
+    }
+    .site-btn {
+        width: 130px;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    .wheel-menu {
+        margin-left: -10px;
+        margin-right: -5px;
+    }
+    .wheel-form-wrapper > h2 {
+        font-size: 38px;
+    }
+    .wheel-thankyou h2 {
+        font-size: 50px;
+    }
+    .back-shop-page {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+    .wheel-menu span span {
+        font-size: 8px;
+        left: -5px;
+        top: 1px;
+        height: 12px;
+        width: 12px;
+        line-height: 12px;
+    }
+    .wheel-form-wrapper {
+        padding: 40px 60px;
+    }
+    .wheel-form-wrapper {
+        padding-right: 120px;
+    }
+    .wheel-share-link a {
+        font-size: 14px;
+        padding: 14px 13px;
+    }
+    .wheel-share-link {
+        margin-top: 0;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .mainmneu ul li a {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+    .mainmneu button {
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+
+    .wheel-menu > span {
+        font-size: 13px;
+        margin: 0;
+        padding: 8px 0;
+        width: 31.333%;
+        flex: auto;
+    }
+    .wheel-title h2 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .wheel-title h6 {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .wheel-menu-wrap h4 {
+        font-size: 18px;
+    }
+    .wheel-menu {
+        display: flex;
+        margin-left: -14px;
+        margin-right: -17px;
+        flex-wrap: wrap;
+    }
+    .site-btn {
+        width: 110px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .choose-page-color h5, .select-page-color h5 {
+        font-size: 17px;
+    }
+    .color-panel span {
+        width: 30px;
+        height: 40px;
+    }
+    .single-price h6 {
+        font-size: 20px;
+    }
+    .single-price h5 {
+        font-size: 16px;
+    }
+    .page-change-btn button {
+        width: 120px;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    .selected-color ul li {
+        width: 30px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .wheel-body {
+        position: relative;
+        height: auto;
+    }
+    .indicator-line {
+        width: 250px;
+    }
+    .color-panel span.active-check::after {
+        font-size: 16px;
+    }
+    .wheel-menu span span {
+        left: 2px;
+        top: 2px;
+        height: 13px;
+        width: 13px;
+        line-height: 13px;
+    }
+    .wheel-color-section {
+        padding-right: 10px;
+    }
+    .wheel-footer {
+        padding: 10px 0;
+        padding-right: 15px;
+    }
+    .wheel-form-wrapper > h2 {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+    .wheel-form-wrapper h6 {
+        font-size: 17px;
+        letter-spacing: 4px;
+    }
+    .wheel-form-wrapper {
+        padding: 50px 40px;
+    }
+    .wheel-form {
+        padding-right: 60px;
+    }
+    .wheel-share-link {
+        margin-right: 0;
+    }
+    .wheel-thankyou h2 {
+        font-size: 35px;
+    }
+    .wheel-thankyou {
+        padding-right: 20px;
+    }
+    .wheel-thankyou p {
+        font-size: 20px;
+    }
+    .wheel-thankyou ul {
+        margin-top: 30px;
+    }
+    .print-btn {
+        padding-top: 50px;
+    }
+    .back-shop-page {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    .wheel-share-link a {
+        font-size: 14px;
+        padding: 12px 15px;
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .wheel-share-link {
+        text-align: left;
+    }
+}
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .site-logo img {
+        max-width: 150px;
+    }
+    .mainmneu button {
+        right: 50px;
+        top: -27px;
+        background: transparent;
+        color: #fff;
+    }
+    .wheel-title h6 {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    .wheel-header {
+        text-align: center;
+    }
+    .wheel-title {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .wheel-title h2 {
+        margin-bottom: 5px;
+    }
+    .site-btn::after {
+        transform: skew(15deg);
+    }
+    .site-btn {
+        width: 150px;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    .wheel-menu-wrap h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .wheel-menu > span {
+        width: 31.333%;
+        flex: auto;
+        margin: 2px 2px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .wheel-menu {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .wheel-menu > span::after {
+        transform: skew(0deg);
+        border: 0;
+    }
+    .wheel-header-wrap {
+        padding: 30px 25px;
+        padding-bottom: 0;
+    }
+    .wheel-img {
+        position: relative;
+        right: auto;
+        height: auto;
+        width: auto;
+        top: auto;
+        transform: none;
+    }
+    .wheel-preview-wrap {
+        display: none;
+    }
+    .wheel-config-wrapper::after, .thankyou-page::after {
+        width: 100%;
+        height: calc(100% - 50px);
+    }
+    .thankyou-page::after {
+        height: 100%;
+    }
+    .wheel-body {
+        height: auto;
+        padding-top: 0;
+    }
+    .wheel-menu-wrap{
+        transform: translate(0, 15px);
+    }
+    .choose-page-color h5, .select-page-color h5 {
+        font-size: 18px;
+    }
+    .color-panel span {
+        height: 40px;
+    }
+    .color-panel,
+    .color-panel-wrap {
+        justify-content: center;
+    }
+    .select-page-color,
+    .choose-page-color {
+        text-align: center;
+        padding: 0 30px;
+    }
+    .wheel-menu span span {
+        font-size: 10px;
+        left: 1px;
+        top: 1px;
+        height: 12px;
+        width: 12px;
+        line-height: 12px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    .selected-color ul li {
+        height: 40px;
+        line-height: 40px;
+        transform: skew(-15deg);
+    }
+    .wheel-footer {
+        padding: 20px;
+        text-align: center;
+    }
+    .selected-color {
+        margin-bottom: 20px;
+    }
+    .selected-color ul {
+        justify-content: center;
+    }
+    .single-price h5 {
+        font-size: 16px;
+    }
+    .single-price h6 {
+        font-size: 18px;
+    }
+    .page-change-btn button {
+        width: 32.333%;
+        padding: 10px 0;
+        font-size: 16px;
+        margin: 0;
+    }
+    .part-indicator span {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .part-indicator {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+    .selected-color h5 {
+        margin-bottom: 5px;
+    }
+
+    /* form */
+    .wheel-form-wrapper > h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .wheel-form-wrapper h6 {
+        font-size: 16px;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+    }
+    .wheel-form-wrapper {
+        padding: 30px 0;
+    }
+    .wheel-input-item input, .wheel-input-item textarea {
+        padding: 15px 15px;
+    }
+    .wheel-input-item::after {
+        transform: skewX(0);
+    }
+    .custom-wheel-area {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    .custom-wheel-item {
+        padding: 0px 15px;
+    }
+    .wheel-form-wrapper .row > div:nth-child(5) .wheel-input-item input {
+        padding-left: 15px;
+    }
+    .wheel-form-wrapper .row > div:nth-child(3) .wheel-input-item::after,
+    .wheel-form-wrapper .row > div:nth-child(2) .wheel-input-item::after,
+    .wheel-form-wrapper .row > div:nth-child(5) .wheel-input-item::after,
+    .wheel-form-wrapper .row > div:nth-child(6) .wheel-input-item::after,
+    .wheel-form-wrapper .row > div:nth-child(7) .wheel-input-item::after {
+        left: 0;
+    }
+    .delaer-check-btn {
+        text-align: center;
+    }
+    .get-quote-btn button,
+    .back-shop-page {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+    .wheel-back-btn a {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .wheel-share-link a {
+        font-size: 14px;
+        padding: 13px 15px;
+        margin-left: 5px;
+    }
+    .wheel-share-link {
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+    }
+    .wheel-thankyou h2 {
+        font-size: 24px;
+    }
+    .wheel-thankyou p {
+        font-size: 16px;
+    }
+    .wheel-thankyou {
+        text-align: center;
+        padding-right: 0;
+    }
+    .wheel-thankyou ul {
+        margin-top: 30px;
+    }
+    .print-btn {
+        padding-top: 30px;
+    }
+    .wheel-right-content {
+        padding: 0 15px;
+    }
+    .thankyou-page {
+        padding-bottom: 20px;
+    }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}

@@ -1,0 +1,39 @@
+# Ignore local design folders
+designs
+configurations/dynamic/**/img
+!configurations/dynamic/assets/img
+
+
+
+# Node modules & build
+node_modules/
+dist/
+build/
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Env variables
+.env
+
+# PSD, RAW, and design assets (store externally like OneDrive)
+*.psd
+*.ai
+*.zip
+*.rar
+
+# Backup and cache files
+*.bak
+*.tmp
+
+
+# Local project outputs
+apps/**/output/
