@@ -2,9 +2,9 @@
 
 This project contains the following main folders:
 
-- **app**: Contains the main application code.
-- **configurations**: Stores configuration files and settings.
 - **v1, v2, v3, v4**: Versioned folders that may contain different versions or iterations of the project components.
+- **configurations**: Stores configuration app of corleone forged to choose custom wheel.
+- **app**: Contains the main others apps of corleone forged like email-tamplate, landings, mobile app, prenstations.
 
 ## Project Structure
 
