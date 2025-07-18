@@ -12,7 +12,7 @@ This project contains the following main folders:
 corleone-forged/
 ├── versions/ # Multiple UI versions (v1.1, v1.2, etc.)
 ├── apps/ # Mobile app, email templates, landing pages, presentations
-├── configurations/ # UI behavior settings with assets (tabs, sidebar, dynamic layout)
+├── configurations/ # configuration application to costomize the wheels
 ├── designs/ # Style guides and external links to PSDs
 ├── index.html # Project dashboard (auto-generated)
 ├── README.md # You are here :)
