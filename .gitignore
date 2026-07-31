@@ -1,39 +1,27 @@
 # Ignore local design folders
 designs
-configurations/dynamic/**/img
-!configurations/dynamic/assets/img
+3d-model
+catalog
 
+# config_app_dynamic - adding only a single version
+config_app_dynamic/*
+!config_app_dynamic/assets
+!config_app_dynamic/concave-forging
 
+config_app_dynamic/concave-forging/*
+!config_app_dynamic/concave-forging/email-template
+!config_app_dynamic/concave-forging/borgio-cf-6665.php
+!config_app_dynamic/concave-forging/img
 
-# Node modules & build
-node_modules/
-dist/
-build/
+config_app_dynamic/concave-forging/img/*
+!config_app_dynamic/concave-forging/img/borgio
 
-# Mac/Windows system files
-.DS_Store
-Thumbs.db
+# config_app_v2 - adding only a single version
+config_app_v2/*
 
-# VSCode and IDE settings
-.vscode/
-.idea/
+!config_app_v2/assets
+!config_app_v2/img
+!config_app_v2/cyrus-sf-6794.html
 
-# Logs
-*.log
-
-# Env variables
-.env
-
-# PSD, RAW, and design assets (store externally like OneDrive)
-*.psd
-*.ai
-*.zip
-*.rar
-
-# Backup and cache files
-*.bak
-*.tmp
-
-
-# Local project outputs
-apps/**/output/
+config_app_v2/img/*
+!config_app_v2/img/CYRUS
